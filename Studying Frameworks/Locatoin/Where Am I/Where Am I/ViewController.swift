@@ -77,8 +77,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.altitudeLabel.text = "\(userLocation.altitude)"
         self.withinKuggen.text = "\(inKuggen)"
         
-        let kuggenLat:CLLocationDegrees = 57.706753
-        let kuggenLong:CLLocationDegrees = 11.9366973
+        
+        
+
+        
+        let kuggenLat:CLLocationDegrees = 57.706673
+        let kuggenLong:CLLocationDegrees = 11.938899
         let kuggenLocation:CLLocation = CLLocation(latitude:kuggenLat, longitude:kuggenLong)
         
         let distanceToKuggen = userLocation.distanceFromLocation(kuggenLocation)

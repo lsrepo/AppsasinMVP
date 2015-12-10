@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Appsassin": {
+      "applicationId": "065DUC1XuH7Rl4OHftyh5qieeLWfdZBm9kcx0EBP"
+    },
+    "_default": {
+      "link": "Appsassin"
+    }
+  }
+}
