@@ -1,0 +1,15 @@
+
+//RUN this after deploy
+curl -X POST \
+ -H "X-Parse-Application-Id: 065DUC1XuH7Rl4OHftyh5qieeLWfdZBm9kcx0EBP" \
+ -H "X-Parse-REST-API-Key: NUP8vfkOzv8SGHd8GwHHLqH6j7NSLKzls67zIex4" \
+ -H "Content-Type: application/json" \
+ -d '{}' \
+ https://api.parse.com/1/functions/findsongs
+ 
+ 
+//Get results from song
+curl -X GET \
+-H "X-Parse-Application-Id: 065DUC1XuH7Rl4OHftyh5qieeLWfdZBm9kcx0EBP" \
+-H "X-Parse-REST-API-Key: NUP8vfkOzv8SGHd8GwHHLqH6j7NSLKzls67zIex4" \
+https://api.parse.com/1/classes/Song
