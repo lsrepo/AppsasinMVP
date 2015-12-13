@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "84BB7EC0D9BBFE933DE29E578D3BB9885E765582",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8C0AF08A221A2DF89935E4FB50A773A6E9AE6C97" : 0,
+    "84BB7EC0D9BBFE933DE29E578D3BB9885E765582" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "462BD496-6652-40B0-8887-99411197BA20",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8C0AF08A221A2DF89935E4FB50A773A6E9AE6C97" : "..\/..\/..\/..\/Development\/AVCamSwift",
+    "84BB7EC0D9BBFE933DE29E578D3BB9885E765582" : "AppsasinMVP\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Appsassin0.1",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ParseStarterProject-Swift\/Appsassin0.1.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/radishlau\/AppsasinMVP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "84BB7EC0D9BBFE933DE29E578D3BB9885E765582"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alex-chan\/AVCamSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8C0AF08A221A2DF89935E4FB50A773A6E9AE6C97"
+    }
+  ]
+}
