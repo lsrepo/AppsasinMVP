@@ -48,7 +48,9 @@ class ProfileViewController: UIViewController {
                     
                     let result = try query!.findObjects()
                     print(result[0]["username"])
-                    
+                    result[0]["testAdd"] = "hey"
+                    result[0].saveInBackground()
+                
                     
                     
                 }
