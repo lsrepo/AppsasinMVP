@@ -110,6 +110,24 @@
             </objects>
             <point key="canvasLocation" x="41" y="757"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lPo-Qi-bOM">
+            <objects>
+                <viewController id="Xpc-LG-mrM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8U-q2-WQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="kPz-8v-1lc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="axT-iN-cXw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyG-zd-Nvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2190" y="301"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="xXx-Zj-xaT">
             <objects>
