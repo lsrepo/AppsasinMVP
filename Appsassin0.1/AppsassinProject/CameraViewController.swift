@@ -49,6 +49,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         let session: AVCaptureSession = AVCaptureSession()
@@ -165,6 +166,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 
     
     override func viewWillAppear(animated: Bool) {
+        
         dispatch_async(self.sessionQueue, {
             
  

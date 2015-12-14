@@ -26,10 +26,7 @@ class ViewController: UIViewController {
         push.setMessage("Willie Hayes injured by own pop fly.")
         push.sendPushInBackground()
         
-        // Associate the device with a user
-        let installation = PFInstallation.currentInstallation()
-        installation["user"] = PFUser.currentUser()
-        installation.saveInBackground()
+        
 
     }
 
