@@ -5,6 +5,33 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="yfK-cH-53J">
+            <objects>
+                <viewController id="17e-K6-TUo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XM6-Cw-Qyy"/>
+                        <viewControllerLayoutGuide type="bottom" id="lj7-TI-O7q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N2G-Bq-r9w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZY-Iy-6Sd">
+                                <rect key="frame" x="242" y="245" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="4GM-dR-u6i" kind="showDetail" id="lQJ-7C-399"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFI-kx-Dvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-724" y="1535"/>
+        </scene>
         <!--Leaderboard-->
         <scene sceneID="MQN-0g-eDN">
             <objects>
@@ -18,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Jw-hO-NlU" id="Jfw-k5-NEm">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -211,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbq-9Z-ILB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="-290"/>
+            <point key="canvasLocation" x="41" y="-398"/>
         </scene>
         <!--Profile-->
         <scene sceneID="KAz-As-941">
@@ -239,6 +266,13 @@
                                     <segue destination="Qen-uC-daf" kind="presentation" id="rMh-tf-Q9J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
+                                <rect key="frame" x="280" y="192" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -255,7 +289,7 @@
         <!--Cam View Controller-->
         <scene sceneID="yf2-Rq-1Wp">
             <objects>
-                <viewController id="FF3-n7-b0n" userLabel="Cam View Controller" customClass="CameraViewController" customModule="AVCamSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FF3-n7-b0n" userLabel="Cam View Controller" customClass="CameraViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EHF-2F-h0c"/>
                         <viewControllerLayoutGuide type="bottom" id="EwX-q7-3II"/>
@@ -264,7 +298,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dC1-Ft-db7" customClass="AVCamPreviewView" customModule="AVCamSwift" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dC1-Ft-db7" customClass="AVCamPreviewView" customModule="Appsassin0_1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxl-FF-uhx">
@@ -297,9 +331,17 @@
                                             <action selector="changeCamera:" destination="FF3-n7-b0n" eventType="touchUpInside" id="Cur-1q-sYJ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eND-6H-Tk5">
+                                        <rect key="frame" x="271" y="37" width="37" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <segue destination="17e-K6-TUo" kind="show" id="d7A-qV-6Ub"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="eND-6H-Tk5" firstAttribute="centerX" secondItem="dC1-Ft-db7" secondAttribute="centerX" id="0Z1-Hv-3ig"/>
                                     <constraint firstAttribute="centerX" secondItem="4xC-3e-lew" secondAttribute="centerX" id="DDW-v5-BdR"/>
                                     <constraint firstItem="xxl-FF-uhx" firstAttribute="trailing" secondItem="4xC-3e-lew" secondAttribute="leading" constant="-20" id="JKQ-fY-UWU"/>
                                     <constraint firstItem="Tlv-hu-eDh" firstAttribute="leading" secondItem="4xC-3e-lew" secondAttribute="trailing" constant="20" id="Jm0-af-stm"/>
@@ -334,7 +376,10 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-724" y="957"/>
+            <point key="canvasLocation" x="-724" y="757"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="c8e-tk-uKk"/>
+    </inferredMetricsTieBreakers>
 </document>

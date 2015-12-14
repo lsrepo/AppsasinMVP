@@ -5,6 +5,13 @@ import Parse
 
 class LogInViewController: UIViewController {
     
+    func registerSession(){
+        // Associate the device with a user
+        let installation = PFInstallation.currentInstallation()
+        installation["user"] = PFUser.currentUser()
+        installation.saveInBackground()
+    }
+    
     @IBOutlet var username: UITextField!
     
     @IBOutlet var errorLabel: UILabel!
@@ -33,7 +40,7 @@ class LogInViewController: UIViewController {
                     } else {
                         
                         print("Signed Up")
-                        self.performSegueWithIdentifier("ShowUserTable", sender: self)
+//                        self.performSegueWithIdentifier("whatsup", sender: self)
                         
                     }
                     
@@ -43,7 +50,9 @@ class LogInViewController: UIViewController {
             } else {
                 
                 print("Logged In")
+                
                 self.performSegueWithIdentifier("whatsup", sender: self)
+                self.registerSession();
             }
             
             
@@ -67,6 +76,7 @@ class LogInViewController: UIViewController {
         if PFUser.currentUser()?.username != nil {
             
             self.performSegueWithIdentifier("whatsup", sender: self)
+            self.registerSession();
             print("already logged in")
         }
         
