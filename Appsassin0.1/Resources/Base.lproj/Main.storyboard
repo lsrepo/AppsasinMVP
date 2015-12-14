@@ -260,17 +260,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJa-Lp-fUK">
-                                <rect key="frame" x="255" y="131" width="91" height="30"/>
+                                <rect key="frame" x="255" y="89" width="91" height="30"/>
                                 <state key="normal" title="Camera View"/>
                                 <connections>
                                     <segue destination="Qen-uC-daf" kind="presentation" id="rMh-tf-Q9J"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
-                                <rect key="frame" x="226" y="192" width="154" height="30"/>
-                                <state key="normal" title="Activate game session"/>
-                                <connections>
-                                    <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-cL-iTJ">
@@ -279,16 +272,35 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKd-jS-xrn">
+                                <rect key="frame" x="215" y="186" width="171" height="30"/>
+                                <state key="normal" title="Deactivate game session"/>
+                                <connections>
+                                    <action selector="deactivateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="5dm-cS-3sq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
+                                <rect key="frame" x="223" y="138" width="154" height="30"/>
+                                <state key="normal" title="Activate game session"/>
+                                <connections>
+                                    <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="01e-2h-czR"/>
                             <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="4Mm-51-doU"/>
                             <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="D9h-Nk-LpS"/>
                             <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="FdS-yT-dF8"/>
                             <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="PV1-mf-8pA"/>
+                            <constraint firstItem="smJ-bH-kl2" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="Rli-gC-RYf"/>
+                            <constraint firstItem="g6Y-ah-dqD" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="UGY-7b-UW7"/>
+                            <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="kFH-us-kj4"/>
                             <constraint firstItem="smJ-bH-kl2" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="keP-fC-MK2"/>
                             <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="otl-Qz-ArU"/>
                             <constraint firstItem="g6Y-ah-dqD" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="uQq-4a-1zN"/>
+                            <constraint firstItem="WKd-jS-xrn" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="vwe-dG-1dz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="mfY-in-ntD"/>
@@ -394,6 +406,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c8e-tk-uKk"/>
+        <segue reference="lQJ-7C-399"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,28 +16,40 @@ class ProfileViewController: UIViewController {
         self.activateGameMode();
     }
     
+    @IBAction func deactivateButton(sender: AnyObject) {
+        self.deactivateGameMode();
+    }
+    
     @IBOutlet weak var targetLabel: UILabel!
+    
+    let myPlayerId = PFUser.currentUser()!["player"].objectId!!
+    
+    func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
+        
+        let mePlayerQuery = PFQuery(className:"Player")
+        mePlayerQuery.getObjectInBackgroundWithId(playerId) {
+            (mePlayer: PFObject?, error: NSError?) -> Void in
+            if error == nil  {
+                //print(mePlayer!)
+                mePlayer!["isActive"] = isActive;
+                mePlayer!["isMatched"] = isMatched;
+                mePlayer!.saveInBackground()
+            } else {
+                print("\(error!) gameStateChangerError")
+            }
+        }
+    }
+    
+    func deactivateGameMode(){
+        gameStateChanger(false,isMatched: false,playerId: myPlayerId)
+    
+    }
+    
+    
     func activateGameMode(){
         //Game Activated
         
-        func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
-            
-            let mePlayerQuery = PFQuery(className:"Player")
-            mePlayerQuery.getObjectInBackgroundWithId(playerId) {
-                (mePlayer: PFObject?, error: NSError?) -> Void in
-                if error == nil  {
-                    //print(mePlayer!)
-                    mePlayer!["isActive"] = isActive;
-                    mePlayer!["isMatched"] = isMatched;
-                    mePlayer!.saveInBackground()
-                } else {
-                    print("\(error!) gameStateChangerError")
-                }
-            }
-        }
-        let myPlayerId = PFUser.currentUser()!["player"].objectId!!
         gameStateChanger(true,isMatched: false,playerId: myPlayerId)
-        
         
         //begin searchTarget
         func searchTarget(){
