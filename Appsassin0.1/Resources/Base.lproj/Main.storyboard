@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Jw-hO-NlU" id="Jfw-k5-NEm">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -273,15 +273,28 @@
                                     <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-cL-iTJ">
+                                <rect key="frame" x="177" y="306" width="267" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="4Mm-51-doU"/>
                             <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="D9h-Nk-LpS"/>
+                            <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="FdS-yT-dF8"/>
+                            <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="PV1-mf-8pA"/>
                             <constraint firstItem="smJ-bH-kl2" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="keP-fC-MK2"/>
+                            <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="otl-Qz-ArU"/>
                             <constraint firstItem="g6Y-ah-dqD" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="uQq-4a-1zN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="mfY-in-ntD"/>
+                    <connections>
+                        <outlet property="targetLabel" destination="AHw-cL-iTJ" id="miG-Ct-kyH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFy-N5-yc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

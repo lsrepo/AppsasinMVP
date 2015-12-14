@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
         self.activateGameMode();
     }
     
+    @IBOutlet weak var targetLabel: UILabel!
     func activateGameMode(){
         //Game Activated
         
@@ -30,15 +31,13 @@ class ProfileViewController: UIViewController {
                     mePlayer!["isMatched"] = isMatched;
                     mePlayer!.saveInBackground()
                 } else {
-                    print(error)
+                    print("\(error!) gameStateChangerError")
                 }
             }
         }
         let myPlayerId = PFUser.currentUser()!["player"].objectId!!
         gameStateChanger(true,isMatched: false,playerId: myPlayerId)
         
-        
-
         
         //begin searchTarget
         func searchTarget(){
@@ -75,10 +74,13 @@ class ProfileViewController: UIViewController {
                     // Final list of objects
                     userQuery!.findObjectsInBackgroundWithBlock {
                         (let objects: [PFObject]?, error: NSError?) -> Void in
+                        self.targetLabel.text = ""
                         if error == nil {
-                            for object in objects! {
-                                print( (object["username"]) , "is your target")
-                            }
+                            let target = objects![0]
+                            print( (target["username"]) , "is your target")
+                            let targetMsg = String(target["username"]) + " is your target!"
+                            self.targetLabel.text = targetMsg
+
                         } else {
                             
                             print("Error: \(error!) \(error!.userInfo)")
@@ -86,7 +88,7 @@ class ProfileViewController: UIViewController {
                     }
             }
             else{
-                print(error)
+                print("\(error!) getGeoPointError")
             }
         }
         
