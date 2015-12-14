@@ -266,9 +266,9 @@
                                     <segue destination="Qen-uC-daf" kind="presentation" id="rMh-tf-Q9J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
-                                <rect key="frame" x="280" y="192" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
+                                <rect key="frame" x="226" y="192" width="154" height="30"/>
+                                <state key="normal" title="Activate game session"/>
                                 <connections>
                                     <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
                                 </connections>
@@ -278,6 +278,7 @@
                         <constraints>
                             <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="D9h-Nk-LpS"/>
                             <constraint firstItem="smJ-bH-kl2" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="keP-fC-MK2"/>
+                            <constraint firstItem="g6Y-ah-dqD" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="uQq-4a-1zN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="mfY-in-ntD"/>
