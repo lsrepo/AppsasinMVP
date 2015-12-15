@@ -48,6 +48,8 @@ class ProfileViewController: UIViewController {
     
     func deactivateGameMode(){
         gameStateChanger(false,isMatched: false,playerId: myPlayerId)
+        self.targetPlayerId="";
+        print("targetPlayerId is now empty: \(targetPlayerId)")
         
     }
     
