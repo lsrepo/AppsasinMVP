@@ -16,6 +16,10 @@ class ProfileViewController: UIViewController {
         self.activateGameMode();
     }
     
+    @IBAction func searchPlayerButton(sender: AnyObject) {
+        self.searchPlayers();
+    }
+
     @IBAction func deactivateButton(sender: AnyObject) {
         self.deactivateGameMode();
     }
@@ -23,17 +27,19 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var targetLabel: UILabel!
     
     let myPlayerId = PFUser.currentUser()!["player"].objectId!!
+    var targetPlayerId:String = "";
     
     func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
         
-        let mePlayerQuery = PFQuery(className:"Player")
-        mePlayerQuery.getObjectInBackgroundWithId(playerId) {
-            (mePlayer: PFObject?, error: NSError?) -> Void in
+        let playerQuery = PFQuery(className:"Player")
+        playerQuery.getObjectInBackgroundWithId(playerId) {
+            (playerObj: PFObject?, error: NSError?) -> Void in
             if error == nil  {
                 //print(mePlayer!)
-                mePlayer!["isActive"] = isActive;
-                mePlayer!["isMatched"] = isMatched;
-                mePlayer!.saveInBackground()
+                playerObj!["isActive"] = isActive;
+                playerObj!["isMatched"] = isMatched;
+                playerObj!.saveInBackground()
+                print("-\(playerObj)")
             } else {
                 print("\(error!) gameStateChangerError")
             }
@@ -42,110 +48,87 @@ class ProfileViewController: UIViewController {
     
     func deactivateGameMode(){
         gameStateChanger(false,isMatched: false,playerId: myPlayerId)
-    
+        
     }
     
-    
+    func assignTargets(){
+        print("now we try to assign")
+        print("myPlayerId is \(self.myPlayerId)")
+        print("targetPlayer is \(self.targetPlayerId)")
+        gameStateChanger(true, isMatched: true, playerId: self.myPlayerId)
+        gameStateChanger(true, isMatched: true, playerId: self.targetPlayerId)
+        print("Both Players are deactiveted")
+        
+        
+    }
+
     func activateGameMode(){
-        //Game Activated
-        
         gameStateChanger(true,isMatched: false,playerId: myPlayerId)
+        searchPlayers();
         
-        //begin searchTarget
-        func searchTarget(){
-            PFGeoPoint.geoPointForCurrentLocationInBackground {
-            (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
-                if error == nil {
-
-                    //Send current location to Parse
-                    PFUser.currentUser()!["location"] = geoPoint;
-                    PFUser.currentUser()!.saveInBackground()
-                    
-                    //print(geoPoint)
-                    //print(PFUser.currentUser()!.objectId!)
-                    
-                    // Create a query for places
-                    let userQuery = PFUser.query()
-                    
-                    // Interested in locations near user
-                    userQuery!.whereKey("location", nearGeoPoint: geoPoint!, withinKilometers: 0.05)
-                    
-                    // Exclude current user
-                    userQuery!.whereKey("objectId", notEqualTo:PFUser.currentUser()!.objectId!)
-                    
-                    // Get players who is active and unmatched in Player class
-                    userQuery!.includeKey("player");
-                    let playerQuery = PFQuery(className:"Player");
-                    playerQuery.whereKey("isActive",equalTo: true);
-                    playerQuery.whereKey("isMatched",equalTo: false);
-                    userQuery!.whereKey("player", matchesQuery: playerQuery)
-                    
-                    // Limit the query to 1 people
-                    userQuery!.limit = 1
-                    
-                    // Final list of objects
-                    userQuery!.findObjectsInBackgroundWithBlock {
-                        (let objects: [PFObject]?, error: NSError?) -> Void in
-                        self.targetLabel.text = ""
-                        if error == nil {
-                            let target = objects![0]
-                            print( (target["username"]) , "is your target")
-                            let targetMsg = String(target["username"]) + " is your target!"
-                            self.targetLabel.text = targetMsg
-
-                        } else {
-                            
-                            print("Error: \(error!) \(error!.userInfo)")
-                        }
-                    }
-            }
-            else{
-                print("\(error!) getGeoPointError")
-            }
-        }
-        
-        }
-        //end searchTarget()
-        searchTarget()
     }
-    
-    
-    
-    //Begin getActivePlayer "backup material"
-    func getActivePlayer(){
-        let query = PFUser.query()
-        query!.includeKey("player");
-        
-        // Get players who is active in Player
-        let playerActiveQuery = PFQuery(className:"Player");
-        playerActiveQuery.whereKey("isActive",equalTo: true);
-        query!.whereKey("player", matchesQuery: playerActiveQuery)
-        
-        
-        query!.findObjectsInBackgroundWithBlock {
-            (let objects: [PFObject]?, error: NSError?) -> Void in
-            
-            if error == nil {
-                
-                for object in objects! {
-                    print(object)
-                }
-                //                print(objects![0]["player"]["isActive"])
-                
-            } else {
-                // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
-            }
-        }
-    }
-    //End getActivePlayer
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    func searchPlayers(){
+        // Find active, unmatched player nearby
+        PFGeoPoint.geoPointForCurrentLocationInBackground {
+            (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
+            if error == nil {
+                //Send current location to Parse
+                PFUser.currentUser()!["location"] = geoPoint;
+                PFUser.currentUser()!.saveInBackground()
+                
+                //print(geoPoint)
+                //print(PFUser.currentUser()!.objectId!)
+                
+                // Create a query for places
+                let userQuery = PFUser.query()
+                
+                // Interested in locations near user
+                userQuery!.whereKey("location", nearGeoPoint: geoPoint!, withinKilometers: 0.05)
+                
+                // Exclude current user
+                userQuery!.whereKey("objectId", notEqualTo:PFUser.currentUser()!.objectId!)
+                
+                // Get players who is active and unmatched in Player class
+                userQuery!.includeKey("player");
+                let playerQuery = PFQuery(className:"Player");
+                playerQuery.whereKey("isActive",equalTo: true);
+                playerQuery.whereKey("isMatched",equalTo: false);
+                userQuery!.whereKey("player", matchesQuery: playerQuery)
+                
+                // Limit the query to 1 people
+                userQuery!.limit = 1
+                
+                // Final list of objects
+                userQuery!.findObjectsInBackgroundWithBlock {
+                    (let objects: [PFObject]?, error: NSError?) -> Void in
+                    self.targetLabel.text = "No target found"
+                    if error == nil {
+                        let target = objects![0]
+                        print( (target["username"]) , "is your target")
+                        let targetMsg = String(target["username"]) + " is your target!"
+                        let targetPlayer = target["player"]
+                        self.targetPlayerId = targetPlayer.objectId!!
+                        self.targetLabel.text = targetMsg
+                        self.assignTargets();
+                    } else {
+                        // Error finding target in query
+                        print("Error: \(error!)")
+                    }
+                }
             }
+            else{
+                print("findObject \(error)")
+            }
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -153,10 +136,10 @@ class ProfileViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
+        
         if segue.identifier == "logOut" {
-        PFUser.logOut()
+            PFUser.logOut()
         }
     }
-
+    
 }
