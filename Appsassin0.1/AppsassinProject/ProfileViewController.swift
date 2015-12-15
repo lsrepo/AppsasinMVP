@@ -17,11 +17,11 @@ class ProfileViewController: UIViewController {
     }
     
     func activateGameMode(){
-//        let currentUser = PFUser.currentUser()!
-//        print("Activating the game")
-//        currentUser["inKuggen"] = true;
-//        PFUser.currentUser()!.saveInBackground()
-//        print(PFUser.currentUser()!["inKuggen"])
+        //        let currentUser = PFUser.currentUser()!
+        //        print("Activating the game")
+        //        currentUser["inKuggen"] = true;
+        //        PFUser.currentUser()!.saveInBackground()
+        //        print(PFUser.currentUser()!["inKuggen"])
         // Find active, unmatched player nearby
         PFGeoPoint.geoPointForCurrentLocationInBackground {
             (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
@@ -60,7 +60,7 @@ class ProfileViewController: UIViewController {
                         print("Error: \(error!)")
                     }
                 }
-
+                
                 
             }
             else{
@@ -73,7 +73,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         
-       
+        
         
         func searchPlayers(){
         }
@@ -85,10 +85,10 @@ class ProfileViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
+        
         if segue.identifier == "logOut" {
-        PFUser.logOut()
+            PFUser.logOut()
         }
     }
-
+    
 }

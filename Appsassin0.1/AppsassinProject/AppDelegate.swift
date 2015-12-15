@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if application.applicationState != UIApplicationState.Background {
             // Track an app open here if we launch with a push, unless
-            // "content_available" was used to trigger a background push (introduced in iOS 7).
+            // "" was used to trigger a background push (introduced in iOS 7).
             // In that case, we skip tracking here to avoid double counting the app-open.
 
             let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
@@ -73,15 +73,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //
         //  Swift 1.2
         //
-        //        if application.respondsToSelector("registerUserNotificationSettings:") {
-        //            let userNotificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
-        //            let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
-        //            application.registerUserNotificationSettings(settings)
-        //            application.registerForRemoteNotifications()
-        //        } else {
-        //            let types = UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound
-        //            application.registerForRemoteNotificationTypes(types)
-        //        }
+//                if application.respondsToSelector("registerUserNotificationSettings:") {
+//                    let userNotificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+//                    let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
+//                    application.registerUserNotificationSettings(settings)
+//                    application.registerForRemoteNotifications()
+//                } else {
+//                    let types = UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound
+//                    application.registerForRemoteNotificationTypes(types)
+//                }
 
         //
         //  Swift 2.0
@@ -135,11 +135,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ///////////////////////////////////////////////////////////
     // Uncomment this method if you want to use Push Notifications with Background App Refresh
     ///////////////////////////////////////////////////////////
-    // func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-    //     if application.applicationState == UIApplicationState.Inactive {
-    //         PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
-    //     }
-    // }
+//     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+//         if application.applicationState == UIApplicationState.Inactive {
+//             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
+//         }
+//     }
 
     //--------------------------------------
     // MARK: Facebook SDK Integration
