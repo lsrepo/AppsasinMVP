@@ -12,6 +12,9 @@ import Parse
 
 class ProfileViewController: UIViewController {
     
+    @IBAction func reactivateAllButton(sender: AnyObject) {
+        self.reactivateAll();
+    }
     @IBAction func activateButton(sender: AnyObject) {
         self.activateGameMode();
     }
@@ -26,8 +29,17 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var targetLabel: UILabel!
     
-    let myPlayerId = PFUser.currentUser()!["player"].objectId!!
+    var myPlayerId = PFUser.currentUser()!["player"].objectId!!
+    var targetUserId:String = "";
+    //var targetUser = PFUser();
     var targetPlayerId:String = "";
+    
+    func reactivateAll(){
+        gameStateChanger(true, isMatched: false, playerId: "ng98K9gGyX")
+        gameStateChanger(true, isMatched: false, playerId: "g326VU11Do")
+        gameStateChanger(true, isMatched: false, playerId: "28r6nJ1769")
+        gameStateChanger(true, isMatched: false, playerId: "qbWwNYCi8j")
+    }
     
     func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
         
@@ -110,10 +122,13 @@ class ProfileViewController: UIViewController {
                     (let objects: [PFObject]?, error: NSError?) -> Void in
                     self.targetLabel.text = "No target found"
                     if error == nil {
+                        
                         let target = objects![0]
                         print( (target["username"]) , "is your target")
                         let targetMsg = String(target["username"]) + " is your target!"
                         let targetPlayer = target["player"]
+                        self.targetUserId = target.objectId!
+                        print("targetUserId is \(self.targetUserId)")
                         self.targetPlayerId = targetPlayer.objectId!!
                         self.targetLabel.text = targetMsg
                         self.assignTargets();
