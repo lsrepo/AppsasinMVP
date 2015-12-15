@@ -50,9 +50,9 @@ class LogInViewController: UIViewController {
             } else {
                 
                 print("Logged In")
-                
-                self.performSegueWithIdentifier("whatsup", sender: self)
                 self.registerSession();
+                self.performSegueWithIdentifier("whatsup", sender: self)
+               
             }
             
             
