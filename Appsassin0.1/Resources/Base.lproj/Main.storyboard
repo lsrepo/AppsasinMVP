@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="41" y="757"/>
         </scene>
-        <!--Game View Controller-->
+        <!--PhotoVC-->
         <scene sceneID="xXx-Zj-xaT">
             <objects>
-                <viewController id="Qen-uC-daf" customClass="GameViewController" customModule="Appsassin0_1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" title="PhotoVC" id="Qen-uC-daf" customClass="GameViewController" customModule="Appsassin0_1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Bf-qV-gtQ"/>
                         <viewControllerLayoutGuide type="bottom" id="WAn-y6-o6F"/>
@@ -345,12 +345,20 @@
                                     <action selector="searchPlayerButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="ked-pD-vKF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUf-oF-Ggo">
+                                <rect key="frame" x="190" y="364" width="219" height="30"/>
+                                <state key="normal" title="Activate and Unmatch Everyone"/>
+                                <connections>
+                                    <action selector="reactivateAllButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="daO-i0-mxf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="01e-2h-czR"/>
                             <constraint firstItem="smJ-bH-kl2" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="22f-1S-mY3"/>
                             <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="4Mm-51-doU"/>
+                            <constraint firstItem="cUf-oF-Ggo" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="5ef-RK-EEq"/>
                             <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="9IE-kv-aw6"/>
                             <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="D9h-Nk-LpS"/>
                             <constraint firstItem="AHw-cL-iTJ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="FdS-yT-dF8"/>

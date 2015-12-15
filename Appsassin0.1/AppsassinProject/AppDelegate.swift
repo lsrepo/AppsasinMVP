@@ -62,6 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
             let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")
             var noPushPayload = false;
+            // call this function manually when the app is launched due to a push notification. ​
             if let options = launchOptions {
                 noPushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil;
             }
@@ -124,12 +125,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("application:didFailToRegisterForRemoteNotificationsWithError: %@\n", error)
         }
     }
+    
+
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         PFPush.handlePush(userInfo)
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
+        
+        //Receiving push notification
     }
 
     ///////////////////////////////////////////////////////////
