@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
         self.activateGameMode();
     }
     
+
     @IBAction func deactivateButton(sender: AnyObject) {
         self.deactivateGameMode();
     }
@@ -45,6 +46,7 @@ class ProfileViewController: UIViewController {
         
     }
     
+
     func activateGameMode(){
         //        let currentUser = PFUser.currentUser()!
         //        print("Activating the game")
