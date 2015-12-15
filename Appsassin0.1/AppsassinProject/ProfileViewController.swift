@@ -16,6 +16,9 @@ class ProfileViewController: UIViewController {
         self.activateGameMode();
     }
     
+    @IBAction func searchPlayerButton(sender: AnyObject) {
+        self.searchPlayers();
+    }
 
     @IBAction func deactivateButton(sender: AnyObject) {
         self.deactivateGameMode();
@@ -24,17 +27,19 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var targetLabel: UILabel!
     
     let myPlayerId = PFUser.currentUser()!["player"].objectId!!
+    var targetPlayerId:String = "";
     
     func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
         
-        let mePlayerQuery = PFQuery(className:"Player")
-        mePlayerQuery.getObjectInBackgroundWithId(playerId) {
-            (mePlayer: PFObject?, error: NSError?) -> Void in
+        let playerQuery = PFQuery(className:"Player")
+        playerQuery.getObjectInBackgroundWithId(playerId) {
+            (playerObj: PFObject?, error: NSError?) -> Void in
             if error == nil  {
                 //print(mePlayer!)
-                mePlayer!["isActive"] = isActive;
-                mePlayer!["isMatched"] = isMatched;
-                mePlayer!.saveInBackground()
+                playerObj!["isActive"] = isActive;
+                playerObj!["isMatched"] = isMatched;
+                playerObj!.saveInBackground()
+                print("-\(playerObj)")
             } else {
                 print("\(error!) gameStateChangerError")
             }
@@ -46,13 +51,30 @@ class ProfileViewController: UIViewController {
         
     }
     
+    func assignTargets(){
+        print("now we try to assign")
+        print("myPlayerId is \(self.myPlayerId)")
+        print("targetPlayer is \(self.targetPlayerId)")
+        gameStateChanger(true, isMatched: true, playerId: self.myPlayerId)
+        gameStateChanger(true, isMatched: true, playerId: self.targetPlayerId)
+        print("Both Players are deactiveted")
+        
+        
+    }
 
     func activateGameMode(){
-        //        let currentUser = PFUser.currentUser()!
-        //        print("Activating the game")
-        //        currentUser["inKuggen"] = true;
-        //        PFUser.currentUser()!.saveInBackground()
-        //        print(PFUser.currentUser()!["inKuggen"])
+        gameStateChanger(true,isMatched: false,playerId: myPlayerId)
+        searchPlayers();
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+    func searchPlayers(){
         // Find active, unmatched player nearby
         PFGeoPoint.geoPointForCurrentLocationInBackground {
             (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
@@ -62,37 +84,44 @@ class ProfileViewController: UIViewController {
                 PFUser.currentUser()!.saveInBackground()
                 
                 //print(geoPoint)
-                print("current user id is \(PFUser.currentUser()!.objectId!)")
+                //print(PFUser.currentUser()!.objectId!)
                 
                 // Create a query for places
-                var query = PFUser.query()
+                let userQuery = PFUser.query()
                 
                 // Interested in locations near user
-                query!.whereKey("location", nearGeoPoint: geoPoint!, withinKilometers: 0.05)
+                userQuery!.whereKey("location", nearGeoPoint: geoPoint!, withinKilometers: 0.05)
                 
-                query!.whereKey("objectId", notEqualTo:PFUser.currentUser()!.objectId!)
+                // Exclude current user
+                userQuery!.whereKey("objectId", notEqualTo:PFUser.currentUser()!.objectId!)
+                
+                // Get players who is active and unmatched in Player class
+                userQuery!.includeKey("player");
+                let playerQuery = PFQuery(className:"Player");
+                playerQuery.whereKey("isActive",equalTo: true);
+                playerQuery.whereKey("isMatched",equalTo: false);
+                userQuery!.whereKey("player", matchesQuery: playerQuery)
                 
                 // Limit the query to 1 people
-                query!.limit = 1
+                userQuery!.limit = 1
+                
                 // Final list of objects
-                query?.findObjectsInBackgroundWithBlock{
-                    (objects: [PFObject]?, error: NSError?) -> Void in
-                    
+                userQuery!.findObjectsInBackgroundWithBlock {
+                    (let objects: [PFObject]?, error: NSError?) -> Void in
+                    self.targetLabel.text = "No target found"
                     if error == nil {
-                        print("found a target")
-                        // Do something with the found objects
-                        if let objects = objects {
-                            let target = objects[0]["player"]
-                            let targetPlayerId = target.objectId
-                            print("targetPlayerId is \(targetPlayerId!)")
-                        }
+                        let target = objects![0]
+                        print( (target["username"]) , "is your target")
+                        let targetMsg = String(target["username"]) + " is your target!"
+                        let targetPlayer = target["player"]
+                        self.targetPlayerId = targetPlayer.objectId!!
+                        self.targetLabel.text = targetMsg
+                        self.assignTargets();
                     } else {
                         // Error finding target in query
                         print("Error: \(error!)")
                     }
                 }
-                
-                
             }
             else{
                 print("findObject \(error)")
@@ -100,15 +129,6 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        
-        
-        func searchPlayers(){
-        }
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
