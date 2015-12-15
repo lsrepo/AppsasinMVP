@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //--------------------------------------
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // Customizing the tab bar
+        UITabBar.appearance().tintColor = UIColor.redColor()
+        
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
         Parse.enableLocalDatastore()
@@ -62,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
             let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")
             var noPushPayload = false;
+            // call this function manually when the app is launched due to a push notification. ​
             if let options = launchOptions {
                 noPushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil;
             }
@@ -124,12 +129,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("application:didFailToRegisterForRemoteNotificationsWithError: %@\n", error)
         }
     }
+    
+
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         PFPush.handlePush(userInfo)
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
+        
+        //Receiving push notification
     }
 
     ///////////////////////////////////////////////////////////
