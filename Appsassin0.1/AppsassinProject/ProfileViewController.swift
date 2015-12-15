@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
                 PFUser.currentUser()!.saveInBackground()
                 
                 //print(geoPoint)
-                print(PFUser.currentUser()!.objectId!)
+                print("current user id is \(PFUser.currentUser()!.objectId!)")
                 
                 // Create a query for places
                 var query = PFUser.query()
@@ -44,21 +44,27 @@ class ProfileViewController: UIViewController {
                 // Limit the query to 1 people
                 query!.limit = 1
                 // Final list of objects
-                do{
+                query?.findObjectsInBackgroundWithBlock{
+                    (objects: [PFObject]?, error: NSError?) -> Void in
                     
-                    let result = try query!.findObjects()
-                    print(result[0]["username"])
-                    
-                    
-                    
+                    if error == nil {
+                        print("found a target")
+                        // Do something with the found objects
+                        if let objects = objects {
+                            let target = objects[0]["player"]
+                            let targetPlayerId = target.objectId
+                            print("targetPlayerId is \(targetPlayerId!)")
+                        }
+                    } else {
+                        // Error finding target in query
+                        print("Error: \(error!)")
+                    }
                 }
-                catch{
-                    print(error)
-                }
+
                 
             }
             else{
-                print(error)
+                print("findObject \(error)")
             }
         }
     }
