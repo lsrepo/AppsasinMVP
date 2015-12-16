@@ -140,6 +140,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Receiving push notification
     }
+    
+    func clearBadges() {
+        let installation = PFInstallation.currentInstallation()
+        installation.badge = 0
+        installation.saveInBackgroundWithBlock { (success, error) -> Void in
+            if success {
+                print("cleared badges")
+                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+            }
+            else {
+                print("failed to clear badges")
+            }
+        }
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        clearBadges()
+    }
 
     ///////////////////////////////////////////////////////////
     // Uncomment this method if you want to use Push Notifications with Background App Refresh

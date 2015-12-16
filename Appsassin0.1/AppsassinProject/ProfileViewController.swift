@@ -90,7 +90,7 @@ class ProfileViewController: UIViewController {
         // Send push notification to query
         let push = PFPush()
         push.setQuery(pushQuery) // Set our Installation query
-        push.setMessage("You're now assigned to terminate  \(targetedName)")
+        push.setMessage("You're now assigned to terminate agent \(targetedName)    /M")
         push.sendPushInBackground()
     }
 
