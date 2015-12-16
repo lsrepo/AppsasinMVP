@@ -163,9 +163,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Uncomment this method if you want to use Push Notifications with Background App Refresh
     ///////////////////////////////////////////////////////////
 //     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+//        
 //         if application.applicationState == UIApplicationState.Inactive {
 //             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
 //         }
+//        print(userInfo["aps"]!["alert"])
+//        
+//        
+//        
 //     }
 
     //--------------------------------------
