@@ -1,0 +1,10 @@
+{
+  "alert" : "kbs86 is your new target.",
+  "sound": "radar.wav",
+  "p" : "vmRZXZ1Dvo" ,
+  "callback":
+    {
+      "type": 20
+    }
+
+}
