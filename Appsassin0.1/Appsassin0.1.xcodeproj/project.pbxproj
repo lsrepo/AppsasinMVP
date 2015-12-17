@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060D54D5D1438B1F3C762280 /* Pods_Appsassin0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61045CA8F1BA45BC66580E05 /* Pods_Appsassin0_1.framework */; };
 		27636BA21C22FB070063BFF2 /* catherine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9E1C22FB070063BFF2 /* catherine.jpg */; };
 		27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9F1C22FB070063BFF2 /* fanny.jpg */; };
 		27636BA41C22FB070063BFF2 /* kbs86.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636BA01C22FB070063BFF2 /* kbs86.jpg */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FBCC0BDCD7AB328E052B3F5 /* Pods-Appsassin0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appsassin0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Appsassin0.1/Pods-Appsassin0.1.release.xcconfig"; sourceTree = "<group>"; };
 		27636B9E1C22FB070063BFF2 /* catherine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = catherine.jpg; path = images/catherine.jpg; sourceTree = SOURCE_ROOT; };
 		27636B9F1C22FB070063BFF2 /* fanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fanny.jpg; path = images/fanny.jpg; sourceTree = SOURCE_ROOT; };
 		27636BA01C22FB070063BFF2 /* kbs86.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kbs86.jpg; path = images/kbs86.jpg; sourceTree = SOURCE_ROOT; };
@@ -47,6 +49,8 @@
 		27B26FA71C1D142500DF01A4 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		27D4ABF11C1D1C6900572B9E /* snipper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snipper.png; sourceTree = "<group>"; };
 		27E02B2A1C1D1EE700E351F5 /* snipper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snipper.png; sourceTree = "<group>"; };
+		61045CA8F1BA45BC66580E05 /* Pods_Appsassin0_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Appsassin0_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3E056AE689A77182B56E24 /* Pods-Appsassin0.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appsassin0.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Appsassin0.1/Pods-Appsassin0.1.debug.xcconfig"; sourceTree = "<group>"; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81BA81451A49DA1800E65899 /* Appsassin0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsassin0.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,7 @@
 				81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */,
 				279DBBFA1C23300500613F12 /* ParseUI.framework in Frameworks */,
 				81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */,
+				060D54D5D1438B1F3C762280 /* Pods_Appsassin0_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,15 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		787FEA6725E972255476E64C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E3E056AE689A77182B56E24 /* Pods-Appsassin0.1.debug.xcconfig */,
+				1FBCC0BDCD7AB328E052B3F5 /* Pods-Appsassin0.1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				81BA81471A49DA1800E65899 /* AppsassinProject */,
+				787FEA6725E972255476E64C /* Pods */,
+				D5557839CE31574BDB41554B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +199,14 @@
 			name = "System Frameworks";
 			sourceTree = "<group>";
 		};
+		D5557839CE31574BDB41554B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61045CA8F1BA45BC66580E05 /* Pods_Appsassin0_1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,10 +214,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "Appsassin0.1" */;
 			buildPhases = (
+				11D66F4842F624AB962F1905 /* Check Pods Manifest.lock */,
 				81BA81411A49DA1800E65899 /* Sources */,
 				81BA81421A49DA1800E65899 /* Frameworks */,
 				81BA81431A49DA1800E65899 /* Resources */,
 				81CC85E11A49F6D40076DE19 /* Upload Symbol Files */,
+				2784F2733D2EAF780AC09C7B /* Embed Pods Frameworks */,
+				437FB8B882F5DDD970E01FC6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +293,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		11D66F4842F624AB962F1905 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2784F2733D2EAF780AC09C7B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Appsassin0.1/Pods-Appsassin0.1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		437FB8B882F5DDD970E01FC6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Appsassin0.1/Pods-Appsassin0.1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		81CC85E11A49F6D40076DE19 /* Upload Symbol Files */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,6 +471,7 @@
 		};
 		81BA81651A49DA1800E65899 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E3E056AE689A77182B56E24 /* Pods-Appsassin0.1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -419,6 +492,7 @@
 		};
 		81BA81661A49DA1800E65899 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBCC0BDCD7AB328E052B3F5 /* Pods-Appsassin0.1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

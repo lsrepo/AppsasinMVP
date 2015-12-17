@@ -9,6 +9,7 @@
 
 import UIKit
 import Parse
+import SwiftyJSON
 
 
 // If you want to use any of the UI components, uncomment this line
