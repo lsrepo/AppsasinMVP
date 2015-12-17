@@ -379,7 +379,7 @@
         <!--Profile-->
         <scene sceneID="KAz-As-941">
             <objects>
-                <viewController id="AXI-xY-kqQ" customClass="ProfileViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="AXI-xY-kqQ" customClass="ProfileViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6jC-Po-CDo"/>
                         <viewControllerLayoutGuide type="bottom" id="r70-Mj-env"/>
