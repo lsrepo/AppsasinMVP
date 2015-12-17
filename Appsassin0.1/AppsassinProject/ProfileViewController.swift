@@ -116,7 +116,7 @@ class ProfileViewController: UIViewController {
         //you need to be logged in to do that
         //addImage();
         
-        loadImage();
+        //loadImage();
         
     }
     
@@ -291,6 +291,8 @@ class ProfileViewController: UIViewController {
         }
     }
     
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -303,5 +305,7 @@ class ProfileViewController: UIViewController {
             PFUser.logOut()
         }
     }
+    
+    
     
 }

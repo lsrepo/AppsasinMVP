@@ -8,8 +8,8 @@
 */
 
 import UIKit
-
 import Parse
+
 
 // If you want to use any of the UI components, uncomment this line
 // import ParseUI
@@ -21,7 +21,7 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     //--------------------------------------
     // MARK: - UIApplicationDelegate
     //--------------------------------------
@@ -100,7 +100,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
                     application.registerForRemoteNotificationTypes(types)
                 }
-
+        
+        print("hej")
+//        // Extract the notification data
+//        if let notificationPayload = launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey] as? NSDictionary {
+//            print("loading notification meta data")
+//            // Create a pointer to the Photo object
+//            let photoId = notificationPayload["p"] as? NSString
+//            print(" p is \(notificationPayload["p"])")
+//            print(" photoId is \(photoId)")
+//            let targetPhoto = PFObject(withoutDataWithClassName: "Photo", objectId: "dfd")
+//            
+//            // Fetch photo object
+//            targetPhoto.fetchIfNeededInBackgroundWithBlock {
+//                (object: PFObject?, error:NSError?) -> Void in
+//                if error == nil {
+//                    // Show photo view controller
+//                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let GVC: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("GameViewController")  as UIViewController
+//                    //PhotoVC(photo: object);
+//                    GVC.presentViewController(GVC, animated: true, completion: nil);
+//                    
+//                }
+//            }
+//        }
         return true
     }
 
@@ -133,12 +156,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        PFPush.handlePush(userInfo)
+//        PFPush.handlePush(userInfo)
+//        print(userInfo)
+//        print("this is 1st")
+
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
-        
         //Receiving push notification
+        let notif = JSON(userInfo) // SwiftyJSON required
+        
     }
     
     func clearBadges() {
@@ -167,7 +194,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //         if application.applicationState == UIApplicationState.Inactive {
 //             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
 //         }
+//        PFPush.handlePush(userInfo)
 //        print(userInfo["aps"]!["alert"])
+//        print("When Screen is OFF! it pops up")
 //        
 //        
 //        
