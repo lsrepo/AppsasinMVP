@@ -153,36 +153,34 @@ class ProfileViewController: UIViewController {
                     (photo, error) -> Void in
                     if error == nil {
                         print("loading alert")
-                        //self.profileIV.image =
+//                        self.profileIV.image =
                         
-//                        let alert = UIAlertController(title: "You have a message", message: "Message from ", preferredStyle: UIAlertControllerStyle.Alert)
-//                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-//                            (action) -> Void in
-//                            
-//                            let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
-//                            backgroundView.backgroundColor = UIColor.blackColor()
-//                            backgroundView.alpha = 0.8
-//                            backgroundView.tag = 10
-//                            backgroundView.contentMode = UIViewContentMode.ScaleAspectFit
-//                            self.view.addSubview(backgroundView)
-//                            
-//                            
-//                            let displayedImage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
-//                            displayedImage.image = photo
-//                            displayedImage.tag = 10
-//                            displayedImage.contentMode = UIViewContentMode.ScaleAspectFit
-//                            
-//                            self.view.addSubview(displayedImage);
-//
-//                            _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "hideMessage", userInfo: nil, repeats: false)
-//
-//                            }
-//                            )
-//                        )
-                        //self.presentViewController(alert, animated: true, completion: nil)
-                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let GVC: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("GameViewController")  as UIViewController
-                        self.presentViewController(GVC, animated: true, completion: nil)
+                        let alert = UIAlertController(title: "You have a message", message: "Message from ", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                            (action) -> Void in
+                            
+                            
+                            let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+                            backgroundView.backgroundColor = UIColor.blackColor()
+                            backgroundView.alpha = 0.8
+                            backgroundView.tag = 10
+                            backgroundView.contentMode = UIViewContentMode.ScaleAspectFit
+                            self.view.addSubview(backgroundView)
+                            
+                            let displayedImage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+                            displayedImage.image = photo
+                            displayedImage.tag = 10
+                            displayedImage.contentMode = UIViewContentMode.ScaleAspectFit
+                            
+                            self.view.addSubview(displayedImage);
+
+                            _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "hideMessage", userInfo: nil, repeats: false)
+
+                            }
+                            )
+                        )
+                        self.presentViewController(alert, animated: true, completion: nil)
+                        
                         
                     }
                     else {
@@ -201,15 +199,13 @@ class ProfileViewController: UIViewController {
     func hideMessage() {
         
         for subview in self.view.subviews {
-            
             if subview.tag == 10 {
-                
                 subview.removeFromSuperview()
-                
             }
-            
-            
         }
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let GVC: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("GameViewController")  as UIViewController
+        self.presentViewController(GVC, animated: true, completion: nil)
         
     }
 
