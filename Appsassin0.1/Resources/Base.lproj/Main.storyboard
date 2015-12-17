@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Finished View Controller-->
         <scene sceneID="yfK-cH-53J">
             <objects>
-                <viewController id="17e-K6-TUo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="17e-K6-TUo" customClass="FinishedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XM6-Cw-Qyy"/>
                         <viewControllerLayoutGuide type="bottom" id="lj7-TI-O7q"/>
@@ -118,7 +118,7 @@
         <!--PhotoVC-->
         <scene sceneID="xXx-Zj-xaT">
             <objects>
-                <viewController storyboardIdentifier="GameViewController" title="PhotoVC" id="Qen-uC-daf" customClass="GameViewController" customModule="Appsassin0_1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gvc" title="PhotoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qen-uC-daf" customClass="GameViewController" customModule="Appsassin0_1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Bf-qV-gtQ"/>
                         <viewControllerLayoutGuide type="bottom" id="WAn-y6-o6F"/>

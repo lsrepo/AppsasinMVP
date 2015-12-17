@@ -166,6 +166,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //Receiving push notification
         let notif = JSON(userInfo) // SwiftyJSON required
+        print(notif)
+        if notif["callback"]["type"] != nil{
+            NSNotificationCenter.defaultCenter().postNotificationName("myNotif", object: nil, userInfo: userInfo as [NSObject : AnyObject])
+            // This is where you read your JSON to know what kind of notification you received, for example :
+            
+        }
         
     }
     
