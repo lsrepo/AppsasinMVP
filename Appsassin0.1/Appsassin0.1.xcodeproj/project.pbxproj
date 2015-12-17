@@ -13,6 +13,7 @@
 		27636BA51C22FB070063BFF2 /* pak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636BA11C22FB070063BFF2 /* pak.jpg */; };
 		278342851C1D191900348B74 /* AVCamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278342831C1D191900348B74 /* AVCamPreviewView.swift */; };
 		278342861C1D191900348B74 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278342841C1D191900348B74 /* CameraViewController.swift */; };
+		279DBBFA1C23300500613F12 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81801A49E10C00E65899 /* ParseUI.framework */; };
 		27B26FA21C1CFD5400DF01A4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */; };
 		27B26FA41C1D0A4D00DF01A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */; };
 		27B26FA61C1D0E9700DF01A4 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B26FA51C1D0E9700DF01A4 /* LogInViewController.swift */; };
@@ -71,6 +72,7 @@
 				81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */,
 				81BA81771A49E0D500E65899 /* libsqlite3.dylib in Frameworks */,
 				81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */,
+				279DBBFA1C23300500613F12 /* ParseUI.framework in Frameworks */,
 				81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "687dcc9d-1a9a-4b08-8dae-1df657055d4b";
@@ -366,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "687dcc9d-1a9a-4b08-8dae-1df657055d4b";
 				SDKROOT = iphoneos9.2;

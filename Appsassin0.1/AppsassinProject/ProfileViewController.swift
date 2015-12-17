@@ -116,11 +116,105 @@ class ProfileViewController: UIViewController {
         //you need to be logged in to do that
         //addImage();
         
-       // loadImage();
+        loadImage();
+        
+    }
+    
+//    func loadImage() {
+//        print("loading image")
+//        let query = PFQuery(className:"Player")
+//        query.whereKey("objectId", equalTo:"g326VU11Do")
+//        let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
+//            if error == nil {
+//                print(imgObj)
+//                print("loading result")
+//                let imageView = PFImageView()
+//                imageView.image = UIImage(named: "...") // placeholder image
+//                imageView.file = imgObj!["image"] as? PFFile // remote image
+//                
+//                imageView.loadInBackground()
+//               
+//            }
+//        }
+//    }
+    func hej(){
+        print("hejhej")
+    }
+    func loadImage() {
+        print("loading image")
+        var query = PFQuery(className:"Player")
+        query.whereKey("objectId", equalTo:"28r6nJ1769")
+        let images = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
+            if error == nil {
+                print(imgObj)
+                print("loading result")
+                let img = imgObj!["image"]
+                var imageView: PFImageView = PFImageView()
+                imageView.file = img as! PFFile
+                imageView.loadInBackground({
+                    (photo, error) -> Void in
+                    if error == nil {
+                        print("loading alert")
+                        
+                        let alert = UIAlertController(title: "You have a message", message: "Message from ", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                            (action) -> Void in
+                            
+                            let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+                            backgroundView.backgroundColor = UIColor.blackColor()
+                            backgroundView.alpha = 0.8
+                            backgroundView.tag = 10
+                            backgroundView.contentMode = UIViewContentMode.ScaleAspectFit
+                            self.view.addSubview(backgroundView)
+                            
+                            
+                            let displayedImage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+                            displayedImage.image = photo
+                            displayedImage.tag = 10
+                            displayedImage.contentMode = UIViewContentMode.ScaleAspectFit
+                            self.view.addSubview(displayedImage);
+                            
+                            //imgObj!.deleteInBackground();
+                            
+                           
+                            _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "hideMessage", userInfo: nil, repeats: false)
+                            
+                            //selector can be Selector("hideMessage")
+                            }
+                            )
+                        )
+                        self.presentViewController(alert, animated: true, completion: nil)
+                        
+                    }
+                    else {
+                        print(error)
+                    }
+                    
+                    }
+                )
+                
+            }
+        }
+    }
+
+
+    
+    func hideMessage() {
+        
+        for subview in self.view.subviews {
+            
+            if subview.tag == 10 {
+                
+                subview.removeFromSuperview()
+                
+            }
+            
+            
+        }
         
     }
 
-        
+    
     
 
     
