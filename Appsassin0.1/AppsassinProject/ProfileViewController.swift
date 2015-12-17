@@ -9,9 +9,13 @@
 
 import UIKit
 import Parse
+import ParseUI
+
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var profileIV: UIImageView!
+   
     @IBAction func reactivateAllButton(sender: AnyObject) {
         self.reactivateAll();
     }
@@ -108,10 +112,34 @@ class ProfileViewController: UIViewController {
         //get targer's installation id, put it in PFinstallationQuery
         
         
-       
         
+        //you need to be logged in to do that
+        //addImage();
+        
+       // loadImage();
+        
+    }
 
         
+    
+
+    
+    func addImage(){
+        let image = UIImage(named: "pak.jpg")
+        let imageData = UIImageJPEGRepresentation(image!, 0.9)
+        let imageFile = PFFile(name:"q.jpg", data:imageData!)
+        
+        var query = PFQuery(className:"Player")
+        query.getObjectInBackgroundWithId("IZhi8dmPYn") {
+            (playerObj: PFObject?, error: NSError?) -> Void in
+            if error == nil && playerObj != nil {
+                print(playerObj)
+                playerObj!["image"] = imageFile
+                playerObj!.saveInBackground()
+            } else {
+                print(error)
+            }
+        }
     }
     
     func searchPlayers(){

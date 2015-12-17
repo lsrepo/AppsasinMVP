@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27636BA21C22FB070063BFF2 /* catherine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9E1C22FB070063BFF2 /* catherine.jpg */; };
+		27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9F1C22FB070063BFF2 /* fanny.jpg */; };
+		27636BA41C22FB070063BFF2 /* kbs86.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636BA01C22FB070063BFF2 /* kbs86.jpg */; };
+		27636BA51C22FB070063BFF2 /* pak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636BA11C22FB070063BFF2 /* pak.jpg */; };
 		278342851C1D191900348B74 /* AVCamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278342831C1D191900348B74 /* AVCamPreviewView.swift */; };
 		278342861C1D191900348B74 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278342841C1D191900348B74 /* CameraViewController.swift */; };
 		27B26FA21C1CFD5400DF01A4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27636B9E1C22FB070063BFF2 /* catherine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = catherine.jpg; path = images/catherine.jpg; sourceTree = SOURCE_ROOT; };
+		27636B9F1C22FB070063BFF2 /* fanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fanny.jpg; path = images/fanny.jpg; sourceTree = SOURCE_ROOT; };
+		27636BA01C22FB070063BFF2 /* kbs86.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kbs86.jpg; path = images/kbs86.jpg; sourceTree = SOURCE_ROOT; };
+		27636BA11C22FB070063BFF2 /* pak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pak.jpg; path = images/pak.jpg; sourceTree = SOURCE_ROOT; };
 		278342831C1D191900348B74 /* AVCamPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCamPreviewView.swift; sourceTree = "<group>"; };
 		278342841C1D191900348B74 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -70,6 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27636B9D1C22FAD60063BFF2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				27636B9E1C22FB070063BFF2 /* catherine.jpg */,
+				27636B9F1C22FB070063BFF2 /* fanny.jpg */,
+				27636BA01C22FB070063BFF2 /* kbs86.jpg */,
+				27636BA11C22FB070063BFF2 /* pak.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +118,7 @@
 		81BA81471A49DA1800E65899 /* AppsassinProject */ = {
 			isa = PBXGroup;
 			children = (
+				27636B9D1C22FAD60063BFF2 /* images */,
 				27D4ABF11C1D1C6900572B9E /* snipper.png */,
 				81BA81461A49DA1800E65899 /* Products */,
 				278342831C1D191900348B74 /* AVCamPreviewView.swift */,
@@ -210,11 +230,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */,
 				27B26FA21C1CFD5400DF01A4 /* Launch Screen.storyboard in Resources */,
 				979ED5071C2056FB0032997F /* Images.xcassets in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				27D4ABF21C1D1C6900572B9E /* snipper.png in Resources */,
 				27E02B2B1C1D1EE700E351F5 /* snipper.png in Resources */,
+				27636BA51C22FB070063BFF2 /* pak.jpg in Resources */,
+				27636BA41C22FB070063BFF2 /* kbs86.jpg in Resources */,
+				27636BA21C22FB070063BFF2 /* catherine.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
