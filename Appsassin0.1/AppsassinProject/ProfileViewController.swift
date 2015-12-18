@@ -353,7 +353,9 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+
+       // self.view.backgroundColor = UIColor.whiteColor()
+
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "catchIt:", name: "myNotif", object: nil)
     }
     
