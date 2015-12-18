@@ -10,6 +10,12 @@ import UIKit
 
 class LeaderboardTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var killsLabel: UILabel!
+    @IBOutlet weak var deathsLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
