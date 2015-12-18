@@ -106,7 +106,8 @@ class LogInViewController: UIViewController {
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-    
+        nsa.tmp = "Justin Bieber"
+        print("baby.tmp is \(nsa.tmp)")
     
         }
     //

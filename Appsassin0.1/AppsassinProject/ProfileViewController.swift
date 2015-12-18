@@ -11,6 +11,21 @@ import UIKit
 import Parse
 import ParseUI
 
+class mySingleton {
+    //this is a singleton
+    static let sharedInstance = mySingleton()
+    
+    //declare variables here
+    var tmp:String = ""
+    
+    
+    //declare functions here
+    private init() {
+        
+    } //This prevents others from using the default '()' initializer for this class.
+}
+
+let nsa = mySingleton()
 
 class ProfileViewController: UIViewController {
     
@@ -33,11 +48,16 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var targetLabel: UILabel!
     
-    var myPlayerId = PFUser.currentUser()!["player"].objectId!!
+    var myPlayerId:String = ""
     var targetUserId:String = "";
     var targetPlayerId:String = "";
-    var targetUsername:String=""
-    var myUsername = PFUser.currentUser()!["username"] as! String
+    var targetUsername:String = ""
+    var myUsername:String = ""
+    
+    func varInit(){
+        myUsername = PFUser.currentUser()!["username"] as! String
+        myPlayerId = PFUser.currentUser()!["player"].objectId!!
+    }
     
     func reactivateAll(){
         gameStateChanger(true, isMatched: false, playerId: "ng98K9gGyX")
@@ -357,6 +377,10 @@ class ProfileViewController: UIViewController {
        // self.view.backgroundColor = UIColor.whiteColor()
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "catchIt:", name: "myNotif", object: nil)
+        
+        varInit();
+        
+        print("baby.tmp is \(nsa.tmp)")
     }
     
     
