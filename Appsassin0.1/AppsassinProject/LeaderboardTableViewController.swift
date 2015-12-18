@@ -18,7 +18,6 @@ class LeaderboardTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
         let query = PFQuery(className:"Player")
         //query.whereKey("playerName", equalTo:"Sean Plott")
         query.findObjectsInBackgroundWithBlock {
@@ -26,22 +25,15 @@ class LeaderboardTableViewController: UITableViewController {
             
             if error == nil {
                 self.playerData = objects!
-                print(self.playerData)
+                print("There is data for \(self.playerData.count) players on the leaderboard")
+                print(objects)
                 
-                // The find succeeded.
-//                print("Successfully retrieved \(objects!.count) scores.")
-                // Do something with the found objects
-//                if let objects = objects {
-//                    for object in objects {
-//                        print(object["score"])
-//
-//                    }
-//                }
             } else {
                 // Log details of the failure
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,34 +48,24 @@ class LeaderboardTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return playerData.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("leaderboardCell", forIndexPath: indexPath) //as! LeaderboardTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("leaderboardCell", forIndexPath: indexPath) as! LeaderboardTableViewCell
         
-        //FOR PROTOTYPING:
-        
-        
-        
-        
-        //FOR IMPLEMENTATION:
-        
-        //let entry = playerData.users[indexPath.row]
-        
-        //change name and name label to what it is...
-        
+        let entry = playerData[indexPath.row]
+
         //cell.placeLabel.text = entry.place (displays "1" or "2" etc depending on the place. this can be stored in the leaderboard data array or maybe calculated locally?)
-        //cell.nameLabel.text = entry.name
-        //cell.killsLabel.text = entry.kills
-        //cell.deathsLabel.text = entry.deaths
-        //cell.scoreLabel.text = entry.score
-        
         //Photo???
+        
+        cell.nameLabel!.text = entry["username"] as! String
+        cell.killsLabel.text = "\(entry["kills"])"
+        cell.deathsLabel.text = "\(entry["deaths"])"
+        cell.scoreLabel.text = "\(entry["score"])"
 
         return cell
     }
-
 
     /*
     // MARK: - Navigation
