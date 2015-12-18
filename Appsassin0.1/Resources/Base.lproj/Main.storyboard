@@ -36,6 +36,33 @@
             </objects>
             <point key="canvasLocation" x="775" y="1297"/>
         </scene>
+        <!--Rules-->
+        <scene sceneID="fgz-jw-oIf">
+            <objects>
+                <viewController title="Rules" id="9E1-I3-Mjt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="43L-Ch-pJH"/>
+                        <viewControllerLayoutGuide type="bottom" id="YWS-Zl-Hv8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lm0-S0-ff7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rules and stuff!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xo-Rj-0MR">
+                                <rect key="frame" x="240" y="254" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rules" id="Oq3-Xw-VsS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3N-eE-5F7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1411" y="-2292"/>
+        </scene>
         <!--Leaderboard-->
         <scene sceneID="MQN-0g-eDN">
             <objects>
@@ -109,6 +136,7 @@
                         <segue destination="AXI-xY-kqQ" kind="relationship" relationship="viewControllers" id="KeF-pd-Nxe"/>
                         <segue destination="Cz2-nV-9fK" kind="relationship" relationship="viewControllers" id="Hoq-dx-OvY"/>
                         <segue destination="5L4-BE-aRX" kind="relationship" relationship="viewControllers" id="fu0-Vh-c53"/>
+                        <segue destination="9E1-I3-Mjt" kind="relationship" relationship="viewControllers" id="uaU-3b-vph"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34y-g5-r0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -437,7 +465,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jg5-gn-U8T">
-                                <rect key="frame" x="20" y="52" width="134" height="131"/>
+                                <rect key="frame" x="62" y="52" width="134" height="131"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
