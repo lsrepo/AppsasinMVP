@@ -92,6 +92,7 @@ class ProfileViewController: UIViewController {
         pushQuery!.whereKey("player", matchesQuery: playerQuery)
         
         // Send push notification to query
+        print("using PFpush in pushAssignment")
         let push = PFPush()
         let data = [
             "alert" : "You're now assigned to terminate agent \(targetedName)    /M",
@@ -319,11 +320,11 @@ class ProfileViewController: UIViewController {
         var notif = JSON(userInfo.valueForKey("userInfo")!)
         // Check nil and do redirect here, for example:
         if notif["type"] == "A"{
-            
+
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
             self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
-            
+        
 //            dispatch_async(dispatch_get_main_queue(), {
 //                self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
 //
@@ -352,7 +353,7 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.view.backgroundColor = UIColor.blackColor()
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "catchIt:", name: "myNotif", object: nil)
     }
     
