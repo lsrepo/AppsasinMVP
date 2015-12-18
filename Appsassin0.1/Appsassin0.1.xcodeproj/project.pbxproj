@@ -33,6 +33,8 @@
 		81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81781A49E0DB00E65899 /* AudioToolbox.framework */; };
 		81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */; };
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
+		971027041C2439D200470C15 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971027031C2439D200470C15 /* LeaderboardTableViewController.swift */; };
+		971027061C243B2100470C15 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971027051C243B2100470C15 /* LeaderboardTableViewCell.swift */; };
 		979ED5071C2056FB0032997F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979ED5061C2056FB0032997F /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		971027031C2439D200470C15 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		971027051C243B2100470C15 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		979ED5061C2056FB0032997F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +173,8 @@
 				27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */,
 				27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				971027051C243B2100470C15 /* LeaderboardTableViewCell.swift */,
+				971027031C2439D200470C15 /* LeaderboardTableViewController.swift */,
 				27B2D5D81C23643C00BF194E /* FinishedViewController.swift */,
 				27B26FA71C1D142500DF01A4 /* GameViewController.swift */,
 				27B26FA51C1D0E9700DF01A4 /* LogInViewController.swift */,
@@ -370,7 +376,9 @@
 				27B26FA61C1D0E9700DF01A4 /* LogInViewController.swift in Sources */,
 				27B26FA41C1D0A4D00DF01A4 /* ProfileViewController.swift in Sources */,
 				27B2D5D91C23643C00BF194E /* FinishedViewController.swift in Sources */,
+				971027061C243B2100470C15 /* LeaderboardTableViewCell.swift in Sources */,
 				279DBBFE1C235EFE00613F12 /* SwiftyJSON.swift in Sources */,
+				971027041C2439D200470C15 /* LeaderboardTableViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				278342861C1D191900348B74 /* CameraViewController.swift in Sources */,
 				278342851C1D191900348B74 /* AVCamPreviewView.swift in Sources */,
