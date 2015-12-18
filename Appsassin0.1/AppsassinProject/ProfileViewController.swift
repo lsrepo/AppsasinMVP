@@ -48,11 +48,11 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var targetLabel: UILabel!
     
-    var myPlayerId:String = ""
+    var myPlayerId:String = "";
     var targetUserId:String = "";
     var targetPlayerId:String = "";
-    var targetUsername:String = ""
-    var myUsername:String = ""
+    var targetUsername:String = "";
+    var myUsername:String = "";
     
     func varInit(){
         myUsername = PFUser.currentUser()!["username"] as! String
@@ -378,9 +378,8 @@ class ProfileViewController: UIViewController {
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "catchIt:", name: "myNotif", object: nil)
         
+        //Initialize data that's connected to the userCurrent method
         varInit();
-        
-        print("baby.tmp is \(nsa.tmp)")
     }
     
     
