@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Jw-hO-NlU" id="Jfw-k5-NEm">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -106,19 +106,19 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
-                        <segue destination="AXI-xY-kqQ" kind="relationship" relationship="viewControllers" id="B1i-wr-snw"/>
+                        <segue destination="AXI-xY-kqQ" kind="relationship" relationship="viewControllers" id="KeF-pd-Nxe"/>
                         <segue destination="Cz2-nV-9fK" kind="relationship" relationship="viewControllers" id="Hoq-dx-OvY"/>
                         <segue destination="5L4-BE-aRX" kind="relationship" relationship="viewControllers" id="fu0-Vh-c53"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34y-g5-r0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="-701"/>
+            <point key="canvasLocation" x="559" y="-701"/>
         </scene>
         <!--PhotoVC-->
         <scene sceneID="xXx-Zj-xaT">
             <objects>
-                <viewController storyboardIdentifier="gvc" title="PhotoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qen-uC-daf" customClass="GameViewController" customModule="Appsassin0_1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" title="PhotoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qen-uC-daf" customClass="GameViewController" customModule="Appsassin0_1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Bf-qV-gtQ"/>
                         <viewControllerLayoutGuide type="bottom" id="WAn-y6-o6F"/>
@@ -284,12 +284,12 @@
                     <connections>
                         <outlet property="errorLabel" destination="eUQ-pI-nWb" id="AgX-jq-hEn"/>
                         <outlet property="username" destination="hYH-vS-zNX" id="10A-It-fwG"/>
-                        <segue destination="4GM-dR-u6i" kind="show" identifier="whatsup" id="c8e-tk-uKk"/>
+                        <segue destination="4GM-dR-u6i" kind="showDetail" identifier="whatsup" action="showViewController:sender:" id="c8e-tk-uKk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbq-9Z-ILB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93" y="-701"/>
+            <point key="canvasLocation" x="-205" y="-721"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NUt-ro-KPz">
@@ -399,7 +399,7 @@
                                 <rect key="frame" x="255" y="89" width="91" height="30"/>
                                 <state key="normal" title="Camera View"/>
                                 <connections>
-                                    <segue destination="Qen-uC-daf" kind="presentation" id="rMh-tf-Q9J"/>
+                                    <segue destination="Qen-uC-daf" kind="presentation" identifier="toGameBegin" id="rMh-tf-Q9J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKd-jS-xrn">
@@ -463,7 +463,8 @@
                             <constraint firstItem="g6Y-ah-dqD" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="wPQ-EC-trf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile_active" id="mfY-in-ntD"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="3In-Z7-Gbw"/>
+                    <navigationItem key="navigationItem" id="Vqa-KC-6xW"/>
                     <connections>
                         <outlet property="profileIV" destination="jg5-gn-U8T" id="cYP-7w-v7i"/>
                         <outlet property="targetLabel" destination="AHw-cL-iTJ" id="miG-Ct-kyH"/>
@@ -471,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFy-N5-yc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1411" y="-267"/>
+            <point key="canvasLocation" x="1423" y="-259"/>
         </scene>
         <!--Cam View Controller-->
         <scene sceneID="yf2-Rq-1Wp">
@@ -568,12 +569,11 @@
     </scenes>
     <resources>
         <image name="Logo" width="22" height="22"/>
-        <image name="Profile_active" width="96" height="98"/>
         <image name="TextInputField" width="178" height="44"/>
         <image name="TextInputField-Active" width="178" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lQJ-7C-399"/>
+        <segue reference="c8e-tk-uKk"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.78823529411764703" green="0.039215686274509803" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
 </document>

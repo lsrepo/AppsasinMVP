@@ -1,10 +1,6 @@
 {
-  "alert" : "kbs86 is your new target.",
+  "alert": "Johan is your new target.",
   "sound": "radar.wav",
-  "p" : "vmRZXZ1Dvo" ,
-  "callback":
-    {
-      "type": 20
-    }
-
+  "p": "vmRZXZ1Dvo",
+  "type": "A"
 }

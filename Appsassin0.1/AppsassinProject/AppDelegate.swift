@@ -157,7 +157,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-//        PFPush.handlePush(userInfo)
+ //      PFPush.handlePush(userInfo)
 //        print(userInfo)
 //        print("this is 1st")
 
@@ -167,7 +167,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Receiving push notification
         let notif = JSON(userInfo) // SwiftyJSON required
         print(notif)
-        if notif["callback"]["type"] != nil{
+        if notif["type"] != nil{
             NSNotificationCenter.defaultCenter().postNotificationName("myNotif", object: nil, userInfo: userInfo as [NSObject : AnyObject])
             // This is where you read your JSON to know what kind of notification you received, for example :
             

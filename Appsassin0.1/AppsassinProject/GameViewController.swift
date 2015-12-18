@@ -28,18 +28,18 @@ class GameViewController: UIViewController {
     
     //Need to have this in some VC to receive push
     func catchIt(userInfo: NSNotification){
-        var not = JSON(userInfo.valueForKey("userInfo")!)
-        // Check nil and do redirect here, for example:
-        if not["callback"]["type"].int == 10{
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let gvc: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("gvc") as UIViewController
-            self.presentViewController(gvc, animated: true, completion: nil)
-        }
-        else if not["callback"]["type"].int == 20{
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let fvc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("fvc") as UIViewController
-            self.presentViewController(fvc, animated: true, completion: nil)
-        }
+//        var notif = JSON(userInfo.valueForKey("userInfo")!)
+//        // Check nil and do redirect here, for example:
+//        if notif["type"] == "A"{
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let gvc: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("gvc") as UIViewController
+//            self.presentViewController(gvc, animated: true, completion: nil)
+//        }
+//        else if notif["type"] == "B"{
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let fvc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("fvc") as UIViewController
+//            self.presentViewController(fvc, animated: true, completion: nil)
+//        }
     }
     
     override func viewWillDisappear(animated: Bool) {

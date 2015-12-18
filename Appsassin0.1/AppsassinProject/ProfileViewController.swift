@@ -93,9 +93,22 @@ class ProfileViewController: UIViewController {
         
         // Send push notification to query
         let push = PFPush()
+        let data = [
+            "alert" : "You're now assigned to terminate agent \(targetedName)    /M",
+            "badge" : "Increment",
+            "sound" : "radar.wav",
+            "type" : "A",
+            "targetPlayerId" : targetedPlayerId
+        ]
+        push.setData(data as [NSObject : AnyObject])
         push.setQuery(pushQuery) // Set our Installation query
-        push.setMessage("You're now assigned to terminate agent \(targetedName)    /M")
+//        push.setMessage("You're now assigned to terminate agent \(targetedName)    /M")
         push.sendPushInBackground()
+        
+        
+        
+
+
     }
 
     func activateGameMode(){
@@ -106,6 +119,14 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        //this works
+//        let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
+//        
+//        self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
+        
+        
+        
         //Send push notifications to the two assigned players
         
         //find target user's userobject
@@ -295,14 +316,31 @@ class ProfileViewController: UIViewController {
     
     //Need to have this in some VC to receive push
     func catchIt(userInfo: NSNotification){
-        var not = JSON(userInfo.valueForKey("userInfo")!)
+        var notif = JSON(userInfo.valueForKey("userInfo")!)
         // Check nil and do redirect here, for example:
-        if not["callback"]["type"].int == 10{
+        if notif["type"] == "A"{
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let gvc: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("gvc") as UIViewController
-            self.presentViewController(gvc, animated: true, completion: nil)
+            let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
+            self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
+            
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
+//
+//            })
+            
+//            let gvc: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("gvc") as UIViewController
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.navigationController!.pushViewController(gvc, animated: true)
+//            })
+//           print("self is\(self)")
+//            self.navigationController!.presentViewController(gvc, animated: true, completion: nil)
+             //performSegueWithIdentifier("toGameBegin", sender: self)
+        
+            //self.showViewController(gvc, sender: self)
+           
         }
-        else if not["callback"]["type"].int == 20{
+        else if notif["type"] == "B"{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let fvc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("fvc") as UIViewController
             self.presentViewController(fvc, animated: true, completion: nil)

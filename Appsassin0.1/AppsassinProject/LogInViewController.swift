@@ -63,6 +63,7 @@ class LogInViewController: UIViewController {
                 print("Logged In")
                 self.registerSession();
                 self.performSegueWithIdentifier("whatsup", sender: self)
+
                
             }
             
