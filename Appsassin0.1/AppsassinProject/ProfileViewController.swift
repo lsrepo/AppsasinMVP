@@ -16,56 +16,15 @@ class mySingleton {
     static let sharedInstance = mySingleton()
     
     //declare variables here
-    var tmp:String = ""
-    
-    
-    //declare functions here
-    private init() {
-        
-    } //This prevents others from using the default '()' initializer for this class.
-}
-
-let nsa = mySingleton()
-
-class ProfileViewController: UIViewController {
-    
-    @IBOutlet weak var profileIV: UIImageView!
-   
-    @IBAction func reactivateAllButton(sender: AnyObject) {
-        self.reactivateAll();
-    }
-    @IBAction func activateButton(sender: AnyObject) {
-        self.activateGameMode();
-    }
-    
-    @IBAction func searchPlayerButton(sender: AnyObject) {
-        self.searchPlayers();
-    }
-
-    @IBAction func deactivateButton(sender: AnyObject) {
-        self.deactivateGameMode();
-    }
-    
-    @IBOutlet weak var targetLabel: UILabel!
-    
+    var tmp:String = "";
     var myPlayerId:String = "";
     var targetUserId:String = "";
     var targetPlayerId:String = "";
     var targetUsername:String = "";
     var myUsername:String = "";
     
-    func varInit(){
-        myUsername = PFUser.currentUser()!["username"] as! String
-        myPlayerId = PFUser.currentUser()!["player"].objectId!!
-    }
     
-    func reactivateAll(){
-        gameStateChanger(true, isMatched: false, playerId: "ng98K9gGyX")
-        gameStateChanger(true, isMatched: false, playerId: "g326VU11Do")
-        gameStateChanger(true, isMatched: false, playerId: "28r6nJ1769")
-        gameStateChanger(true, isMatched: false, playerId: "qbWwNYCi8j")
-    }
-    
+    //declare functions here
     func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
         
         let playerQuery = PFQuery(className:"Player")
@@ -83,22 +42,72 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    func reactivateAll(){
+        nsa.gameStateChanger(true, isMatched: false, playerId: "ng98K9gGyX")
+        nsa.gameStateChanger(true, isMatched: false, playerId: "g326VU11Do")
+        nsa.gameStateChanger(true, isMatched: false, playerId: "28r6nJ1769")
+        nsa.gameStateChanger(true, isMatched: false, playerId: "qbWwNYCi8j")
+    }
+    
+
+    
+    private init() {
+        
+    } //This prevents others from using the default '()' initializer for this class.
+}
+
+let nsa = mySingleton()
+
+class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var profileIV: UIImageView!
+   
+    @IBAction func reactivateAllButton(sender: AnyObject) {
+        nsa.reactivateAll();
+    }
+    @IBAction func activateButton(sender: AnyObject) {
+        self.activateGameMode();
+    }
+    
+    @IBAction func searchPlayerButton(sender: AnyObject) {
+        self.searchPlayers();
+    }
+
+    @IBAction func deactivateButton(sender: AnyObject) {
+        self.deactivateGameMode();
+    }
+    
+    @IBOutlet weak var targetLabel: UILabel!
+    
+   
+    
+    func varInit(){
+        nsa.myUsername = PFUser.currentUser()!["username"] as! String
+        nsa.myPlayerId = PFUser.currentUser()!["player"].objectId!!
+    }
+    
     func deactivateGameMode(){
-        gameStateChanger(false,isMatched: false,playerId: myPlayerId)
-        self.targetPlayerId="";
-        print("targetPlayerId is now empty: \(targetPlayerId)")
+        nsa.gameStateChanger(false,isMatched: false,playerId: nsa.myPlayerId)
+        nsa.targetPlayerId="";
+        print("targetPlayerId is now empty: \(nsa.targetPlayerId)")
+        
+    }
+    
+    func activateGameMode(){
+        nsa.gameStateChanger(true,isMatched: false,playerId: nsa.myPlayerId)
+        self.searchPlayers();
         
     }
     
     func assignTargets(){
         print("now we try to assign")
-        print("myPlayerId is \(self.myPlayerId)")
-        print("targetPlayer is \(self.targetPlayerId)")
-        gameStateChanger(true, isMatched: true, playerId: self.myPlayerId)
-        gameStateChanger(true, isMatched: true, playerId: self.targetPlayerId)
+        print("myPlayerId is \(nsa.myPlayerId)")
+        print("targetPlayer is \(nsa.targetPlayerId)")
+        nsa.gameStateChanger(true, isMatched: true, playerId: nsa.myPlayerId)
+        nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
         print("Both Players are deactiveted")
-        pushAssignments(self.myPlayerId, targetedName: self.targetUsername)
-        pushAssignments(self.targetPlayerId, targetedName: self.myUsername)
+        pushAssignments(nsa.myPlayerId, targetedName: nsa.targetUsername)
+        pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername)
 
     }
     
@@ -132,11 +141,7 @@ class ProfileViewController: UIViewController {
 
     }
 
-    func activateGameMode(){
-        gameStateChanger(true,isMatched: false,playerId: myPlayerId)
-        searchPlayers();
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -312,13 +317,13 @@ class ProfileViewController: UIViewController {
                         
                         let target = objects![0]
                         print("target[\"username\"]: \(target["username"])")
-                        self.targetUsername = target["username"] as! String
-                        print( " \(self.targetUsername) is your target")
-                        let targetMsg = String(self.targetUsername) + " is your target!"
+                        nsa.targetUsername = target["username"] as! String
+                        print( " \(nsa.targetUsername) is your target")
+                        let targetMsg = String(nsa.targetUsername) + " is your target!"
                         let targetPlayer = target["player"]
-                        self.targetUserId = target.objectId!
-                        print("targetUserId is \(self.targetUserId)")
-                        self.targetPlayerId = targetPlayer.objectId!!
+                        nsa.targetUserId = target.objectId!
+                        print("targetUserId is \(nsa.targetUserId)")
+                        nsa.targetPlayerId = targetPlayer.objectId!!
                         self.targetLabel.text = targetMsg
                         self.assignTargets();
                     } else {
@@ -382,10 +387,7 @@ class ProfileViewController: UIViewController {
         varInit();
     }
     
-    
-    
 //End of Push
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
