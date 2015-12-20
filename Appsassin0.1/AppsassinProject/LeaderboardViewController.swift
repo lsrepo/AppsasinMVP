@@ -64,6 +64,7 @@ class LeaderboardViewController: PFQueryTableViewController {
         cell!.killsLabel.text = "\(object!["kills"])"
         cell!.deathLabel.text = "\(object!["deaths"])"
         cell!.scoreLabel.text = "\(object!["score"])"
+        cell!.placeLabel.text = "\(indexPath.row + 1)"
         
         
         // Default tableview with images

@@ -36,6 +36,7 @@
 		971027041C2439D200470C15 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971027031C2439D200470C15 /* LeaderboardTableViewController.swift */; };
 		979E10441C26EE160083D76E /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10431C26EE160083D76E /* LeaderboardViewController.swift */; };
 		979E10461C26F1130083D76E /* LeaderboardPFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */; };
+		979E10481C273BFA0083D76E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10471C273BFA0083D76E /* NavigationController.swift */; };
 		979ED5071C2056FB0032997F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979ED5061C2056FB0032997F /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		971027031C2439D200470C15 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 		979E10431C26EE160083D76E /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPFTableViewCell.swift; sourceTree = "<group>"; };
+		979E10471C273BFA0083D76E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		979ED5061C2056FB0032997F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 				27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */,
 				27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				979E10471C273BFA0083D76E /* NavigationController.swift */,
 				979E10431C26EE160083D76E /* LeaderboardViewController.swift */,
 				979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */,
 				971027031C2439D200470C15 /* LeaderboardTableViewController.swift */,
@@ -383,6 +386,7 @@
 				971027041C2439D200470C15 /* LeaderboardTableViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				278342861C1D191900348B74 /* CameraViewController.swift in Sources */,
+				979E10481C273BFA0083D76E /* NavigationController.swift in Sources */,
 				278342851C1D191900348B74 /* AVCamPreviewView.swift in Sources */,
 				979E10441C26EE160083D76E /* LeaderboardViewController.swift in Sources */,
 				979E10461C26F1130083D76E /* LeaderboardPFTableViewCell.swift in Sources */,
