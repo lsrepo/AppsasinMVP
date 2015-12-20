@@ -123,12 +123,20 @@ class ProfileViewController: UIViewController {
         // Send push notification to query
         print("using PFpush in pushAssignment")
         let push = PFPush()
+        
+        var playerId:String = ""
+        if (targetedPlayerId == nsa.myPlayerId){
+            playerId = nsa.targetPlayerId
+        }
+        else{
+            playerId = nsa.myPlayerId
+        }
         let data = [
             "alert" : "You're now assigned to terminate agent \(targetedName)    /M",
             "badge" : "Increment",
             "sound" : "radar.wav",
             "type" : "A",
-            "targetPlayerId" : targetedPlayerId
+            "playerId" : playerId
         ]
         push.setData(data as [NSObject : AnyObject])
         push.setQuery(pushQuery) // Set our Installation query
@@ -344,9 +352,11 @@ class ProfileViewController: UIViewController {
     func catchIt(userInfo: NSNotification){
         var notif = JSON(userInfo.valueForKey("userInfo")!)
         // Check nil and do redirect here, for example:
-        if notif["type"] == "A"{
-
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if notif["type"] == "A" {
+            //print("//ProfileVC:notif is \(notif)")
+            nsa.targetPlayerId = String(notif["playerId"])
+            print("//GameVC: targetPlayerId is \( nsa.targetPlayerId)")
+            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
             self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
         

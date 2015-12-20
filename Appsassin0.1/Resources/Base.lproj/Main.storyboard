@@ -66,7 +66,6 @@
         <!--Leaderboard-->
         <scene sceneID="MQN-0g-eDN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v3u-WB-gYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Cz2-nV-9fK" customClass="LeaderboardTableViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pIA-ir-wn2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -121,6 +120,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Leaderboard" id="nqZ-xv-BQl"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3u-WB-gYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1411" y="-1619"/>
         </scene>
@@ -175,10 +175,10 @@
             </objects>
             <point key="canvasLocation" x="559" y="-701"/>
         </scene>
-        <!--PhotoVC-->
+        <!--GameVC-->
         <scene sceneID="xXx-Zj-xaT">
             <objects>
-                <viewController storyboardIdentifier="GameViewController" title="PhotoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qen-uC-daf" customClass="GameViewController" customModule="Appsassin0_1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" title="GameVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qen-uC-daf" customClass="GameViewController" customModule="Appsassin0_1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Bf-qV-gtQ"/>
                         <viewControllerLayoutGuide type="bottom" id="WAn-y6-o6F"/>
@@ -193,7 +193,7 @@
                                 <color key="textColor" red="0.93592522905759168" green="0.93592522905759168" blue="0.93592522905759168" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C56-KW-GW2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C56-KW-GW2" customClass="PFImageView">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Jjj-dR-d2x"/>
@@ -218,6 +218,9 @@
                             <constraint firstItem="C56-KW-GW2" firstAttribute="centerX" secondItem="yEX-kQ-VU9" secondAttribute="centerX" id="k2I-bU-aea"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profilePic" destination="C56-KW-GW2" id="0VN-Hz-1Bi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grU-CZ-rxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -496,9 +499,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jg5-gn-U8T">
-                                <rect key="frame" x="62" y="52" width="134" height="131"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -526,7 +526,6 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="3In-Z7-Gbw"/>
                     <navigationItem key="navigationItem" id="Vqa-KC-6xW"/>
                     <connections>
-                        <outlet property="profileIV" destination="jg5-gn-U8T" id="cYP-7w-v7i"/>
                         <outlet property="targetLabel" destination="AHw-cL-iTJ" id="miG-Ct-kyH"/>
                     </connections>
                 </viewController>
