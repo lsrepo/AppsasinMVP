@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1411" y="-2292"/>
         </scene>
-        <!--Leaderboard-->
+        <!--Item-->
         <scene sceneID="MQN-0g-eDN">
             <objects>
-                <tableViewController id="Cz2-nV-9fK" customClass="LeaderboardTableViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="I" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cz2-nV-9fK" customClass="LeaderboardTableViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="pIA-ir-wn2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,11 +165,12 @@
                             <outlet property="delegate" destination="Cz2-nV-9fK" id="jPj-Sd-29V"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Leaderboard" id="nqZ-xv-BQl"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="Cma-dK-0mn"/>
+                    <navigationItem key="navigationItem" id="cmd-In-Chc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3u-WB-gYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1411" y="-1619"/>
+            <point key="canvasLocation" x="1411" y="-1603"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Dqb-HG-DLf">
@@ -206,16 +207,16 @@
         <!--Tab Bar Controller-->
         <scene sceneID="LbA-YX-ZU2">
             <objects>
-                <tabBarController id="4GM-dR-u6i" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4GM-dR-u6i" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="X5E-fO-mue">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
                         <segue destination="AXI-xY-kqQ" kind="relationship" relationship="viewControllers" id="KeF-pd-Nxe"/>
-                        <segue destination="Cz2-nV-9fK" kind="relationship" relationship="viewControllers" id="Hoq-dx-OvY"/>
                         <segue destination="5L4-BE-aRX" kind="relationship" relationship="viewControllers" id="fu0-Vh-c53"/>
                         <segue destination="9E1-I3-Mjt" kind="relationship" relationship="viewControllers" id="uaU-3b-vph"/>
+                        <segue destination="Cz2-nV-9fK" kind="relationship" relationship="viewControllers" id="D1I-gL-HTT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34y-g5-r0A" userLabel="First Responder" sceneMemberID="firstResponder"/>

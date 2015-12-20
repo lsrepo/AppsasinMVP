@@ -12,8 +12,11 @@ class FinishedViewController: UIViewController {
 
     @IBAction func moveOnButton(sender: UIButton) {
         print("running navigation")
-        let LeaderboardTableViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LeaderboardTableViewController") as! UITableViewController
-        self.presentViewController(LeaderboardTableViewController, animated: true, completion: nil)
+        let preViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarViewController") as! UITabBarController
+        
+        preViewController.selectedIndex = 3;
+        
+        self.presentViewController(preViewController, animated: true, completion: nil)
         
     }
     @IBAction func moveToLeaderboardButton(sender: AnyObject) {
