@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4GM-dR-u6i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gKe-uV-D7o">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -74,19 +74,19 @@
             </objects>
             <point key="canvasLocation" x="1411" y="-2292"/>
         </scene>
-        <!--Item-->
+        <!--Leaderboard-->
         <scene sceneID="MQN-0g-eDN">
             <objects>
-                <tableViewController storyboardIdentifier="I" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cz2-nV-9fK" customClass="LeaderboardTableViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LeaderboardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cz2-nV-9fK" customClass="LeaderboardViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="pIA-ir-wn2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leaderboardCell" rowHeight="100" id="3Jw-hO-NlU" customClass="LeaderboardTableViewCell" customModule="Appsassin0_1" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leaderboardPFCell" rowHeight="100" id="3Jw-hO-NlU" customClass="LeaderboardPFTableViewCell" customModule="Appsassin0_1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Jw-hO-NlU" id="Jfw-k5-NEm">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="3Jw-hO-NlU" id="Jfw-k5-NEm">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -138,6 +138,9 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OxF-L4-Dd1" customClass="PFImageView">
+                                            <rect key="frame" x="14" y="16" width="65" height="67"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="zAr-d1-6Mk" firstAttribute="centerY" secondItem="Jfw-k5-NEm" secondAttribute="centerY" id="D4e-ta-m1A"/>
@@ -153,10 +156,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="deathsLabel" destination="uHH-tn-9yx" id="ENN-2n-uZM"/>
-                                    <outlet property="killsLabel" destination="zAr-d1-6Mk" id="pTq-Da-z37"/>
-                                    <outlet property="nameLabel" destination="6dr-dz-FQr" id="Dig-O0-6W3"/>
-                                    <outlet property="scoreLabel" destination="jS5-ho-FJk" id="Yhv-hV-5fl"/>
+                                    <outlet property="avatar" destination="OxF-L4-Dd1" id="zAo-br-mee"/>
+                                    <outlet property="deathLabel" destination="uHH-tn-9yx" id="4D0-TZ-JnT"/>
+                                    <outlet property="killsLabel" destination="zAr-d1-6Mk" id="Mtk-vY-s3e"/>
+                                    <outlet property="nameLabel" destination="6dr-dz-FQr" id="2WF-Kf-eOV"/>
+                                    <outlet property="scoreLabel" destination="jS5-ho-FJk" id="VUc-5F-sjk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -165,8 +169,10 @@
                             <outlet property="delegate" destination="Cz2-nV-9fK" id="jPj-Sd-29V"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Cma-dK-0mn"/>
-                    <navigationItem key="navigationItem" id="cmd-In-Chc"/>
+                    <tabBarItem key="tabBarItem" title="Leaderboard" id="nqZ-xv-BQl"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="placeholderImage" value="Logo"/>
+                    </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3u-WB-gYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,9 +220,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="AXI-xY-kqQ" kind="relationship" relationship="viewControllers" id="KeF-pd-Nxe"/>
-                        <segue destination="5L4-BE-aRX" kind="relationship" relationship="viewControllers" id="fu0-Vh-c53"/>
                         <segue destination="9E1-I3-Mjt" kind="relationship" relationship="viewControllers" id="uaU-3b-vph"/>
                         <segue destination="Cz2-nV-9fK" kind="relationship" relationship="viewControllers" id="D1I-gL-HTT"/>
+                        <segue destination="5L4-BE-aRX" kind="relationship" relationship="viewControllers" id="Zoe-tF-hgc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34y-g5-r0A" userLabel="First Responder" sceneMemberID="firstResponder"/>

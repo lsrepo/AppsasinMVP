@@ -14,7 +14,7 @@ class FinishedViewController: UIViewController {
         print("running navigation")
         let preViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarViewController") as! UITabBarController
         
-        preViewController.selectedIndex = 3;
+        preViewController.selectedIndex = 2;
         
         self.presentViewController(preViewController, animated: true, completion: nil)
         
