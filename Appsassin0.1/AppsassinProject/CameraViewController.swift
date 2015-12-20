@@ -39,9 +39,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
     var lockInterfaceRotation: Bool = false
     
     @IBOutlet weak var previewView: AVCamPreviewView!
-    @IBOutlet weak var recordButton: UIButton!
+    
     @IBOutlet weak var snapButton: UIButton!
-    @IBOutlet weak var cameraButton: UIButton!
+   
     
 
 
@@ -264,17 +264,17 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
             dispatch_async(dispatch_get_main_queue(), {
                 
                 if isRecording {
-                    self.recordButton.titleLabel!.text = "Stop"
-                    self.recordButton.enabled = true
+//                    self.recordButton.titleLabel!.text = "Stop"
+//                    self.recordButton.enabled = true
 //                    self.snapButton.enabled = false
-                    self.cameraButton.enabled = false
+                    //self.cameraButton.enabled = false
                     
                 }else{
 //                    self.snapButton.enabled = true
 
-                    self.recordButton.titleLabel!.text = "Record"
-                    self.recordButton.enabled = true
-                    self.cameraButton.enabled = true
+//                    self.recordButton.titleLabel!.text = "Record"
+//                    self.recordButton.enabled = true
+                    //self.cameraButton.enabled = true
                     
                 }
                 
@@ -446,7 +446,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
     
     @IBAction func toggleMovieRecord(sender: AnyObject) {
         
-        self.recordButton.enabled = false
+        //self.recordButton.enabled = false
         
         dispatch_async(self.sessionQueue, {
             if !self.movieFileOutput!.recording{
@@ -494,12 +494,22 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
                 if error == nil {
                     let data:NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
                     let image:UIImage = UIImage( data: data)!
+
                     
                     let libaray:ALAssetsLibrary = ALAssetsLibrary()
                     let orientation: ALAssetOrientation = ALAssetOrientation(rawValue: image.imageOrientation.rawValue)!
+                    
                     libaray.writeImageToSavedPhotosAlbum(image.CGImage, orientation: orientation, completionBlock: nil)
                     
+                    
                     print("save to album")
+                    nsa.cameraImageFromMe = image;
+                    
+                    
+                    print("save image to nsa")
+                    let FinishedViewController = self.storyboard!.instantiateViewControllerWithIdentifier("FinishedViewController") as UIViewController
+                    self.presentViewController(FinishedViewController, animated: true, completion: nil)
+                  
 
                     
                     
@@ -520,8 +530,8 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
         
         print("change camera")
         
-        self.cameraButton.enabled = false
-        self.recordButton.enabled = false
+        //self.cameraButton.enabled = false
+        //self.recordButton.enabled = false
         self.snapButton.enabled = false
         
         dispatch_async(self.sessionQueue, {
@@ -578,9 +588,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 
             
             dispatch_async(dispatch_get_main_queue(), {
-                self.recordButton.enabled = true
+                //self.recordButton.enabled = true
                 self.snapButton.enabled = true
-                self.cameraButton.enabled = true
+                //self.cameraButton.enabled = true
             })
             
         })

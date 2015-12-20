@@ -10,7 +10,7 @@ class LogInViewController: UIViewController {
         let installation = PFInstallation.currentInstallation()
         installation["user"] = PFUser.currentUser()
         installation["player"] = PFUser.currentUser()!["player"]
-        print("installation is set to \(installation["player"])");
+        print("//From Login:Installation is set to \(installation["player"])");
         installation.saveInBackground()
         
        
@@ -89,7 +89,7 @@ class LogInViewController: UIViewController {
             
             self.performSegueWithIdentifier("whatsup", sender: self)
             self.registerSession();
-            print("already logged in")
+            print("//From Login:Already logged in")
         }
         
     }
@@ -106,7 +106,7 @@ class LogInViewController: UIViewController {
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-    
+        
     
         }
     //

@@ -7,9 +7,32 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class GameViewController: UIViewController {
-
+    
+    @IBOutlet weak var profilePic: PFImageView!
+    
+        func loadImage() {
+            
+            let query = PFQuery(className:"Player")
+            query.whereKey("objectId", equalTo:nsa.targetPlayerId)
+            let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
+                if error == nil {
+                    print(imgObj)
+                    print("//GameView:Loading image")
+                    //let imageView = PFImageView()
+                    self.profilePic.image = UIImage(named: "...") // placeholder image
+                    self.profilePic.file = imgObj!["image"] as? PFFile // remote image
+                    self.profilePic.loadInBackground()
+                    
+                    //self.profilePic = imageView
+    
+                }
+            }
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +41,7 @@ class GameViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
        self.view.backgroundColor = UIColor.blackColor()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "catchIt:", name: "myNotif", object: nil)
+        loadImage();
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,29 +49,11 @@ class GameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //Need to have this in some VC to receive push
-    func catchIt(userInfo: NSNotification){
-//        var notif = JSON(userInfo.valueForKey("userInfo")!)
-//        // Check nil and do redirect here, for example:
-//        if notif["type"] == "A"{
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let gvc: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("gvc") as UIViewController
-//            self.presentViewController(gvc, animated: true, completion: nil)
-//        }
-//        else if notif["type"] == "B"{
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let fvc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("fvc") as UIViewController
-//            self.presentViewController(fvc, animated: true, completion: nil)
-//        }
-    }
+   
     
-    override func viewWillDisappear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
+  
     
-//    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//    let GVC: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("GameViewController")  as UIViewController
-//    self.presentViewController(GVC, animated: true, completion: nil)
+
     /*
     // MARK: - Navigation
 
