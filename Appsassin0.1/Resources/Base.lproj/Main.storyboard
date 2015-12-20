@@ -167,7 +167,7 @@
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45.5" id="ZCb-Ma-TPS"/>
                                                 <constraint firstAttribute="width" constant="30" id="gxb-eu-O4m"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
