@@ -10,6 +10,26 @@ import UIKit
 
 class FinishedViewController: UIViewController {
 
+    @IBAction func moveOnButton(sender: UIButton) {
+        print("running navigation")
+        let preViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarViewController") as! UITabBarController
+        
+        preViewController.selectedIndex = 2;
+        
+        self.presentViewController(preViewController, animated: true, completion: nil)
+        
+    }
+    @IBAction func moveToLeaderboardButton(sender: AnyObject) {
+        
+        print("running navigation")
+        
+//        let LeaderboardTableViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LeaderboardTableViewController") as UIViewController
+//        self.presentViewController(LeaderboardTableViewController, animated: true, completion: nil)
+    }
+   
+    @IBOutlet weak var finishedImageView: UIImageView!
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +39,17 @@ class FinishedViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.finishedImageView.image = nsa.cameraImageFromMe
+            //nsa.cameraImageFromMe
+        
+        
+//        self.profilePic.image = UIImage(named: "...") // placeholder image
+//        self.profilePic.file = imgObj!["image"] as? PFFile // remote image
+//        self.profilePic.loadInBackground()
+        
     }
     
 
