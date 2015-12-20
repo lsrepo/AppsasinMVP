@@ -17,20 +17,8 @@ class LeaderboardViewController: PFQueryTableViewController {
         
         // The className to query on
         self.parseClassName = "Player"
-        
-        // The key of the PFObject to display in the label of the default cell style
-        self.textKey = "text"
-        
-        // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
-        self.imageKey = "image"
-        
-        // Whether the built-in pull-to-refresh is enabled
         self.pullToRefreshEnabled = true
-        
-        // Whether the built-in pagination is enabled
         self.paginationEnabled = false
-        
-        // The number of objects to show per page
         self.objectsPerPage = 25
     }
     
@@ -76,6 +64,7 @@ class LeaderboardViewController: PFQueryTableViewController {
         cell!.killsLabel.text = "\(object!["kills"])"
         cell!.deathLabel.text = "\(object!["deaths"])"
         cell!.scoreLabel.text = "\(object!["score"])"
+        cell!.placeLabel.text = "\(indexPath.row + 1)"
         
         
         // Default tableview with images

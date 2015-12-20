@@ -36,6 +36,9 @@
 		971027041C2439D200470C15 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971027031C2439D200470C15 /* LeaderboardTableViewController.swift */; };
 		979E10441C26EE160083D76E /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10431C26EE160083D76E /* LeaderboardViewController.swift */; };
 		979E10461C26F1130083D76E /* LeaderboardPFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */; };
+		979E10481C273BFA0083D76E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10471C273BFA0083D76E /* NavigationController.swift */; };
+		979E104A1C275A8A0083D76E /* Fonts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E10491C275A8A0083D76E /* Fonts.xcassets */; };
+		979E104C1C275AA90083D76E /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 979E104B1C275AA90083D76E /* Pacifico.ttf */; };
 		979ED5071C2056FB0032997F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979ED5061C2056FB0032997F /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +78,9 @@
 		971027031C2439D200470C15 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 		979E10431C26EE160083D76E /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPFTableViewCell.swift; sourceTree = "<group>"; };
+		979E10471C273BFA0083D76E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		979E10491C275A8A0083D76E /* Fonts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Fonts.xcassets; path = ../AppsassinProject/Fonts.xcassets; sourceTree = "<group>"; };
+		979E104B1C275AA90083D76E /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		979ED5061C2056FB0032997F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,8 @@
 			children = (
 				814C3AC91B69877600E307BB /* Info.plist */,
 				979ED5061C2056FB0032997F /* Images.xcassets */,
+				979E10491C275A8A0083D76E /* Fonts.xcassets */,
+				979E104B1C275AA90083D76E /* Pacifico.ttf */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -175,6 +183,7 @@
 				27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */,
 				27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				979E10471C273BFA0083D76E /* NavigationController.swift */,
 				979E10431C26EE160083D76E /* LeaderboardViewController.swift */,
 				979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */,
 				971027031C2439D200470C15 /* LeaderboardTableViewController.swift */,
@@ -295,10 +304,12 @@
 			files = (
 				27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */,
 				27B2D5DB1C236EB100BF194E /* radar.wav in Resources */,
+				979E104C1C275AA90083D76E /* Pacifico.ttf in Resources */,
 				27B26FA21C1CFD5400DF01A4 /* Launch Screen.storyboard in Resources */,
 				979ED5071C2056FB0032997F /* Images.xcassets in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				27D4ABF21C1D1C6900572B9E /* snipper.png in Resources */,
+				979E104A1C275A8A0083D76E /* Fonts.xcassets in Resources */,
 				27E02B2B1C1D1EE700E351F5 /* snipper.png in Resources */,
 				27636BA51C22FB070063BFF2 /* pak.jpg in Resources */,
 				27636BA41C22FB070063BFF2 /* kbs86.jpg in Resources */,
@@ -383,6 +394,7 @@
 				971027041C2439D200470C15 /* LeaderboardTableViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				278342861C1D191900348B74 /* CameraViewController.swift in Sources */,
+				979E10481C273BFA0083D76E /* NavigationController.swift in Sources */,
 				278342851C1D191900348B74 /* AVCamPreviewView.swift in Sources */,
 				979E10441C26EE160083D76E /* LeaderboardViewController.swift in Sources */,
 				979E10461C26F1130083D76E /* LeaderboardPFTableViewCell.swift in Sources */,
