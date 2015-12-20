@@ -39,9 +39,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
     var lockInterfaceRotation: Bool = false
     
     @IBOutlet weak var previewView: AVCamPreviewView!
-    //@IBOutlet weak var recordButton: UIButton!
+    
     @IBOutlet weak var snapButton: UIButton!
-   // @IBOutlet weak var cameraButton: UIButton!
+   
     
 
 
@@ -494,12 +494,22 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
                 if error == nil {
                     let data:NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
                     let image:UIImage = UIImage( data: data)!
+
                     
                     let libaray:ALAssetsLibrary = ALAssetsLibrary()
                     let orientation: ALAssetOrientation = ALAssetOrientation(rawValue: image.imageOrientation.rawValue)!
+                    
                     libaray.writeImageToSavedPhotosAlbum(image.CGImage, orientation: orientation, completionBlock: nil)
                     
+                    
                     print("save to album")
+                    nsa.cameraImageFromMe = image;
+                    
+                    
+                    print("save image to nsa")
+                    let FinishedViewController = self.storyboard!.instantiateViewControllerWithIdentifier("FinishedViewController") as UIViewController
+                    self.presentViewController(FinishedViewController, animated: true, completion: nil)
+                  
 
                     
                     

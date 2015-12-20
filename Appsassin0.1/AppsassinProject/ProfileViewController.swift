@@ -22,6 +22,7 @@ class mySingleton {
     var targetPlayerId:String = "";
     var targetUsername:String = "";
     var myUsername:String = "";
+    var cameraImageFromMe:UIImage = UIImage()
     
     
     //declare functions here

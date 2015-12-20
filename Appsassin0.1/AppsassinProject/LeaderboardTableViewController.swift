@@ -59,7 +59,7 @@ class LeaderboardTableViewController: UITableViewController {
         //cell.placeLabel.text = entry.place (displays "1" or "2" etc depending on the place. this can be stored in the leaderboard data array or maybe calculated locally?)
         //Photo???
         
-        cell.nameLabel!.text = entry["username"] as! String
+        cell.nameLabel!.text = "\(entry["username"])"
         cell.killsLabel.text = "\(entry["kills"])"
         cell.deathsLabel.text = "\(entry["deaths"])"
         cell.scoreLabel.text = "\(entry["score"])"
