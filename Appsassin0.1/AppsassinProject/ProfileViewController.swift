@@ -136,7 +136,7 @@ class ProfileViewController: UIViewController {
         
         
         //you need to be logged in to do that
-        //addImage();
+        addImage();
         
         //loadImage();
         
@@ -236,9 +236,9 @@ class ProfileViewController: UIViewController {
 
     
     func addImage(){
-        let image = UIImage(named: "pak.jpg")
+        let image = UIImage(named: "kbs86.jpg")
         let imageData = UIImageJPEGRepresentation(image!, 0.9)
-        let imageFile = PFFile(name:"q.jpg", data:imageData!)
+        let imageFile = PFFile(name:"kbs86.jpg", data:imageData!)
         
         var query = PFQuery(className:"Player")
         query.getObjectInBackgroundWithId("IZhi8dmPYn") {
