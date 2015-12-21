@@ -85,6 +85,15 @@ class LogInViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
+        for family: String in UIFont.familyNames()
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNamesForFamilyName(family)
+            {
+                print("== \(names)")
+            }
+        }
+        
         if PFUser.currentUser()?.username != nil {
             
             self.performSegueWithIdentifier("whatsup", sender: self)
