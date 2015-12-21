@@ -7,9 +7,32 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class GameViewController: UIViewController {
-
+    
+    @IBOutlet weak var profilePic: PFImageView!
+    
+        func loadImage() {
+            
+            let query = PFQuery(className:"Player")
+            query.whereKey("objectId", equalTo:nsa.targetPlayerId)
+            let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
+                if error == nil {
+                    print(imgObj)
+                    print("//GameView:Loading image")
+                    //let imageView = PFImageView()
+                    self.profilePic.image = UIImage(named: "...") // placeholder image
+                    self.profilePic.file = imgObj!["image"] as? PFFile // remote image
+                    self.profilePic.loadInBackground()
+                    
+                    //self.profilePic = imageView
+    
+                }
+            }
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +41,7 @@ class GameViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
        self.view.backgroundColor = UIColor.blackColor()
-       
+        loadImage();
     }
     
     override func didReceiveMemoryWarning() {

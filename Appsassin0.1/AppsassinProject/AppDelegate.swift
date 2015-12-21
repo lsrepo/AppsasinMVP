@@ -29,9 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        // Customizing the tab bar
-        UITabBar.appearance().tintColor = UIColor.redColor()
-        
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
         Parse.enableLocalDatastore()
@@ -102,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     application.registerForRemoteNotificationTypes(types)
                 }
         
-        print("hej")
+       
 //        // Extract the notification data
 //        if let notificationPayload = launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey] as? NSDictionary {
 //            print("loading notification meta data")
@@ -139,7 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         PFPush.subscribeToChannelInBackground("") { (succeeded: Bool, error: NSError?) in
             if succeeded {
-                print("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.\n");
+                //print("ParseStarterProject successfully subscribed to push notifications on the broadcast channel.\n");
             } else {
                 print("ParseStarterProject failed to subscribe to push notifications on the broadcast channel with error = %@.\n", error)
             }
@@ -179,7 +176,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         installation.badge = 0
         installation.saveInBackgroundWithBlock { (success, error) -> Void in
             if success {
-                print("cleared badges")
+                //print("cleared badges")
                 UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             }
             else {
