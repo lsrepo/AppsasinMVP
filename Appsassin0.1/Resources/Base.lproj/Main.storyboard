@@ -66,7 +66,6 @@
         <!--Leaderboard-->
         <scene sceneID="MQN-0g-eDN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v3u-WB-gYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Cz2-nV-9fK" customClass="LeaderboardTableViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pIA-ir-wn2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -121,6 +120,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Leaderboard" id="nqZ-xv-BQl"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3u-WB-gYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1411" y="-1619"/>
         </scene>
