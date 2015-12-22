@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		060D54D5D1438B1F3C762280 /* Pods_Appsassin0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61045CA8F1BA45BC66580E05 /* Pods_Appsassin0_1.framework */; };
+		274AE62E1C29C1490040C682 /* appsassinLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AE62D1C29C1490040C682 /* appsassinLogo2.png */; };
 		27636BA21C22FB070063BFF2 /* catherine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9E1C22FB070063BFF2 /* catherine.jpg */; };
 		27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9F1C22FB070063BFF2 /* fanny.jpg */; };
 		27636BA41C22FB070063BFF2 /* kbs86.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636BA01C22FB070063BFF2 /* kbs86.jpg */; };
@@ -17,6 +18,7 @@
 		279DBBFA1C23300500613F12 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81801A49E10C00E65899 /* ParseUI.framework */; };
 		279DBBFE1C235EFE00613F12 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBBFD1C235EFE00613F12 /* SwiftyJSON.swift */; };
 		27A4C0621C29846A006C31D5 /* appsassinLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A4C0611C29846A006C31D5 /* appsassinLogo.png */; };
+		27A4C0641C29B201006C31D5 /* NewLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A4C0631C29B201006C31D5 /* NewLogInViewController.swift */; };
 		27B26FA21C1CFD5400DF01A4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */; };
 		27B26FA41C1D0A4D00DF01A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */; };
 		27B26FA61C1D0E9700DF01A4 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B26FA51C1D0E9700DF01A4 /* LogInViewController.swift */; };
@@ -74,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		1FBCC0BDCD7AB328E052B3F5 /* Pods-Appsassin0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appsassin0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Appsassin0.1/Pods-Appsassin0.1.release.xcconfig"; sourceTree = "<group>"; };
+		274AE62D1C29C1490040C682 /* appsassinLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appsassinLogo2.png; sourceTree = "<group>"; };
 		27636B9E1C22FB070063BFF2 /* catherine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = catherine.jpg; path = images/catherine.jpg; sourceTree = SOURCE_ROOT; };
 		27636B9F1C22FB070063BFF2 /* fanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fanny.jpg; path = images/fanny.jpg; sourceTree = SOURCE_ROOT; };
 		27636BA01C22FB070063BFF2 /* kbs86.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kbs86.jpg; path = images/kbs86.jpg; sourceTree = SOURCE_ROOT; };
@@ -82,6 +85,7 @@
 		278342841C1D191900348B74 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		279DBBFD1C235EFE00613F12 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		27A4C0611C29846A006C31D5 /* appsassinLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appsassinLogo.png; sourceTree = "<group>"; };
+		27A4C0631C29B201006C31D5 /* NewLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLogInViewController.swift; sourceTree = "<group>"; };
 		27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		27B26FA51C1D0E9700DF01A4 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				27A4C0611C29846A006C31D5 /* appsassinLogo.png */,
+				274AE62D1C29C1490040C682 /* appsassinLogo2.png */,
 				27636B9E1C22FB070063BFF2 /* catherine.jpg */,
 				27636B9F1C22FB070063BFF2 /* fanny.jpg */,
 				27636BA01C22FB070063BFF2 /* kbs86.jpg */,
@@ -243,11 +248,12 @@
 				278342841C1D191900348B74 /* CameraViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
-				27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */,
 				27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */,
+				27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 				979E10471C273BFA0083D76E /* NavigationController.swift */,
 				979E10431C26EE160083D76E /* LeaderboardViewController.swift */,
+				27A4C0631C29B201006C31D5 /* NewLogInViewController.swift */,
 				979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */,
 				971027031C2439D200470C15 /* LeaderboardTableViewController.swift */,
 				27B2D5D81C23643C00BF194E /* FinishedViewController.swift */,
@@ -412,6 +418,7 @@
 				27D4ABF21C1D1C6900572B9E /* snipper.png in Resources */,
 				979E104A1C275A8A0083D76E /* Fonts.xcassets in Resources */,
 				27E02B2B1C1D1EE700E351F5 /* snipper.png in Resources */,
+				274AE62E1C29C1490040C682 /* appsassinLogo2.png in Resources */,
 				27636BA51C22FB070063BFF2 /* pak.jpg in Resources */,
 				27636BA41C22FB070063BFF2 /* kbs86.jpg in Resources */,
 				979E11711C2897AE0083D76E /* LoadingView.xib in Resources */,
@@ -492,6 +499,7 @@
 				979E117C1C2897AE0083D76E /* TransitionManager.swift in Sources */,
 				979E116B1C2897AE0083D76E /* DesignableTextView.swift in Sources */,
 				27B26FA81C1D142500DF01A4 /* GameViewController.swift in Sources */,
+				27A4C0641C29B201006C31D5 /* NewLogInViewController.swift in Sources */,
 				979E11731C2897AE0083D76E /* SoundPlayer.swift in Sources */,
 				27B26FA61C1D0E9700DF01A4 /* LogInViewController.swift in Sources */,
 				27B26FA41C1D0A4D00DF01A4 /* ProfileViewController.swift in Sources */,
