@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,45 +17,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright © 2015 Nogrammers. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
-                                <rect key="frame" x="20" y="559" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Appsassin" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="20" y="105" width="560" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="by Nogrammers" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="tTI-uI-WrZ">
-                                <rect key="frame" x="20" y="192" width="560" height="43"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsassinLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="1YR-OZ-wZX">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="560" id="7AQ-og-W7Y"/>
-                                    <constraint firstAttribute="height" constant="43" id="9ui-28-1hW"/>
+                                    <constraint firstAttribute="height" constant="131" id="5hw-Qt-q5R"/>
+                                    <constraint firstAttribute="width" constant="246" id="68Z-Oc-MU0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5hw-Qt-q5R"/>
+                                        <exclude reference="68Z-Oc-MU0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5hw-Qt-q5R"/>
+                                        <include reference="68Z-Oc-MU0"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0F-3r-gsI">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="80" y="265" width="243" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOGRAMMERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9da-Db-dCx">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="78" y="294" width="243" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with love" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuw-n3-YLL">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="80" y="323" width="243" height="21"/>
+                                </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
-                            <constraint firstItem="tTI-uI-WrZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="E31-tr-3k2"/>
-                            <constraint firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
-                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
-                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
-                            <constraint firstItem="tTI-uI-WrZ" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="44" id="Zah-dK-6zr"/>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" constant="1" id="moa-c2-u7t"/>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="x7j-FC-K8j"/>
+                            <constraint firstItem="uuw-n3-YLL" firstAttribute="top" secondItem="9da-Db-dCx" secondAttribute="bottom" constant="8" id="5JZ-6h-CXf"/>
+                            <constraint firstItem="z0F-3r-gsI" firstAttribute="leading" secondItem="1YR-OZ-wZX" secondAttribute="leading" id="HIn-eu-p52"/>
+                            <constraint firstItem="z0F-3r-gsI" firstAttribute="top" secondItem="1YR-OZ-wZX" secondAttribute="bottom" constant="47" id="MRn-Fd-Zll"/>
+                            <constraint firstItem="1YR-OZ-wZX" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="67" id="VzH-DS-cwR"/>
+                            <constraint firstItem="1YR-OZ-wZX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Z1T-lh-QQV"/>
+                            <constraint firstItem="9da-Db-dCx" firstAttribute="top" secondItem="z0F-3r-gsI" secondAttribute="bottom" constant="8" id="cjb-K4-8pc"/>
+                            <constraint firstItem="uuw-n3-YLL" firstAttribute="leading" secondItem="1YR-OZ-wZX" secondAttribute="leading" id="lwn-gn-LRR"/>
+                            <constraint firstItem="9da-Db-dCx" firstAttribute="leading" secondItem="1YR-OZ-wZX" secondAttribute="leading" id="s0j-qX-6KJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1YR-OZ-wZX"/>
+                                <exclude reference="z0F-3r-gsI"/>
+                                <exclude reference="9da-Db-dCx"/>
+                                <exclude reference="uuw-n3-YLL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="VzH-DS-cwR"/>
+                                <exclude reference="Z1T-lh-QQV"/>
+                                <exclude reference="HIn-eu-p52"/>
+                                <exclude reference="MRn-Fd-Zll"/>
+                                <exclude reference="cjb-K4-8pc"/>
+                                <exclude reference="s0j-qX-6KJ"/>
+                                <exclude reference="5JZ-6h-CXf"/>
+                                <exclude reference="lwn-gn-LRR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1YR-OZ-wZX"/>
+                                <include reference="z0F-3r-gsI"/>
+                                <include reference="9da-Db-dCx"/>
+                                <include reference="uuw-n3-YLL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="VzH-DS-cwR"/>
+                                <include reference="Z1T-lh-QQV"/>
+                                <include reference="HIn-eu-p52"/>
+                                <include reference="MRn-Fd-Zll"/>
+                                <include reference="cjb-K4-8pc"/>
+                                <include reference="s0j-qX-6KJ"/>
+                                <include reference="5JZ-6h-CXf"/>
+                                <include reference="lwn-gn-LRR"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appsassinLogo.png" width="1223" height="660"/>
+    </resources>
 </document>

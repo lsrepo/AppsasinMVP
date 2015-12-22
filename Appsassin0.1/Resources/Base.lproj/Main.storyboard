@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="height" constant="207" id="NNN-Ef-T3V"/>
                                     <constraint firstAttribute="width" constant="201" id="OJT-wC-fhk"/>
                                 </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="100" y="40" width="201" height="207"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXv-0q-GZa">
                                 <rect key="frame" x="200" y="269" width="61" height="30"/>
@@ -782,6 +785,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJa-Lp-fUK">
                                 <rect key="frame" x="255" y="89" width="91" height="30"/>
                                 <state key="normal" title="Camera View"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="155" y="89" width="91" height="30"/>
+                                </variation>
                                 <connections>
                                     <segue destination="Qen-uC-daf" kind="presentation" identifier="toGameBegin" id="rMh-tf-Q9J"/>
                                 </connections>
@@ -789,6 +795,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKd-jS-xrn">
                                 <rect key="frame" x="214" y="248" width="171" height="30"/>
                                 <state key="normal" title="Deactivate game session"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="114" y="248" width="171" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="deactivateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="5dm-cS-3sq"/>
                                 </connections>
@@ -796,6 +805,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
                                 <rect key="frame" x="223" y="138" width="154" height="30"/>
                                 <state key="normal" title="Activate game session"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="123" y="138" width="154" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
                                 </connections>
@@ -810,6 +822,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUf-oF-Ggo">
                                 <rect key="frame" x="191" y="333" width="219" height="30"/>
                                 <state key="normal" title="Activate and Unmatch Everyone"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="91" y="333" width="219" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="reactivateAllButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="daO-i0-mxf"/>
                                 </connections>
@@ -1115,8 +1130,8 @@
                                                             </userDefinedRuntimeAttributes>
                                                             <variation key="default">
                                                                 <mask key="constraints">
-                                                                    <exclude reference="GRK-i6-Dg4"/>
                                                                     <exclude reference="FtA-ch-FDF"/>
+                                                                    <exclude reference="GRK-i6-Dg4"/>
                                                                 </mask>
                                                             </variation>
                                                         </view>
