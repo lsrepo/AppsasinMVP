@@ -26,6 +26,8 @@ class GameViewController: UIViewController {
                     self.profilePic.image = UIImage(named: "...") // placeholder image
                     self.profilePic.file = imgObj!["image"] as? PFFile // remote image
                     self.profilePic.loadInBackground()
+                    self.profilePic.layer.masksToBounds = true;
+                    self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
                     
                     //self.profilePic = imageView
     

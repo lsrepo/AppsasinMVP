@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		060D54D5D1438B1F3C762280 /* Pods_Appsassin0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61045CA8F1BA45BC66580E05 /* Pods_Appsassin0_1.framework */; };
+		2724C90B1C29FC51001C9DE0 /* LucidaGrande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2724C90A1C29F744001C9DE0 /* LucidaGrande.ttf */; };
 		274AE62E1C29C1490040C682 /* appsassinLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AE62D1C29C1490040C682 /* appsassinLogo2.png */; };
 		27636BA21C22FB070063BFF2 /* catherine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9E1C22FB070063BFF2 /* catherine.jpg */; };
 		27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9F1C22FB070063BFF2 /* fanny.jpg */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		1FBCC0BDCD7AB328E052B3F5 /* Pods-Appsassin0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appsassin0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Appsassin0.1/Pods-Appsassin0.1.release.xcconfig"; sourceTree = "<group>"; };
+		2724C90A1C29F744001C9DE0 /* LucidaGrande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttf; sourceTree = "<group>"; };
 		274AE62D1C29C1490040C682 /* appsassinLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appsassinLogo2.png; sourceTree = "<group>"; };
 		27636B9E1C22FB070063BFF2 /* catherine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = catherine.jpg; path = images/catherine.jpg; sourceTree = SOURCE_ROOT; };
 		27636B9F1C22FB070063BFF2 /* fanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fanny.jpg; path = images/fanny.jpg; sourceTree = SOURCE_ROOT; };
@@ -215,6 +217,7 @@
 				979ED5061C2056FB0032997F /* Images.xcassets */,
 				979E10491C275A8A0083D76E /* Fonts.xcassets */,
 				979E104B1C275AA90083D76E /* Pacifico.ttf */,
+				2724C90A1C29F744001C9DE0 /* LucidaGrande.ttf */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */,
+				2724C90B1C29FC51001C9DE0 /* LucidaGrande.ttf in Resources */,
 				27B2D5DB1C236EB100BF194E /* radar.wav in Resources */,
 				979E104C1C275AA90083D76E /* Pacifico.ttf in Resources */,
 				27B26FA21C1CFD5400DF01A4 /* Launch Screen.storyboard in Resources */,

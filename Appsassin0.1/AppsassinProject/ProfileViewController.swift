@@ -49,6 +49,8 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var agentLabel: UILabel!
+    
     func loadProfileImage() {
         
         let query = PFQuery(className:"Player")
@@ -388,6 +390,8 @@ class ProfileViewController: UIViewController {
         
         //Initialize data that's connected to the userCurrent method
         varInit();
+        
+        self.agentLabel.text = "Agent " + PFUser.currentUser()!.username!
     }
     
 //End of Push
