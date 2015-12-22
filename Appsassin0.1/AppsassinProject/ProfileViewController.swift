@@ -11,57 +11,11 @@ import UIKit
 import Parse
 import ParseUI
 
-class mySingleton {
-    //this is a singleton
-    static let sharedInstance = mySingleton()
-    
-    //declare variables here
-    var tmp:String = "";
-    var myPlayerId:String = "";
-    var targetUserId:String = "";
-    var targetPlayerId:String = "";
-    var targetUsername:String = "";
-    var myUsername:String = "";
-    var cameraImageFromMe:UIImage = UIImage()
-    
-    
-    //declare functions here
-    func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
-        
-        let playerQuery = PFQuery(className:"Player")
-        playerQuery.getObjectInBackgroundWithId(playerId) {
-            (playerObj: PFObject?, error: NSError?) -> Void in
-            if error == nil  {
-                //print(mePlayer!)
-                playerObj!["isActive"] = isActive;
-                playerObj!["isMatched"] = isMatched;
-                playerObj!.saveInBackground()
-                print("-\(playerObj)")
-            } else {
-                print("\(error!) gameStateChangerError")
-            }
-        }
-    }
-    
-    func reactivateAll(){
-        nsa.gameStateChanger(true, isMatched: false, playerId: "ng98K9gGyX")
-        nsa.gameStateChanger(true, isMatched: false, playerId: "g326VU11Do")
-        nsa.gameStateChanger(true, isMatched: false, playerId: "28r6nJ1769")
-        nsa.gameStateChanger(true, isMatched: false, playerId: "qbWwNYCi8j")
-    }
-    
 
-    
-    private init() {
-        
-    } //This prevents others from using the default '()' initializer for this class.
-}
-
-let nsa = mySingleton()
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var profileIV: UIImageView!
+    
    
     @IBAction func reactivateAllButton(sender: AnyObject) {
         nsa.reactivateAll();
@@ -79,6 +33,28 @@ class ProfileViewController: UIViewController {
     }
     
     @IBOutlet weak var targetLabel: UILabel!
+    
+    
+    @IBOutlet weak var profilePic: PFImageView!
+    
+    func loadProfileImage() {
+        
+        let query = PFQuery(className:"Player")
+        query.whereKey("objectId", equalTo:nsa.myPlayerId)
+        let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
+            if error == nil {
+                print("//ProfileView:imgObj is \(imgObj)")
+                print("//ProfileView:Loading image")
+                
+                self.profilePic.image = UIImage(named: "...") // placeholder image
+                self.profilePic.file = imgObj!["image"] as? PFFile // remote image
+                self.profilePic.loadInBackground()
+                
+                //self.profilePic = imageView
+                
+            }
+        }
+    }
     
    
     
@@ -154,21 +130,14 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadProfileImage()
+        //print("From Profile:nsa.myPlayerId", nsa.myPlayerId);
         
 //        //this works
 //        let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
 //        
 //        self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
-        
-        
-        
-        //Send push notifications to the two assigned players
-        
-        //find target user's userobject
-        //get targer's installation id, put it in PFinstallationQuery
-        
-        
-        
+
         //you need to be logged in to do that
         //addImage();
         
@@ -194,6 +163,7 @@ class ProfileViewController: UIViewController {
 //        }
 //    }
 
+    //giant pile of ... code
     func loadImage() {
         print("loading image")
         let query = PFQuery(className:"Player")
@@ -405,13 +375,8 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "logOut" {
-            PFUser.logOut()
-        }
-    }
+
     
-    
+   
     
 }

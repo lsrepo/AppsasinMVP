@@ -23,6 +23,7 @@
 		27B26FA41C1D0A4D00DF01A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */; };
 		27B26FA61C1D0E9700DF01A4 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B26FA51C1D0E9700DF01A4 /* LogInViewController.swift */; };
 		27B26FA81C1D142500DF01A4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B26FA71C1D142500DF01A4 /* GameViewController.swift */; };
+		27B2A9C11C29E0E8001A6AE7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2A9C01C29E0E8001A6AE7 /* SettingsViewController.swift */; };
 		27B2D5D91C23643C00BF194E /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2D5D81C23643C00BF194E /* FinishedViewController.swift */; };
 		27B2D5DB1C236EB100BF194E /* radar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27B2D5DA1C236EB100BF194E /* radar.wav */; };
 		27D4ABF21C1D1C6900572B9E /* snipper.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D4ABF11C1D1C6900572B9E /* snipper.png */; };
@@ -90,6 +91,7 @@
 		27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		27B26FA51C1D0E9700DF01A4 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		27B26FA71C1D142500DF01A4 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		27B2A9C01C29E0E8001A6AE7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
 		27B2D5D81C23643C00BF194E /* FinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
 		27B2D5DA1C236EB100BF194E /* radar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = radar.wav; sourceTree = "<group>"; };
 		27D4ABF11C1D1C6900572B9E /* snipper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snipper.png; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				27D4ABF11C1D1C6900572B9E /* snipper.png */,
 				81BA81461A49DA1800E65899 /* Products */,
 				278342831C1D191900348B74 /* AVCamPreviewView.swift */,
+				27B2A9C01C29E0E8001A6AE7 /* SettingsViewController.swift */,
 				278342841C1D191900348B74 /* CameraViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
@@ -519,6 +522,7 @@
 				979E11671C2897AE0083D76E /* DesignableImageView.swift in Sources */,
 				979E11691C2897AE0083D76E /* DesignableTabBarController.swift in Sources */,
 				979E117D1C2897AE0083D76E /* TransitionZoom.swift in Sources */,
+				27B2A9C11C29E0E8001A6AE7 /* SettingsViewController.swift in Sources */,
 				979E10481C273BFA0083D76E /* NavigationController.swift in Sources */,
 				979E11781C2897AE0083D76E /* SpringLabel.swift in Sources */,
 				979E117B1C2897AE0083D76E /* SpringView.swift in Sources */,

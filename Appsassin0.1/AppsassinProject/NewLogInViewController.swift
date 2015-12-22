@@ -3,6 +3,56 @@
 import UIKit
 import Parse
 
+
+class mySingleton {
+    //this is a singleton
+    static let sharedInstance = mySingleton()
+    
+    //declare variables here
+    var tmp:String = "";
+    var myPlayerId:String = "";
+    var targetUserId:String = "";
+    var targetPlayerId:String = "";
+    var targetUsername:String = "";
+    var myUsername:String = "";
+    var cameraImageFromMe:UIImage = UIImage()
+    
+    
+    //declare functions here
+    func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
+        
+        let playerQuery = PFQuery(className:"Player")
+        playerQuery.getObjectInBackgroundWithId(playerId) {
+            (playerObj: PFObject?, error: NSError?) -> Void in
+            if error == nil  {
+                //print(mePlayer!)
+                playerObj!["isActive"] = isActive;
+                playerObj!["isMatched"] = isMatched;
+                playerObj!.saveInBackground()
+                print("-\(playerObj)")
+            } else {
+                print("\(error!) gameStateChangerError")
+            }
+        }
+    }
+    
+    func reactivateAll(){
+        nsa.gameStateChanger(true, isMatched: false, playerId: "ng98K9gGyX")
+        nsa.gameStateChanger(true, isMatched: false, playerId: "g326VU11Do")
+        nsa.gameStateChanger(true, isMatched: false, playerId: "28r6nJ1769")
+        nsa.gameStateChanger(true, isMatched: false, playerId: "qbWwNYCi8j")
+    }
+    
+    
+    
+    private init() {
+        
+    } //This prevents others from using the default '()' initializer for this class.
+}
+
+let nsa = mySingleton()
+
+
 class NewLogInViewController: UIViewController {
     
     func registerSession(){
@@ -10,9 +60,13 @@ class NewLogInViewController: UIViewController {
         let installation = PFInstallation.currentInstallation()
         installation["user"] = PFUser.currentUser()
         installation["player"] = PFUser.currentUser()!["player"]
-        print("//From Login:Installation is set to \(installation["player"])");
+        //print("//From Login:Installation is set to \(installation["player"])");
         installation.saveInBackground()
         
+        //Setup Profile picture for next view
+        let preparePlayerId = PFUser.currentUser()!["player"]
+        
+        nsa.myPlayerId = preparePlayerId.objectId!!
         
         
     }
