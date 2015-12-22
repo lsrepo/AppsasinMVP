@@ -37,6 +37,18 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profilePic: PFImageView!
     
+    
+    @IBOutlet weak var activateSwitch: UISwitch!
+   
+    @IBAction func activateSwitchTapped(sender: AnyObject) {
+        if (activateSwitch.on){
+            self.activateGameMode();
+        }
+        else {
+            self.deactivateGameMode();
+        }
+    }
+    
     func loadProfileImage() {
         
         let query = PFQuery(className:"Player")
@@ -46,11 +58,21 @@ class ProfileViewController: UIViewController {
                 print("//ProfileView:imgObj is \(imgObj)")
                 print("//ProfileView:Loading image")
                 
+                //ad circular shape to the img
+                self.profilePic.layer.masksToBounds = true;
+                self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
+                
                 self.profilePic.image = UIImage(named: "...") // placeholder image
                 self.profilePic.file = imgObj!["image"] as? PFFile // remote image
                 self.profilePic.loadInBackground()
                 
                 //self.profilePic = imageView
+                
+                
+                
+                //itemImageView.layer.masksToBounds = YES;
+                
+                //profilePic.layer
                 
             }
         }

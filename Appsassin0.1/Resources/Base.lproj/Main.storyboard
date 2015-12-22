@@ -142,7 +142,7 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Codename" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g4-23-W0J">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Codename" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g4-23-W0J">
                                             <rect key="frame" x="61" y="0.0" width="76" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="145" id="Rwp-Ng-r0j"/>
@@ -162,7 +162,7 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD6-lH-5VS">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD6-lH-5VS">
                                             <rect key="frame" x="163" y="0.0" width="40" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="Dqu-ij-GzK"/>
@@ -182,7 +182,7 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kills  Deaths" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUs-Nv-ic0">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kills  Deaths" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUs-Nv-ic0">
                                             <rect key="frame" x="229" y="0.0" width="98" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="98" id="clj-Dc-PZ2"/>
@@ -405,9 +405,6 @@
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="109" y="244" width="181.5" height="23"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1025,14 +1022,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKd-jS-xrn">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKd-jS-xrn">
                                 <rect key="frame" x="214" y="248" width="171" height="30"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <state key="normal" title="Deactivate game session">
                                     <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="95" y="385" width="210" height="30"/>
+                                    <rect key="frame" x="307" y="88" width="210" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="114" y="248" width="171" height="30"/>
@@ -1080,7 +1077,7 @@
                                     <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="128" y="429" width="144" height="30"/>
+                                    <rect key="frame" x="330" y="117" width="144" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="114" y="195" width="174" height="30"/>
@@ -1089,14 +1086,14 @@
                                     <action selector="searchPlayerButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="ked-pD-vKF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
                                 <rect key="frame" x="223" y="138" width="154" height="30"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <state key="normal" title="Activate game session">
                                     <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="110" y="347" width="181" height="30"/>
+                                    <rect key="frame" x="293" y="64" width="181" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="123" y="138" width="165" height="30"/>
@@ -1105,7 +1102,7 @@
                                     <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-cL-iTJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-cL-iTJ">
                                 <rect key="frame" x="166" y="403" width="267" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1130,19 +1127,48 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="112" y="109" width="179" height="171"/>
+                                    <rect key="frame" x="111" y="132" width="179" height="171"/>
                                     <mask key="constraints">
                                         <include reference="U2Y-C1-dJA"/>
                                         <include reference="Zik-N5-hN3"/>
                                     </mask>
                                 </variation>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zXU-AO-XjQ">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <color key="onTintColor" red="0.88199979026845643" green="0.031223783557046979" blue="0.19413276006711411" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="234" y="377" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="activateSwitchTapped:" destination="AXI-xY-kqQ" eventType="valueChanged" id="tlz-Kt-JHc"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prd-we-qEf">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="122" y="382" width="91" height="22"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time is running out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-fb-3Dg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="100" y="324" width="190" height="22"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r70-Mj-env" firstAttribute="top" secondItem="XJa-Lp-fUK" secondAttribute="bottom" constant="15" id="78f-9h-fRl"/>
                             <constraint firstItem="WKd-jS-xrn" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="ACh-v6-brs"/>
+                            <constraint firstItem="zXU-AO-XjQ" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="IAT-f5-WNf"/>
                             <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="Kd4-1L-w7g"/>
                             <constraint firstItem="g6Y-ah-dqD" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="TxE-QP-Dpo"/>
                             <constraint firstItem="hoI-IT-aXU" firstAttribute="top" secondItem="6jC-Po-CDo" secondAttribute="bottom" constant="45" id="UUv-86-GVm"/>
@@ -1152,15 +1178,21 @@
                             <constraint firstItem="hoI-IT-aXU" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="iMY-QJ-vcf"/>
                             <constraint firstItem="r70-Mj-env" firstAttribute="top" secondItem="cUf-oF-Ggo" secondAttribute="bottom" constant="54" id="l8Q-lv-EuY"/>
                             <constraint firstItem="cUf-oF-Ggo" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="lRN-BP-oCe"/>
+                            <constraint firstItem="zXU-AO-XjQ" firstAttribute="top" secondItem="hoI-IT-aXU" secondAttribute="bottom" constant="23" id="m7n-ga-DAn"/>
                             <constraint firstItem="WKd-jS-xrn" firstAttribute="top" secondItem="g6Y-ah-dqD" secondAttribute="bottom" constant="8" id="ps2-D4-u2y"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="hoI-IT-aXU"/>
+                                <exclude reference="zXU-AO-XjQ"/>
+                                <exclude reference="Prd-we-qEf"/>
+                                <exclude reference="XH9-fb-3Dg"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="UUv-86-GVm"/>
                                 <exclude reference="iMY-QJ-vcf"/>
+                                <exclude reference="IAT-f5-WNf"/>
+                                <exclude reference="m7n-ga-DAn"/>
                                 <exclude reference="TxE-QP-Dpo"/>
                                 <exclude reference="ACh-v6-brs"/>
                                 <exclude reference="ps2-D4-u2y"/>
@@ -1176,10 +1208,15 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="hoI-IT-aXU"/>
+                                <include reference="zXU-AO-XjQ"/>
+                                <include reference="Prd-we-qEf"/>
+                                <include reference="XH9-fb-3Dg"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="UUv-86-GVm"/>
                                 <include reference="iMY-QJ-vcf"/>
+                                <include reference="IAT-f5-WNf"/>
+                                <include reference="m7n-ga-DAn"/>
                                 <include reference="TxE-QP-Dpo"/>
                                 <include reference="ACh-v6-brs"/>
                                 <include reference="ps2-D4-u2y"/>
@@ -1195,6 +1232,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="PROFILE" id="Vqa-KC-6xW"/>
                     <connections>
+                        <outlet property="activateSwitch" destination="zXU-AO-XjQ" id="yFv-Ya-45i"/>
                         <outlet property="profilePic" destination="hoI-IT-aXU" id="ILR-Jb-ELM"/>
                         <outlet property="targetLabel" destination="AHw-cL-iTJ" id="miG-Ct-kyH"/>
                     </connections>
