@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		060D54D5D1438B1F3C762280 /* Pods_Appsassin0_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61045CA8F1BA45BC66580E05 /* Pods_Appsassin0_1.framework */; };
 		2724C90B1C29FC51001C9DE0 /* LucidaGrande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2724C90A1C29F744001C9DE0 /* LucidaGrande.ttf */; };
+		2724C90D1C2A096E001C9DE0 /* overlayi5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2724C90C1C2A096E001C9DE0 /* overlayi5.png */; };
+		2724C90F1C2A0B5F001C9DE0 /* overlayi5x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2724C90E1C2A0B5F001C9DE0 /* overlayi5x1.png */; };
+		2724C9131C2A1118001C9DE0 /* target2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2724C9121C2A1118001C9DE0 /* target2.png */; };
 		274AE62E1C29C1490040C682 /* appsassinLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AE62D1C29C1490040C682 /* appsassinLogo2.png */; };
 		27636BA21C22FB070063BFF2 /* catherine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9E1C22FB070063BFF2 /* catherine.jpg */; };
 		27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9F1C22FB070063BFF2 /* fanny.jpg */; };
@@ -79,6 +82,9 @@
 /* Begin PBXFileReference section */
 		1FBCC0BDCD7AB328E052B3F5 /* Pods-Appsassin0.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appsassin0.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Appsassin0.1/Pods-Appsassin0.1.release.xcconfig"; sourceTree = "<group>"; };
 		2724C90A1C29F744001C9DE0 /* LucidaGrande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttf; sourceTree = "<group>"; };
+		2724C90C1C2A096E001C9DE0 /* overlayi5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayi5.png; sourceTree = "<group>"; };
+		2724C90E1C2A0B5F001C9DE0 /* overlayi5x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayi5x1.png; sourceTree = "<group>"; };
+		2724C9121C2A1118001C9DE0 /* target2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target2.png; sourceTree = "<group>"; };
 		274AE62D1C29C1490040C682 /* appsassinLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appsassinLogo2.png; sourceTree = "<group>"; };
 		27636B9E1C22FB070063BFF2 /* catherine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = catherine.jpg; path = images/catherine.jpg; sourceTree = SOURCE_ROOT; };
 		27636B9F1C22FB070063BFF2 /* fanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fanny.jpg; path = images/fanny.jpg; sourceTree = SOURCE_ROOT; };
@@ -177,8 +183,11 @@
 			children = (
 				27A4C0611C29846A006C31D5 /* appsassinLogo.png */,
 				274AE62D1C29C1490040C682 /* appsassinLogo2.png */,
+				2724C90E1C2A0B5F001C9DE0 /* overlayi5x1.png */,
 				27636B9E1C22FB070063BFF2 /* catherine.jpg */,
+				2724C9121C2A1118001C9DE0 /* target2.png */,
 				27636B9F1C22FB070063BFF2 /* fanny.jpg */,
+				2724C90C1C2A096E001C9DE0 /* overlayi5.png */,
 				27636BA01C22FB070063BFF2 /* kbs86.jpg */,
 				27636BA11C22FB070063BFF2 /* pak.jpg */,
 			);
@@ -421,6 +430,7 @@
 				27B26FA21C1CFD5400DF01A4 /* Launch Screen.storyboard in Resources */,
 				27A4C0621C29846A006C31D5 /* appsassinLogo.png in Resources */,
 				979ED5071C2056FB0032997F /* Images.xcassets in Resources */,
+				2724C90F1C2A0B5F001C9DE0 /* overlayi5x1.png in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				27D4ABF21C1D1C6900572B9E /* snipper.png in Resources */,
 				979E104A1C275A8A0083D76E /* Fonts.xcassets in Resources */,
@@ -428,6 +438,8 @@
 				274AE62E1C29C1490040C682 /* appsassinLogo2.png in Resources */,
 				27636BA51C22FB070063BFF2 /* pak.jpg in Resources */,
 				27636BA41C22FB070063BFF2 /* kbs86.jpg in Resources */,
+				2724C9131C2A1118001C9DE0 /* target2.png in Resources */,
+				2724C90D1C2A096E001C9DE0 /* overlayi5.png in Resources */,
 				979E11711C2897AE0083D76E /* LoadingView.xib in Resources */,
 				27636BA21C22FB070063BFF2 /* catherine.jpg in Resources */,
 				979E116E1C2897AE0083D76E /* Info.plist in Resources */,

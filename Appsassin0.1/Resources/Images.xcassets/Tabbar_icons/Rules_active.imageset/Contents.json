@@ -2,7 +2,6 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Rules_active.png",
       "scale" : "1x"
     },
     {
@@ -11,6 +10,7 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "Rules_active.png",
       "scale" : "3x"
     }
   ],
