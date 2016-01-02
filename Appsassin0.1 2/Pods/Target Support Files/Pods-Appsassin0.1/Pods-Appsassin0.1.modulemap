@@ -1,0 +1,6 @@
+framework module Pods_Appsassin0_1 {
+  umbrella header "Pods-Appsassin0.1-umbrella.h"
+
+  export *
+  module * { export * }
+}
