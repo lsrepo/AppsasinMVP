@@ -10,62 +10,62 @@
 ////import Parse
 ////
 ////class LeaderboardTableViewController: UITableViewController {
-////
+////    
 ////    var playerData = [PFObject]()
-////
+////    
 ////    override func viewDidLoad() {
 ////        super.viewDidLoad()
 ////    }
-////
+////    
 ////    override func viewWillAppear(animated: Bool) {
 ////        let query = PFQuery(className:"Player")
 ////        //query.whereKey("playerName", equalTo:"Sean Plott")
 ////        query.findObjectsInBackgroundWithBlock {
 ////            (objects: [PFObject]?, error: NSError?) -> Void in
-////
+////            
 ////            if error == nil {
 ////                self.playerData = objects!
 ////                print("There is data for \(self.playerData.count) players on the leaderboard")
 ////                print(objects)
-////
+////                
 ////            } else {
 ////                // Log details of the failure
 ////                print("Error: \(error!) \(error!.userInfo)")
 ////            }
 ////        }
-////
+////        
 ////    }
 ////
-//
+//<<<<<<< HEAD
 //
 //import UIKit
 //import Parse
 //
 //class LeaderboardTableViewController: UITableViewController {
-//
+//    
 //    var playerData = [PFObject]()
-//
+//    
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //    }
-//
+//    
 //    override func viewWillAppear(animated: Bool) {
 //        let query = PFQuery(className:"Player")
 //        //query.whereKey("playerName", equalTo:"Sean Plott")
 //        query.findObjectsInBackgroundWithBlock {
 //            (objects: [PFObject]?, error: NSError?) -> Void in
-//
+//            
 //            if error == nil {
 //                self.playerData = objects!
 //                print("There is data for \(self.playerData.count) players on the leaderboard")
 //                print(objects)
-//
+//                
 //            } else {
 //                // Log details of the failure
 //                print("Error: \(error!) \(error!.userInfo)")
 //            }
 //        }
-//
+//        
 //    }
 //
 //    override func didReceiveMemoryWarning() {
@@ -85,12 +85,12 @@
 //
 //    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCellWithIdentifier("leaderboardCell", forIndexPath: indexPath) as! LeaderboardTableViewCell
-//
+//        
 //        let entry = playerData[indexPath.row]
 //
 //        //cell.placeLabel.text = entry.place (displays "1" or "2" etc depending on the place. this can be stored in the leaderboard data array or maybe calculated locally?)
 //        //Photo???
-//
+//        
 //        cell.nameLabel!.text = "\(entry["username"])"
 //        cell.killsLabel.text = "\(entry["kills"])"
 //        cell.deathsLabel.text = "\(entry["deaths"])"
@@ -128,12 +128,12 @@
 ////
 ////    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 ////        let cell = tableView.dequeueReusableCellWithIdentifier("leaderboardCell", forIndexPath: indexPath) as! LeaderboardTableViewCell
-////
+////        
 ////        let entry = playerData[indexPath.row]
 ////
 ////        //cell.placeLabel.text = entry.place (displays "1" or "2" etc depending on the place. this can be stored in the leaderboard data array or maybe calculated locally?)
 ////        //Photo???
-////
+////        
 //////        cell.nameLabel!.text = entry["username"] as! String
 //////        cell.killsLabel.text = "\(entry["kills"])"
 //////        cell.deathsLabel.text = "\(entry["deaths"])"
