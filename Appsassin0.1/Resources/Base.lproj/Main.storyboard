@@ -615,7 +615,7 @@
                                 <color key="textColor" red="0.93592522905759168" green="0.93592522905759168" blue="0.93592522905759168" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="100" y="115" width="175.5" height="44.5"/>
+                                    <rect key="frame" x="100" y="115" width="176" height="45"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -1260,7 +1260,7 @@
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <color key="onTintColor" red="0.88199979026845643" green="0.031223783557046979" blue="0.19413276006711411" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="209.5" y="413" width="51" height="31"/>
+                                    <rect key="frame" x="209" y="413" width="51" height="31"/>
                                 </variation>
                                 <connections>
                                     <action selector="activateSwitchTapped:" destination="AXI-xY-kqQ" eventType="valueChanged" id="tlz-Kt-JHc"/>
@@ -1272,7 +1272,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="110.5" y="416" width="91" height="20"/>
+                                    <rect key="frame" x="110" y="416" width="91" height="20"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-fb-3Dg">
@@ -1448,9 +1448,6 @@
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlayi5x1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-Fc-Ucn">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="40" y="140" width="320" height="320"/>
-                                        </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer will be added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoV-VR-1y4">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -1458,7 +1455,7 @@
                                         <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="95" y="80" width="210.5" height="28"/>
+                                            <rect key="frame" x="95" y="80" width="211" height="28"/>
                                         </variation>
                                     </label>
                                 </subviews>

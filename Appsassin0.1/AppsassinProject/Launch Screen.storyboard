@@ -39,23 +39,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="pLb-ky-Ef5"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="131" id="vqO-jx-DeM"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="246" id="xk9-7t-0yQ"/>
                                     <constraint firstAttribute="height" constant="131" id="zWX-i0-X7A"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="pLb-ky-Ef5"/>
-                                        <exclude reference="vqO-jx-DeM"/>
-                                        <exclude reference="xk9-7t-0yQ"/>
                                         <exclude reference="zWX-i0-X7A"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="pLb-ky-Ef5"/>
-                                        <include reference="vqO-jx-DeM"/>
-                                        <include reference="xk9-7t-0yQ"/>
                                         <include reference="zWX-i0-X7A"/>
                                     </mask>
                                 </variation>
