@@ -16,6 +16,9 @@ class mySingleton {
     var targetUsername:String = "";
     var myUsername:String = "";
     var cameraImageFromMe:UIImage = UIImage()
+    var currentGameSession = PFObject(className:"Game")
+    var myPlayer = PFObject(className:"Player")
+    var targetPlayer = PFObject(className:"Player")
     
     
     //declare functions here
@@ -29,7 +32,7 @@ class mySingleton {
                 playerObj!["isActive"] = isActive;
                 playerObj!["isMatched"] = isMatched;
                 playerObj!.saveInBackground()
-                print("-\(playerObj)")
+                //print("-\(playerObj)")
             } else {
                 print("\(error!) gameStateChangerError")
             }

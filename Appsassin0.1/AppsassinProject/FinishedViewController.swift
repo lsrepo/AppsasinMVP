@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class FinishedViewController: UIViewController {
 
@@ -26,14 +28,87 @@ class FinishedViewController: UIViewController {
 //        let LeaderboardTableViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LeaderboardTableViewController") as UIViewController
 //        self.presentViewController(LeaderboardTableViewController, animated: true, completion: nil)
     }
+    @IBOutlet weak var status: UIButton!
    
     @IBOutlet weak var finishedImageView: UIImageView!
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Make decision of who win
+        makeDecision();
+        
 
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    func endGame(){
+        
+        print("//GameView: the game is ended")
+        uploadImageToGameSession();
+
+    }
+    
+    func uploadImageToGameSession(){
+        //get the image
+        let image = nsa.cameraImageFromMe
+        let imageData = UIImageJPEGRepresentation(image, 0.9)
+        let imageFile = PFFile(name:"winner.jpg", data:imageData!)
+        
+        // prepare to save
+        nsa.currentGameSession["image"] = imageFile;
+        nsa.currentGameSession.saveInBackgroundWithBlock { (result:Bool?, error: NSError?) -> Void in
+            if error == nil  {
+                // if upload successful, show positive result
+                print("//FinishedVC:Image Uploaded")
+                //I win the game
+                self.addScore(nsa.myPlayer,loser: nsa.targetPlayer);
+            }
+            else{
+                print("//FinishedVC:Image failed to upload")
+                // if upload fail, show negative result
+                print(error)
+                self.addScore(nsa.targetPlayer,loser: nsa.myPlayer);
+            }
+        }
+    }
+    
+    func addScore(winner: PFObject,loser: PFObject){
+        
+        
+    }
+    
+    
+    func makeDecision(){
+        // check game status. ie.e check if player is directed from push notif
+        
+        //  upload the picture
+        
+        
+        
+        
+        nsa.currentGameSession.fetchInBackgroundWithBlock {
+            (gameSessionObj: PFObject?, error: NSError?) -> Void in
+            if error == nil  {
+                if (gameSessionObj!["isFinished"] === true){
+                    
+                }
+                else {
+                    // happened when it is nil or false
+                    //end The Game
+                    self.endGame();
+                }
+            } else {
+                print("\(error!) ")
+            }
+        }
+
+
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +118,7 @@ class FinishedViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.finishedImageView.image = nsa.cameraImageFromMe
-            //nsa.cameraImageFromMe
+        
         
         
 //        self.profilePic.image = UIImage(named: "...") // placeholder image

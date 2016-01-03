@@ -162,7 +162,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //Receiving push notification
         let notif = JSON(userInfo) // SwiftyJSON required
-        print("notif in AppDelegate is \(notif)")
+        print("//AppDelegate: Push notification is \(notif)")
         if notif["type"] != nil{
             NSNotificationCenter.defaultCenter().postNotificationName("myNotif", object: nil, userInfo: userInfo as [NSObject : AnyObject])
             // This is where you read your JSON to know what kind of notification you received, for example :

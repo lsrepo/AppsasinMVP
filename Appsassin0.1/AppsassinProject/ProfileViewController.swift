@@ -101,15 +101,14 @@ class ProfileViewController: UIViewController {
     }
     
     func assignTargets(){
-        print("//GameView:Assigning Targets")
-        print("myPlayerId is \(nsa.myPlayerId)")
-        print("targetPlayer is \(nsa.targetPlayerId)")
+        //print("//GameView:Assigning Targets")
+        //print("myPlayerId is \(nsa.myPlayerId)")
+        //print("targetPlayer is \(nsa.targetPlayerId)")
         nsa.gameStateChanger(true, isMatched: true, playerId: nsa.myPlayerId)
-        //nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
+    //nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
         //print("Both Players are deactiveted")
         createGameSession();
-        pushAssignments(nsa.myPlayerId, targetedName: nsa.targetUsername)
-        pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername)
+        
 
     }
     
@@ -119,16 +118,23 @@ class ProfileViewController: UIViewController {
         gameSession["player1"] = nsa.myPlayerId
         gameSession["player2"] = nsa.targetPlayerId
         var endTime = NSDate()
+        //Say that game finishes in 10 minutes ,600 seconds
         endTime = endTime.dateByAddingTimeInterval(600)
         gameSession["finishedAt"] = endTime
-        //gameSession["finishedAt"] =
+        gameSession.ACL!.setWriteAccess(true, forUserId: nsa.targetUserId)
+        
+        
         gameSession.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
                 // The object has been saved.
                 print("//Profile:Create Game Session Succeessful")
-                let gameSessionId = gameSession.objectId
-                print("//Profile:gameSessionId:\(gameSessionId)")
+                nsa.currentGameSession = gameSession
+                
+                //Send push notifications to two players
+                self.pushAssignments(nsa.myPlayerId, targetedName: nsa.targetUsername)
+                self.pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername)
+
             } else {
                 // There was a problem, check error.description
                 print("//Profile:Create Game Session Failure")
@@ -156,12 +162,15 @@ class ProfileViewController: UIViewController {
         else{
             playerId = nsa.myPlayerId
         }
+        
+        
         let data = [
             "alert" : "You're now assigned to terminate agent \(targetedName)    /M",
             "badge" : "Increment",
             "sound" : "radar.wav",
             "type" : "A",
-            "playerId" : playerId
+            "playerId" : playerId,
+            "gameSessionId" : nsa.currentGameSession.objectId!
         ]
         push.setData(data as [NSObject : AnyObject])
         push.setQuery(pushQuery) // Set our Installation query

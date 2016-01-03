@@ -20,7 +20,7 @@ class GameViewController: UIViewController {
             query.whereKey("objectId", equalTo:nsa.targetPlayerId)
             let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
                 if error == nil {
-                    print(imgObj)
+                    print("//GameView:imgObj is\(imgObj)")
                     print("//GameView:Loading image")
                     //let imageView = PFImageView()
                     self.profilePic.image = UIImage(named: "...") // placeholder image

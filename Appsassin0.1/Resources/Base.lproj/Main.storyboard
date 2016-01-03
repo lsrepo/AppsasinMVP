@@ -170,6 +170,7 @@
                     </view>
                     <connections>
                         <outlet property="finishedImageView" destination="Mna-cK-27L" id="tYq-bw-5cH"/>
+                        <outlet property="status" destination="jmQ-pa-ICh" id="FWH-xd-MRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFI-kx-Dvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
