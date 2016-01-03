@@ -57,8 +57,8 @@ class ProfileViewController: UIViewController {
         query.whereKey("objectId", equalTo:nsa.myPlayerId)
         let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
             if error == nil {
-                print("//ProfileView:imgObj is \(imgObj)")
-                print("//ProfileView:Loading image")
+                //print("//ProfileView:imgObj is \(imgObj)")
+                //print("//ProfileView:Loading image")
                 
                 //ad circular shape to the img
                 self.profilePic.layer.masksToBounds = true;
@@ -101,15 +101,39 @@ class ProfileViewController: UIViewController {
     }
     
     func assignTargets(){
-        print("now we try to assign")
+        print("//GameView:Assigning Targets")
         print("myPlayerId is \(nsa.myPlayerId)")
         print("targetPlayer is \(nsa.targetPlayerId)")
         nsa.gameStateChanger(true, isMatched: true, playerId: nsa.myPlayerId)
-        nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
-        print("Both Players are deactiveted")
+        //nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
+        //print("Both Players are deactiveted")
+        createGameSession();
         pushAssignments(nsa.myPlayerId, targetedName: nsa.targetUsername)
         pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername)
 
+    }
+    
+    func createGameSession(){
+        
+        let gameSession = PFObject(className:"Game")
+        gameSession["player1"] = nsa.myPlayerId
+        gameSession["player2"] = nsa.targetPlayerId
+        var endTime = NSDate()
+        endTime = endTime.dateByAddingTimeInterval(600)
+        gameSession["finishedAt"] = endTime
+        //gameSession["finishedAt"] =
+        gameSession.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The object has been saved.
+                print("//Profile:Create Game Session Succeessful")
+                let gameSessionId = gameSession.objectId
+                print("//Profile:gameSessionId:\(gameSessionId)")
+            } else {
+                // There was a problem, check error.description
+                print("//Profile:Create Game Session Failure")
+            }
+        }
     }
     
     func pushAssignments(targetedPlayerId:String,targetedName:String){
@@ -122,7 +146,7 @@ class ProfileViewController: UIViewController {
         pushQuery!.whereKey("player", matchesQuery: playerQuery)
         
         // Send push notification to query
-        print("using PFpush in pushAssignment")
+        //print("using PFpush in pushAssignment")
         let push = PFPush()
         
         var playerId:String = ""
@@ -194,8 +218,8 @@ class ProfileViewController: UIViewController {
         query.whereKey("objectId", equalTo:"28r6nJ1769")
         _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
             if error == nil {
-                print(imgObj)
-                print("loading result")
+                //print(imgObj)
+                //print("loading result")
                 let img = imgObj!["image"]
                 let imageView: PFImageView = PFImageView()
                 imageView.file = img as? PFFile
@@ -272,7 +296,7 @@ class ProfileViewController: UIViewController {
         query.getObjectInBackgroundWithId("IZhi8dmPYn") {
             (playerObj: PFObject?, error: NSError?) -> Void in
             if error == nil && playerObj != nil {
-                print(playerObj)
+                //print(playerObj)
                 playerObj!["image"] = imageFile
                 playerObj!.saveInBackground()
             } else {
@@ -319,13 +343,13 @@ class ProfileViewController: UIViewController {
                     if error == nil {
                         
                         let target = objects![0]
-                        print("target[\"username\"]: \(target["username"])")
+                        //print("target[\"username\"]: \(target["username"])")
                         nsa.targetUsername = target["username"] as! String
-                        print( " \(nsa.targetUsername) is your target")
+                        //print( " \(nsa.targetUsername) is your target")
                         let targetMsg = String(nsa.targetUsername) + " is your target!"
                         let targetPlayer = target["player"]
                         nsa.targetUserId = target.objectId!
-                        print("targetUserId is \(nsa.targetUserId)")
+                        //print("targetUserId is \(nsa.targetUserId)")
                         nsa.targetPlayerId = targetPlayer.objectId!!
                         self.targetLabel.text = targetMsg
                         self.assignTargets();
@@ -350,7 +374,7 @@ class ProfileViewController: UIViewController {
         if notif["type"] == "A" {
             //print("//ProfileVC:notif is \(notif)")
             nsa.targetPlayerId = String(notif["playerId"])
-            print("//GameVC: targetPlayerId is \( nsa.targetPlayerId)")
+            //print("//GameVC: targetPlayerId is \( nsa.targetPlayerId)")
             //let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
             self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
