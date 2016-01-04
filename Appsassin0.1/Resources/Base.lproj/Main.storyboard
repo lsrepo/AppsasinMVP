@@ -59,11 +59,11 @@
                                     <rect key="frame" x="100" y="40" width="201" height="207"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlayi5x1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hea-6m-fm1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlayi6x1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hea-6m-fm1">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="9K2-TY-iCD"/>
-                                    <constraint firstAttribute="height" constant="568" id="uGd-7K-0mm"/>
+                                    <constraint firstAttribute="width" constant="375" id="9K2-TY-iCD"/>
+                                    <constraint firstAttribute="height" constant="667" id="uGd-7K-0mm"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -78,17 +78,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXv-0q-GZa">
-                                <rect key="frame" x="200" y="269" width="61" height="30"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="34"/>
-                                <state key="normal" title="Continue.."/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="48" y="462" width="305" height="83"/>
-                                </variation>
-                                <connections>
-                                    <action selector="moveOnButton:" destination="17e-K6-TUo" eventType="touchUpInside" id="2UL-tG-SoM"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="target2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Boc-27-RlQ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -108,6 +97,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXv-0q-GZa">
+                                <rect key="frame" x="200" y="269" width="61" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="34"/>
+                                <state key="normal" title="Continue.."/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="48" y="462" width="305" height="83"/>
+                                </variation>
+                                <connections>
+                                    <action selector="moveOnButton:" destination="17e-K6-TUo" eventType="touchUpInside" id="2UL-tG-SoM"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0I-f1-b6T">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="28"/>
@@ -1457,7 +1457,7 @@
                                             <action selector="snapStillImage:" destination="FF3-n7-b0n" eventType="touchUpInside" id="BtG-nI-pAM"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlayi5x1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-Fc-Ucn">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlayi6x1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-Fc-Ucn">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer will be added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoV-VR-1y4">
@@ -1780,6 +1780,7 @@
         <image name="TextInputField-Active" width="178" height="44"/>
         <image name="appsassinLogo.png" width="1223" height="660"/>
         <image name="overlayi5x1.png" width="320" height="568"/>
+        <image name="overlayi6x1.png" width="375" height="667"/>
         <image name="target2.png" width="504" height="500"/>
     </resources>
     <color key="tintColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

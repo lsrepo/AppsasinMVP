@@ -12,6 +12,7 @@
 		2724C90D1C2A096E001C9DE0 /* overlayi5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2724C90C1C2A096E001C9DE0 /* overlayi5.png */; };
 		2724C90F1C2A0B5F001C9DE0 /* overlayi5x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2724C90E1C2A0B5F001C9DE0 /* overlayi5x1.png */; };
 		2724C9131C2A1118001C9DE0 /* target2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2724C9121C2A1118001C9DE0 /* target2.png */; };
+		273FA29E1C3AEC9400081A7A /* overlayi6x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 273FA29D1C3AEC9400081A7A /* overlayi6x1.png */; };
 		274AE62E1C29C1490040C682 /* appsassinLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 274AE62D1C29C1490040C682 /* appsassinLogo2.png */; };
 		27636BA21C22FB070063BFF2 /* catherine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9E1C22FB070063BFF2 /* catherine.jpg */; };
 		27636BA31C22FB070063BFF2 /* fanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27636B9F1C22FB070063BFF2 /* fanny.jpg */; };
@@ -84,6 +85,7 @@
 		2724C90C1C2A096E001C9DE0 /* overlayi5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayi5.png; sourceTree = "<group>"; };
 		2724C90E1C2A0B5F001C9DE0 /* overlayi5x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayi5x1.png; sourceTree = "<group>"; };
 		2724C9121C2A1118001C9DE0 /* target2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target2.png; sourceTree = "<group>"; };
+		273FA29D1C3AEC9400081A7A /* overlayi6x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayi6x1.png; sourceTree = "<group>"; };
 		274AE62D1C29C1490040C682 /* appsassinLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appsassinLogo2.png; sourceTree = "<group>"; };
 		27636B9E1C22FB070063BFF2 /* catherine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = catherine.jpg; path = images/catherine.jpg; sourceTree = SOURCE_ROOT; };
 		27636B9F1C22FB070063BFF2 /* fanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fanny.jpg; path = images/fanny.jpg; sourceTree = SOURCE_ROOT; };
@@ -179,6 +181,7 @@
 		27636B9D1C22FAD60063BFF2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				273FA29D1C3AEC9400081A7A /* overlayi6x1.png */,
 				27A4C0611C29846A006C31D5 /* appsassinLogo.png */,
 				274AE62D1C29C1490040C682 /* appsassinLogo2.png */,
 				2724C90E1C2A0B5F001C9DE0 /* overlayi5x1.png */,
@@ -435,6 +438,7 @@
 				274AE62E1C29C1490040C682 /* appsassinLogo2.png in Resources */,
 				27636BA51C22FB070063BFF2 /* pak.jpg in Resources */,
 				27636BA41C22FB070063BFF2 /* kbs86.jpg in Resources */,
+				273FA29E1C3AEC9400081A7A /* overlayi6x1.png in Resources */,
 				2724C9131C2A1118001C9DE0 /* target2.png in Resources */,
 				2724C90D1C2A096E001C9DE0 /* overlayi5.png in Resources */,
 				979E11711C2897AE0083D76E /* LoadingView.xib in Resources */,
