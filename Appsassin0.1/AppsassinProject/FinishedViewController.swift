@@ -28,13 +28,18 @@ class FinishedViewController: UIViewController {
 //        let LeaderboardTableViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LeaderboardTableViewController") as UIViewController
 //        self.presentViewController(LeaderboardTableViewController, animated: true, completion: nil)
     }
-    @IBOutlet weak var status: UIButton!
    
+    @IBOutlet weak var status: UILabel!
     @IBOutlet weak var finishedImageView: UIImageView!
-   
+    @IBOutlet weak var targetImg: NSLayoutConstraint!
+    @IBOutlet weak var overlayImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.finishedImageView.hidden = true;
+        self.overlayImg.hidden = true;
+        
         
         // Make decision of who win
         makeDecision();
@@ -43,12 +48,29 @@ class FinishedViewController: UIViewController {
         
     }
     
-    func endGame(){
+    func winGame(){
         
         print("//GameView: the game is ended")
+        //set isFinished
+        nsa.currentGameSession["isFinished"] = true;
+        nsa.currentGameSession.saveInBackground()
+        
+        //upload image
         uploadImageToGameSession();
+        
+        //send notification to target
+        
+        //show imageView
+        self.finishedImageView.hidden = false;
+        self.finishedImageView.image = nsa.cameraImageFromMe
 
     }
+    
+    func loseGame(){
+        
+    }
+    
+ 
     
     func uploadImageToGameSession(){
         //get the image
@@ -58,18 +80,18 @@ class FinishedViewController: UIViewController {
         
         // prepare to save
         nsa.currentGameSession["image"] = imageFile;
+        // deny target to access the game object
+        nsa.currentGameSession.ACL!.setWriteAccess(false, forUserId: nsa.targetUserId)
+        nsa.currentGameSession["test"] = " baby"
+        print("nsa.targetUserId\(nsa.targetUserId)")
+        // Implement it
         nsa.currentGameSession.saveInBackgroundWithBlock { (result:Bool?, error: NSError?) -> Void in
             if error == nil  {
-                // if upload successful, show positive result
+                //upload successful
                 print("//FinishedVC:Image Uploaded")
-                //I win the game
-                self.addScore(nsa.myPlayer,loser: nsa.targetPlayer);
             }
             else{
-                print("//FinishedVC:Image failed to upload")
-                // if upload fail, show negative result
-                print(error)
-                self.addScore(nsa.targetPlayer,loser: nsa.myPlayer);
+                print("//FinishedVC:Image failed to upload",error)
             }
         }
     }
@@ -82,33 +104,24 @@ class FinishedViewController: UIViewController {
     
     func makeDecision(){
         // check game status. ie.e check if player is directed from push notif
-        
         //  upload the picture
-        
-        
-        
         
         nsa.currentGameSession.fetchInBackgroundWithBlock {
             (gameSessionObj: PFObject?, error: NSError?) -> Void in
             if error == nil  {
                 if (gameSessionObj!["isFinished"] === true){
-                    
+                    // I lose
+                    self.loseGame();
                 }
                 else {
                     // happened when it is nil or false
-                    //end The Game
-                    self.endGame();
+                    // I win --> end The Game
+                    self.winGame();
                 }
             } else {
                 print("\(error!) ")
             }
         }
-
-
-        
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -117,13 +130,11 @@ class FinishedViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.finishedImageView.image = nsa.cameraImageFromMe
         
         
         
-//        self.profilePic.image = UIImage(named: "...") // placeholder image
-//        self.profilePic.file = imgObj!["image"] as? PFFile // remote image
-//        self.profilePic.loadInBackground()
+        
+
         
     }
     

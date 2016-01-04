@@ -131,6 +131,9 @@ class ProfileViewController: UIViewController {
                 print("//Profile:Create Game Session Succeessful")
                 nsa.currentGameSession = gameSession
                 
+                
+                gameSession.saveInBackground()
+                
                 //Send push notifications to two players
                 self.pushAssignments(nsa.myPlayerId, targetedName: nsa.targetUsername)
                 self.pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername)
