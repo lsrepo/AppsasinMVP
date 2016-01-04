@@ -1156,99 +1156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKd-jS-xrn">
-                                <rect key="frame" x="214" y="248" width="171" height="30"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                <state key="normal" title="Deactivate game session">
-                                    <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="307" y="88" width="210" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="114" y="248" width="171" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="deactivateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="5dm-cS-3sq"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUf-oF-Ggo">
-                                <rect key="frame" x="191" y="333" width="219" height="30"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                <state key="normal" title="Activate and Unmatch Everyone">
-                                    <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="74" y="467" width="268" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="91" y="333" width="219" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="reactivateAllButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="daO-i0-mxf"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJa-Lp-fUK">
-                                <rect key="frame" x="255" y="89" width="91" height="30"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
-                                <state key="normal" title="Camera Mode">
-                                    <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="86" y="489" width="228" height="47"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="155" y="89" width="91" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="Qen-uC-daf" kind="presentation" identifier="toGameBegin" id="rMh-tf-Q9J"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLy-08-cWe">
-                                <rect key="frame" x="241" y="195" width="116" height="30"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                <state key="normal" title="Search for target">
-                                    <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="330" y="117" width="144" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="114" y="195" width="174" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="searchPlayerButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="ked-pD-vKF"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
-                                <rect key="frame" x="223" y="138" width="154" height="30"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                <state key="normal" title="Activate game session">
-                                    <color key="titleColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="293" y="64" width="181" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="123" y="138" width="165" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-cL-iTJ">
-                                <rect key="frame" x="166" y="403" width="267" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="60" y="64" width="267" height="60"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="72" y="404" width="267" height="60"/>
-                                </variation>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hoI-IT-aXU" customClass="PFImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hoI-IT-aXU" customClass="PFImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="U2Y-C1-dJA"/>
@@ -1267,9 +1175,9 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zXU-AO-XjQ">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zXU-AO-XjQ">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                <color key="onTintColor" red="0.88199979026845643" green="0.031223783557046979" blue="0.19413276006711411" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="209" y="413" width="51" height="31"/>
                                 </variation>
@@ -1277,7 +1185,7 @@
                                     <action selector="activateSwitchTapped:" destination="AXI-xY-kqQ" eventType="valueChanged" id="tlz-Kt-JHc"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   ACTIVATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prd-we-qEf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="   ACTIVATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prd-we-qEf">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1286,7 +1194,7 @@
                                     <rect key="frame" x="110" y="416" width="91" height="20"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-fb-3Dg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Agent name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-fb-3Dg">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1295,7 +1203,7 @@
                                     <rect key="frame" x="111" y="311" width="179" height="31"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Agent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-jS-P5a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Special Agent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-jS-P5a">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="15"/>
                                 <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1308,108 +1216,23 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XJa-Lp-fUK" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="0xf-g7-kAr"/>
-                            <constraint firstItem="cUf-oF-Ggo" firstAttribute="top" secondItem="cLy-08-cWe" secondAttribute="bottom" constant="320" id="3hT-J3-7Dx"/>
-                            <constraint firstItem="cUf-oF-Ggo" firstAttribute="top" secondItem="zXU-AO-XjQ" secondAttribute="bottom" constant="23" id="3vM-bw-qzS"/>
-                            <constraint firstItem="WKd-jS-xrn" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="4g9-XB-cmm"/>
-                            <constraint firstItem="g6Y-ah-dqD" firstAttribute="top" secondItem="6jC-Po-CDo" secondAttribute="bottom" id="8Xy-F9-0bq"/>
-                            <constraint firstItem="cUf-oF-Ggo" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="AxX-Zl-0dj"/>
-                            <constraint firstItem="r70-Mj-env" firstAttribute="top" secondItem="cUf-oF-Ggo" secondAttribute="bottom" constant="54" id="HR8-la-gOe"/>
-                            <constraint firstItem="g6Y-ah-dqD" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="KaP-Wc-0h6"/>
-                            <constraint firstItem="cUf-oF-Ggo" firstAttribute="top" secondItem="WKd-jS-xrn" secondAttribute="bottom" constant="349" id="Ksr-oE-yhL"/>
                             <constraint firstItem="JX9-jS-P5a" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="OIU-Ku-dQn"/>
                             <constraint firstItem="Prd-we-qEf" firstAttribute="leading" secondItem="hoI-IT-aXU" secondAttribute="leading" id="OgP-9R-BsL"/>
-                            <constraint firstItem="XJa-Lp-fUK" firstAttribute="top" secondItem="zXU-AO-XjQ" secondAttribute="bottom" constant="45" id="OnU-Oj-wK4"/>
-                            <constraint firstItem="cLy-08-cWe" firstAttribute="top" secondItem="g6Y-ah-dqD" secondAttribute="bottom" constant="23" id="PI5-E0-WAy"/>
                             <constraint firstItem="zXU-AO-XjQ" firstAttribute="leading" secondItem="Prd-we-qEf" secondAttribute="trailing" constant="8" id="SW6-oc-uhR"/>
                             <constraint firstItem="zXU-AO-XjQ" firstAttribute="top" secondItem="JX9-jS-P5a" secondAttribute="bottom" constant="45" id="StZ-ee-57B"/>
-                            <constraint firstItem="cLy-08-cWe" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="Ulf-qr-iCB"/>
                             <constraint firstItem="hoI-IT-aXU" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="WKy-X6-ZZf"/>
                             <constraint firstItem="XH9-fb-3Dg" firstAttribute="top" secondItem="hoI-IT-aXU" secondAttribute="bottom" constant="17" id="XwL-5b-vrw"/>
                             <constraint firstItem="hoI-IT-aXU" firstAttribute="top" secondItem="6jC-Po-CDo" secondAttribute="bottom" constant="59" id="ZS2-Y6-kSh"/>
                             <constraint firstItem="JX9-jS-P5a" firstAttribute="top" secondItem="XH9-fb-3Dg" secondAttribute="bottom" constant="4" id="cs2-1n-rd0"/>
                             <constraint firstItem="Prd-we-qEf" firstAttribute="top" secondItem="JX9-jS-P5a" secondAttribute="bottom" constant="48" id="jDb-3f-67e"/>
-                            <constraint firstItem="r70-Mj-env" firstAttribute="top" secondItem="XJa-Lp-fUK" secondAttribute="bottom" constant="15" id="wZk-x0-ffY"/>
-                            <constraint firstItem="WKd-jS-xrn" firstAttribute="top" secondItem="6jC-Po-CDo" secondAttribute="bottom" constant="24" id="ydN-sQ-bxn"/>
                             <constraint firstItem="XH9-fb-3Dg" firstAttribute="centerX" secondItem="JUU-Vn-0fL" secondAttribute="centerX" id="yjY-GX-VlS"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="hoI-IT-aXU"/>
-                                <exclude reference="zXU-AO-XjQ"/>
-                                <exclude reference="Prd-we-qEf"/>
-                                <exclude reference="XH9-fb-3Dg"/>
-                                <exclude reference="JX9-jS-P5a"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="SW6-oc-uhR"/>
-                                <exclude reference="StZ-ee-57B"/>
-                                <exclude reference="OIU-Ku-dQn"/>
-                                <exclude reference="cs2-1n-rd0"/>
-                                <exclude reference="OgP-9R-BsL"/>
-                                <exclude reference="jDb-3f-67e"/>
-                                <exclude reference="XwL-5b-vrw"/>
-                                <exclude reference="yjY-GX-VlS"/>
-                                <exclude reference="WKy-X6-ZZf"/>
-                                <exclude reference="ZS2-Y6-kSh"/>
-                                <exclude reference="8Xy-F9-0bq"/>
-                                <exclude reference="KaP-Wc-0h6"/>
-                                <exclude reference="0xf-g7-kAr"/>
-                                <exclude reference="OnU-Oj-wK4"/>
-                                <exclude reference="PI5-E0-WAy"/>
-                                <exclude reference="Ulf-qr-iCB"/>
-                                <exclude reference="4g9-XB-cmm"/>
-                                <exclude reference="ydN-sQ-bxn"/>
-                                <exclude reference="3hT-J3-7Dx"/>
-                                <exclude reference="3vM-bw-qzS"/>
-                                <exclude reference="AxX-Zl-0dj"/>
-                                <exclude reference="Ksr-oE-yhL"/>
-                                <exclude reference="HR8-la-gOe"/>
-                                <exclude reference="wZk-x0-ffY"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="hoI-IT-aXU"/>
-                                <include reference="zXU-AO-XjQ"/>
-                                <include reference="Prd-we-qEf"/>
-                                <include reference="XH9-fb-3Dg"/>
-                                <include reference="JX9-jS-P5a"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="SW6-oc-uhR"/>
-                                <include reference="StZ-ee-57B"/>
-                                <include reference="OIU-Ku-dQn"/>
-                                <include reference="cs2-1n-rd0"/>
-                                <include reference="OgP-9R-BsL"/>
-                                <include reference="jDb-3f-67e"/>
-                                <include reference="XwL-5b-vrw"/>
-                                <include reference="yjY-GX-VlS"/>
-                                <include reference="WKy-X6-ZZf"/>
-                                <include reference="ZS2-Y6-kSh"/>
-                                <include reference="8Xy-F9-0bq"/>
-                                <include reference="KaP-Wc-0h6"/>
-                                <include reference="0xf-g7-kAr"/>
-                                <include reference="OnU-Oj-wK4"/>
-                                <include reference="PI5-E0-WAy"/>
-                                <include reference="Ulf-qr-iCB"/>
-                                <include reference="4g9-XB-cmm"/>
-                                <include reference="ydN-sQ-bxn"/>
-                                <include reference="3hT-J3-7Dx"/>
-                                <include reference="3vM-bw-qzS"/>
-                                <include reference="AxX-Zl-0dj"/>
-                                <include reference="Ksr-oE-yhL"/>
-                                <include reference="HR8-la-gOe"/>
-                                <include reference="wZk-x0-ffY"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="PROFILE" id="Vqa-KC-6xW"/>
                     <connections>
                         <outlet property="activateSwitch" destination="zXU-AO-XjQ" id="yFv-Ya-45i"/>
                         <outlet property="agentLabel" destination="XH9-fb-3Dg" id="08W-fA-iWl"/>
                         <outlet property="profilePic" destination="hoI-IT-aXU" id="ILR-Jb-ELM"/>
-                        <outlet property="targetLabel" destination="AHw-cL-iTJ" id="miG-Ct-kyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFy-N5-yc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
