@@ -115,7 +115,6 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HXv-0q-GZa" firstAttribute="centerX" secondItem="N2G-Bq-r9w" secondAttribute="centerX" id="Bbf-rM-ViY"/>
                             <constraint firstItem="Mna-cK-27L" firstAttribute="centerX" secondItem="N2G-Bq-r9w" secondAttribute="centerX" id="LXF-Tf-j1g"/>
@@ -169,9 +168,10 @@
                     </view>
                     <connections>
                         <outlet property="finishedImageView" destination="Mna-cK-27L" id="tYq-bw-5cH"/>
-                        <outlet property="overlayImg" destination="Boc-27-RlQ" id="DTb-lI-olr"/>
+                        <outlet property="moveOnButton" destination="HXv-0q-GZa" id="ieN-D5-5ip"/>
+                        <outlet property="overlayImg" destination="hea-6m-fm1" id="tXI-JF-qGP"/>
                         <outlet property="status" destination="N0I-f1-b6T" id="vis-o8-NGj"/>
-                        <outlet property="targetImg" destination="WG7-y1-L4w" id="bFx-Ko-0Tq"/>
+                        <outlet property="targetImg" destination="Boc-27-RlQ" id="zDj-em-exy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFI-kx-Dvv" userLabel="First Responder" sceneMemberID="firstResponder"/>

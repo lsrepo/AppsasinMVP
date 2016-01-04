@@ -13,6 +13,7 @@ import ParseUI
 class FinishedViewController: UIViewController {
 
     @IBAction func moveOnButton(sender: UIButton) {
+        //move to leaderboard
         print("running navigation")
         let preViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarViewController") as! UITabBarController
         
@@ -21,24 +22,27 @@ class FinishedViewController: UIViewController {
         self.presentViewController(preViewController, animated: true, completion: nil)
         
     }
-    @IBAction func moveToLeaderboardButton(sender: AnyObject) {
-        
-        print("running navigation")
-        
-//        let LeaderboardTableViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LeaderboardTableViewController") as UIViewController
-//        self.presentViewController(LeaderboardTableViewController, animated: true, completion: nil)
-    }
+
    
+    @IBOutlet weak var moveOnButton: UIButton!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var finishedImageView: UIImageView!
-    @IBOutlet weak var targetImg: NSLayoutConstraint!
     @IBOutlet weak var overlayImg: UIImageView!
+    @IBOutlet weak var targetImg: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.finishedImageView.hidden = true;
         self.overlayImg.hidden = true;
+        self.targetImg.hidden = true;
+        self.moveOnButton.hidden = true;
+        self.view.backgroundColor = UIColor.blackColor()
+        
+        
+        
+        
         
         
         // Make decision of who win
@@ -59,9 +63,14 @@ class FinishedViewController: UIViewController {
         uploadImageToGameSession();
         
         //send notification to target
+        nsa.pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername,type: "B")
         
         //show imageView
+        self.status.text! = "Target Terminated";
         self.finishedImageView.hidden = false;
+        self.overlayImg.hidden = false;
+        self.targetImg.hidden = false;
+        self.moveOnButton.hidden = false;
         self.finishedImageView.image = nsa.cameraImageFromMe
 
     }

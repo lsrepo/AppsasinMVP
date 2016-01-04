@@ -20,6 +20,53 @@ class mySingleton {
     var myPlayer = PFObject(className:"Player")
     var targetPlayer = PFObject(className:"Player")
     
+    func pushAssignments(targetedPlayerId:String,targetedName:String,type:String){
+        // Find players in Player
+        let playerQuery = PFQuery(className:"Player")
+        playerQuery.whereKey("objectId", equalTo: targetedPlayerId )
+        
+        // Find devices associated with these users
+        let pushQuery = PFInstallation.query()
+        pushQuery!.whereKey("player", matchesQuery: playerQuery)
+        
+        // Send push notification to query
+        //print("using PFpush in pushAssignment")
+        let push = PFPush()
+        
+        var playerId:String = ""
+        if (targetedPlayerId == nsa.myPlayerId){
+            playerId = nsa.targetPlayerId
+        }
+        else{
+            playerId = nsa.myPlayerId
+        }
+        var data:Dictionary = ["empty": ""];
+        if ( type == "A"){
+             data = [
+                "alert" : "You're now assigned to terminate agent \(targetedName)    /M",
+                "badge" : "Increment",
+                "sound" : "radar.wav",
+                "type" : "A",
+                "playerId" : playerId,
+                "gameSessionId" : nsa.currentGameSession.objectId!
+            ]
+        }
+        else if (type == "B"){
+             data = [
+                "alert" : "You're terminated!",
+                "badge" : "Increment",
+                //"sound" : "radar.wav",
+                "type" : "B"
+            ]
+        }
+        
+        push.setData(data as [NSObject : AnyObject])
+        push.setQuery(pushQuery) // Set our Installation query
+        //        push.setMessage("You're now assigned to terminate agent \(targetedName)    /M")
+        push.sendPushInBackground()
+        
+    }
+    
     
     //declare functions here
     func gameStateChanger(isActive: Bool,isMatched: Bool,playerId: String){
