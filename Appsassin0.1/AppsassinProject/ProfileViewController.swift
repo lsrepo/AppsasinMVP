@@ -17,22 +17,22 @@ class ProfileViewController: UIViewController {
     
     
    
-    @IBAction func reactivateAllButton(sender: AnyObject) {
-        nsa.reactivateAll();
-    }
-    @IBAction func activateButton(sender: AnyObject) {
-        self.activateGameMode();
-    }
-    
-    @IBAction func searchPlayerButton(sender: AnyObject) {
-        self.searchPlayers();
-    }
-
-    @IBAction func deactivateButton(sender: AnyObject) {
-        self.deactivateGameMode();
-    }
-    
-    @IBOutlet weak var targetLabel: UILabel!
+//    @IBAction func reactivateAllButton(sender: AnyObject) {
+//        nsa.reactivateAll();
+//    }
+//    @IBAction func activateButton(sender: AnyObject) {
+//        self.activateGameMode();
+//    }
+//    
+//    @IBAction func searchPlayerButton(sender: AnyObject) {
+//        self.searchPlayers();
+//    }
+//
+//    @IBAction func deactivateButton(sender: AnyObject) {
+//        self.deactivateGameMode();
+//    }
+//    
+//    @IBOutlet weak var targetLabel: UILabel!
     
     
     @IBOutlet weak var profilePic: PFImageView!
