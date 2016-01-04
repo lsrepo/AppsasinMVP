@@ -18,6 +18,20 @@ var RecordingContext = "RecordingContext"
 
 class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
+    //Need to have this in some VC to receive push
+    func catchIt(userInfo: NSNotification){
+        var notif = JSON(userInfo.valueForKey("userInfo")!)
+        // Check nil and do redirect here, for example:
+        if notif["type"] == "B" {
+            //Initiate change in VC
+            nsa.playerStatus = "Loser";
+            let FinishedViewController = self.storyboard!.instantiateViewControllerWithIdentifier("FinishedViewController") as UIViewController
+            self.presentViewController(FinishedViewController, animated: true, completion: nil)
+            
+        }
+    }
+    
+    // Camera Package
     // MARK: property
     
     var sessionQueue: dispatch_queue_t!
@@ -166,6 +180,8 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 
     
     override func viewWillAppear(animated: Bool) {
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "catchIt:", name: "myNotif", object: nil)
         
         dispatch_async(self.sessionQueue, {
             
@@ -611,4 +627,5 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
         
     }
 }
+
 

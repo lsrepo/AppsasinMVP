@@ -10,6 +10,7 @@ class mySingleton {
     
     //declare variables here
     var tmp:String = "";
+    var playerStatus:String = "";
     var myPlayerId:String = "";
     var targetUserId:String = "";
     var targetPlayerId:String = "";
@@ -61,10 +62,12 @@ class mySingleton {
         }
         
         push.setData(data as [NSObject : AnyObject])
-        push.setQuery(pushQuery) // Set our Installation query
-        //        push.setMessage("You're now assigned to terminate agent \(targetedName)    /M")
-        push.sendPushInBackground()
+        push.setQuery(pushQuery)
+        // Set our Installation query
         
+        push.sendPushInBackground()
+        let tmpDate =  NSDate()
+        print(tmpDate,"//NSA:push notification sent")
     }
     
     

@@ -34,6 +34,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cEE-qy-urk">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                            </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="overlayi5x1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-cK-27L">
                                 <rect key="frame" x="200" y="40" width="201" height="207"/>
                                 <constraints>
@@ -110,9 +113,6 @@
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="84" y="82" width="232" height="33"/>
-                                </variation>
                             </label>
                         </subviews>
                         <constraints>
@@ -120,15 +120,18 @@
                             <constraint firstItem="Mna-cK-27L" firstAttribute="centerX" secondItem="N2G-Bq-r9w" secondAttribute="centerX" id="LXF-Tf-j1g"/>
                             <constraint firstItem="hea-6m-fm1" firstAttribute="centerX" secondItem="N2G-Bq-r9w" secondAttribute="centerX" id="NBx-lF-kpt"/>
                             <constraint firstItem="Boc-27-RlQ" firstAttribute="centerX" secondItem="N2G-Bq-r9w" secondAttribute="centerX" id="WG7-y1-L4w"/>
+                            <constraint firstItem="cEE-qy-urk" firstAttribute="centerX" secondItem="N2G-Bq-r9w" secondAttribute="centerX" id="Wk3-SX-tzg"/>
                             <constraint firstItem="N0I-f1-b6T" firstAttribute="centerX" secondItem="N2G-Bq-r9w" secondAttribute="centerX" id="bc4-Sb-63K"/>
                             <constraint firstItem="N0I-f1-b6T" firstAttribute="top" secondItem="XM6-Cw-Qyy" secondAttribute="bottom" constant="62" id="dIw-RL-BiP"/>
                             <constraint firstItem="Mna-cK-27L" firstAttribute="centerY" secondItem="N2G-Bq-r9w" secondAttribute="centerY" id="df0-Nz-qax"/>
                             <constraint firstItem="Boc-27-RlQ" firstAttribute="centerY" secondItem="N2G-Bq-r9w" secondAttribute="centerY" id="jTD-4m-qtE"/>
                             <constraint firstItem="hea-6m-fm1" firstAttribute="centerY" secondItem="N2G-Bq-r9w" secondAttribute="centerY" id="lCt-79-wh1"/>
+                            <constraint firstItem="cEE-qy-urk" firstAttribute="centerY" secondItem="N2G-Bq-r9w" secondAttribute="centerY" id="oGS-dg-Cuq"/>
                             <constraint firstItem="lj7-TI-O7q" firstAttribute="top" secondItem="HXv-0q-GZa" secondAttribute="bottom" constant="55" id="pjk-oc-aZy"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="cEE-qy-urk"/>
                                 <exclude reference="hea-6m-fm1"/>
                                 <exclude reference="Boc-27-RlQ"/>
                                 <exclude reference="N0I-f1-b6T"/>
@@ -142,12 +145,15 @@
                                 <exclude reference="dIw-RL-BiP"/>
                                 <exclude reference="WG7-y1-L4w"/>
                                 <exclude reference="jTD-4m-qtE"/>
+                                <exclude reference="Wk3-SX-tzg"/>
+                                <exclude reference="oGS-dg-Cuq"/>
                                 <exclude reference="Bbf-rM-ViY"/>
                                 <exclude reference="pjk-oc-aZy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="cEE-qy-urk"/>
                                 <include reference="hea-6m-fm1"/>
                                 <include reference="Boc-27-RlQ"/>
                                 <include reference="N0I-f1-b6T"/>
@@ -161,6 +167,8 @@
                                 <include reference="dIw-RL-BiP"/>
                                 <include reference="WG7-y1-L4w"/>
                                 <include reference="jTD-4m-qtE"/>
+                                <include reference="Wk3-SX-tzg"/>
+                                <include reference="oGS-dg-Cuq"/>
                                 <include reference="Bbf-rM-ViY"/>
                                 <include reference="pjk-oc-aZy"/>
                             </mask>
@@ -170,6 +178,7 @@
                         <outlet property="finishedImageView" destination="Mna-cK-27L" id="tYq-bw-5cH"/>
                         <outlet property="moveOnButton" destination="HXv-0q-GZa" id="ieN-D5-5ip"/>
                         <outlet property="overlayImg" destination="hea-6m-fm1" id="tXI-JF-qGP"/>
+                        <outlet property="spinner" destination="cEE-qy-urk" id="rmV-n7-epU"/>
                         <outlet property="status" destination="N0I-f1-b6T" id="vis-o8-NGj"/>
                         <outlet property="targetImg" destination="Boc-27-RlQ" id="zDj-em-exy"/>
                     </connections>

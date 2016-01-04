@@ -12,6 +12,8 @@ import ParseUI
 
 class FinishedViewController: UIViewController {
 
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     @IBAction func moveOnButton(sender: UIButton) {
         //move to leaderboard
         print("running navigation")
@@ -30,6 +32,34 @@ class FinishedViewController: UIViewController {
     @IBOutlet weak var overlayImg: UIImageView!
     @IBOutlet weak var targetImg: UIImageView!
     
+    func downloadImage() {
+        
+        nsa.currentGameSession.fetchInBackgroundWithBlock { (gSObj:PFObject?,error:NSError? ) -> Void in
+            if (error == nil){
+                let userImageFile = gSObj!["image"] as? PFFile
+                userImageFile!.getDataInBackgroundWithBlock {
+                    (imageData: NSData?, error: NSError?) -> Void in
+                    if error == nil {
+                        if let imageData = imageData {
+                            self.finishedImageView.image = UIImage(data:imageData)
+                            
+                            self.finishedImageView.hidden = false;
+                            self.overlayImg.hidden = false;
+                            self.targetImg.hidden = false;
+                            self.moveOnButton.hidden = false;
+                            self.spinner.stopAnimating();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                print(error)
+            }
+        }
+        
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,17 +69,20 @@ class FinishedViewController: UIViewController {
         self.targetImg.hidden = true;
         self.moveOnButton.hidden = true;
         self.view.backgroundColor = UIColor.blackColor()
-        
-        
-        
-        
-        
-        
+
         // Make decision of who win
         makeDecision();
-        
-
-        
+  
+    }
+    
+    //Need to have this in some VC to receive push
+    func catchIt(userInfo: NSNotification){
+        var notif = JSON(userInfo.valueForKey("userInfo")!)
+        // Check nil and do redirect here, for example:
+        if notif["type"] == "B" {
+            //Initiate change in VC
+            loseGame();
+        }
     }
     
     func winGame(){
@@ -59,11 +92,13 @@ class FinishedViewController: UIViewController {
         nsa.currentGameSession["isFinished"] = true;
         nsa.currentGameSession.saveInBackground()
         
+        
+        //risk: perhaps image is not uploaded when view is load?
+        
+        
+        
         //upload image
         uploadImageToGameSession();
-        
-        //send notification to target
-        nsa.pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername,type: "B")
         
         //show imageView
         self.status.text! = "Target Terminated";
@@ -77,6 +112,10 @@ class FinishedViewController: UIViewController {
     
     func loseGame(){
         
+        self.status.text! = "You're terminated!";
+        downloadImage();
+        
+        
     }
     
  
@@ -89,15 +128,21 @@ class FinishedViewController: UIViewController {
         
         // prepare to save
         nsa.currentGameSession["image"] = imageFile;
-        // deny target to access the game object
-        nsa.currentGameSession.ACL!.setWriteAccess(false, forUserId: nsa.targetUserId)
-        nsa.currentGameSession["test"] = " baby"
+        
+        // try to deny target to access the game object
+        //nsa.currentGameSession.ACL!.setWriteAccess(false, forUserId: nsa.targetUserId)
+      
         print("nsa.targetUserId\(nsa.targetUserId)")
         // Implement it
         nsa.currentGameSession.saveInBackgroundWithBlock { (result:Bool?, error: NSError?) -> Void in
             if error == nil  {
                 //upload successful
-                print("//FinishedVC:Image Uploaded")
+                let tmpDate =  NSDate()
+                print(tmpDate,"//FinishedVC:Image Uploaded")
+                
+                //send notification to target
+                nsa.pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername,type: "B")
+                
             }
             else{
                 print("//FinishedVC:Image failed to upload",error)
@@ -119,8 +164,12 @@ class FinishedViewController: UIViewController {
             (gameSessionObj: PFObject?, error: NSError?) -> Void in
             if error == nil  {
                 if (gameSessionObj!["isFinished"] === true){
-                    // I lose
-                    self.loseGame();
+                    // I lose, wait!
+                    if (nsa.playerStatus == "Loser")
+                    {
+                       self.loseGame();
+                    }
+                    
                 }
                 else {
                     // happened when it is nil or false
@@ -140,11 +189,8 @@ class FinishedViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        
-        
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "catchIt:", name: "myNotif", object: nil)
 
-        
     }
     
 

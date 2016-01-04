@@ -101,12 +101,12 @@ class ProfileViewController: UIViewController {
     }
     
     func assignTargets(){
-        //print("//GameView:Assigning Targets")
+        //GameView:Assigning Targets
         //print("myPlayerId is \(nsa.myPlayerId)")
         //print("targetPlayer is \(nsa.targetPlayerId)")
         nsa.gameStateChanger(true, isMatched: true, playerId: nsa.myPlayerId)
     //nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
-        //print("Both Players are deactiveted")
+        
         createGameSession();
         
 
@@ -130,10 +130,7 @@ class ProfileViewController: UIViewController {
                 // The object has been saved.
                 print("//Profile:Create Game Session Succeessful")
                 nsa.currentGameSession = gameSession
-                
-                
-                gameSession.saveInBackground()
-                
+
                 //Send push notifications to two players
                 nsa.pushAssignments(nsa.myPlayerId, targetedName: nsa.targetUsername,type: "A")
                 nsa.pushAssignments(nsa.targetPlayerId, targetedName: nsa.myUsername,type: "A")
@@ -345,35 +342,30 @@ class ProfileViewController: UIViewController {
         var notif = JSON(userInfo.valueForKey("userInfo")!)
         // Check nil and do redirect here, for example:
         if notif["type"] == "A" {
-            //print("//ProfileVC:notif is \(notif)")
+            //Set currentGameSession
             nsa.targetPlayerId = String(notif["playerId"])
-            //print("//GameVC: targetPlayerId is \( nsa.targetPlayerId)")
-            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
-            self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
-        
-//            dispatch_async(dispatch_get_main_queue(), {
-//                self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
-//
-//            })
+            let gameSessionId = String(notif["gameSessionId"])
             
-//            let gvc: UIViewController  = storyboard.instantiateViewControllerWithIdentifier("gvc") as UIViewController
-//            dispatch_async(dispatch_get_main_queue(), {
-//                self.navigationController!.pushViewController(gvc, animated: true)
-//            })
-//           print("self is\(self)")
-//            self.navigationController!.presentViewController(gvc, animated: true, completion: nil)
-             //performSegueWithIdentifier("toGameBegin", sender: self)
-        
-            //self.showViewController(gvc, sender: self)
-           
-        }
-        else if notif["type"] == "B"{
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let fvc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("fvc") as UIViewController
-            self.presentViewController(fvc, animated: true, completion: nil)
+            let query = PFQuery(className:"Game")
+            query.getObjectInBackgroundWithId(gameSessionId) {
+                (gameSessionObj:PFObject?, error:NSError?) -> Void in
+                if error == nil {
+                    //Set currentGameSession for both players
+                    nsa.currentGameSession = gameSessionObj!;
+                    
+                    //Initiate change in VC
+                    let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
+                    self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
+                    
+                } else {
+                    print(error)
+                }
+            }
         }
     }
+    
+    
+    
     
     override func viewWillDisappear(animated: Bool) {
         NSNotificationCenter.defaultCenter().removeObserver(self)
