@@ -116,6 +116,10 @@ class NewLogInViewController: UIViewController {
         //print("//From Login:Installation is set to \(installation["player"])");
         installation.saveInBackground()
         
+        
+        // Associate User class with installationID
+        PFUser.currentUser()!["installation"] = installation
+        
         //Setup Profile picture for next view
         let preparePlayerId = PFUser.currentUser()!["player"]
         
@@ -131,41 +135,47 @@ class NewLogInViewController: UIViewController {
    // @IBOutlet var errorLabel: UILabel!
     
     @IBAction func signUp(sender: AnyObject) {
-    
-    
         PFUser.logInWithUsernameInBackground(username.text!, password:"password") {
             
             (user: PFUser?, error: NSError?) -> Void in
-            
+
             if let error = error {
-                
+
                 var user = PFUser()
                 user.username = self.username.text!
                 user.password = "password"
-                
+
                 user.signUpInBackgroundWithBlock {
                     (succeeded, error) -> Void in
-                    
                     if let error = error {
-                        
                         let errorString = error.userInfo["error"]! as! String
-                        
-                        //self.errorLabel.text = "Error: " + errorString
-                        
+
                     } else {
-                        
-                        print("Signed Up")
-                        //                      self.performSegueWithIdentifier("whatsup", sender: self)
-                        
+
+
                         //Associate player and username if you're newly registered
+                        //create a playerClass
                         let playerClass = PFObject(className:"Player")
                         playerClass["username"] = user.username
-                        print(playerClass["username"])
-                        playerClass.saveInBackground()
-                        
+                        playerClass["installation"] = PFInstallation.currentInstallation()
+                        playerClass.ACL?.publicWriteAccess = true
+                        playerClass.saveInBackgroundWithBlock({ (tf:Bool, error:NSError?) -> Void in
+                            //Sign in
+                            
+                            PFUser.logInWithUsernameInBackground(self.username.text!, password:"password", block: { (result:PFUser?, error:NSError?) -> Void in
+                                //Associate player with user
+                                PFUser.currentUser()?["player"] = playerClass;
+                                PFUser.currentUser()?.saveInBackgroundWithBlock({ (tf:Bool, error:NSError?) -> Void in
+                                    //Log user in
+                                    self.registerSession();
+                                    self.performSegueWithIdentifier("whatsup", sender: self)
+                                })
+                            })
+ 
+                        })
+  
                     }
-                    
-                    
+   
                 }
                 
             } else {
