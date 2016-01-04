@@ -36,8 +36,16 @@ class SettingsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "logOut" {
+            
             PFUser.logOut()
         }
     }
+    
+    func unregisterSession(){
+       
+        
+        
+    }
+    
 
 }
