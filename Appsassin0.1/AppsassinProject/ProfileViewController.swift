@@ -105,7 +105,7 @@ class ProfileViewController: UIViewController {
         //print("myPlayerId is \(nsa.myPlayerId)")
         //print("targetPlayer is \(nsa.targetPlayerId)")
         nsa.gameStateChanger(true, isMatched: true, playerId: nsa.myPlayerId)
-    //nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
+        nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
         
         createGameSession();
         
