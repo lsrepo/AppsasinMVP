@@ -1269,7 +1269,7 @@
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zXU-AO-XjQ">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                <color key="onTintColor" red="0.88199979026845643" green="0.031223783557046979" blue="0.19413276006711411" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="209" y="413" width="51" height="31"/>
                                 </variation>
@@ -1539,7 +1539,7 @@
         <scene sceneID="TZ1-HZ-sBA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZaL-U4-S22" customClass="NavigationController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Leaderboard" image="Leaderboard_inactive" selectedImage="Leaderboard_active" id="nqZ-xv-BQl"/>
+                    <tabBarItem key="tabBarItem" title="Leaderboard" image="leaderboard" selectedImage="leaderboard" id="nqZ-xv-BQl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q6p-Zm-LSW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1558,7 +1558,7 @@
         <scene sceneID="Ukq-XS-hKU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NWe-9x-t8t" customClass="NavigationController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rules" image="Rules_inactive" selectedImage="Rules_active" id="Oq3-Xw-VsS"/>
+                    <tabBarItem key="tabBarItem" title="Rules" image="rules" selectedImage="rules" id="Oq3-Xw-VsS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qe1-oX-Sbo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1577,7 +1577,7 @@
         <scene sceneID="iR3-VS-13c">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mg7-1Q-lzB" customClass="NavigationController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="Settings_inactive" selectedImage="Settings_active" id="3eS-1M-nrl"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="3eS-1M-nrl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bTu-8e-Ut4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1596,7 +1596,7 @@
         <scene sceneID="CHP-8X-KAe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0EZ-lF-zwv" customClass="NavigationController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile_inactive" selectedImage="Profile_active" id="3In-Z7-Gbw"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile" id="3In-Z7-Gbw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mZz-km-jOP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1767,20 +1767,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Leaderboard_active" width="35" height="24"/>
-        <image name="Leaderboard_inactive" width="35" height="24"/>
         <image name="Logo" width="22" height="22"/>
-        <image name="Profile_active" width="32" height="32"/>
-        <image name="Profile_inactive" width="32" height="33"/>
-        <image name="Rules_active" width="24" height="30"/>
-        <image name="Rules_inactive" width="24" height="30"/>
-        <image name="Settings_active" width="27" height="27"/>
-        <image name="Settings_inactive" width="27" height="27"/>
         <image name="TextInputField" width="178" height="44"/>
         <image name="TextInputField-Active" width="178" height="44"/>
         <image name="appsassinLogo.png" width="1223" height="660"/>
+        <image name="leaderboard" width="27" height="26"/>
         <image name="overlayi5x1.png" width="320" height="568"/>
         <image name="overlayi6x1.png" width="375" height="667"/>
+        <image name="profile" width="25" height="27"/>
+        <image name="rules" width="21" height="26"/>
+        <image name="settings" width="25" height="25"/>
         <image name="target2.png" width="504" height="500"/>
     </resources>
     <color key="tintColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
