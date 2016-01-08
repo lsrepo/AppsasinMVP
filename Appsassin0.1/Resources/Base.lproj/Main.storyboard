@@ -589,22 +589,44 @@ There’s not much more to it, happy hunting! &lt;3
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tT-Cb-56U">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <segue destination="dP9-qB-YdP" kind="presentation" identifier="logOut" id="Wp9-PT-dJu"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change profile picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80c-Zx-IJ5">
                                 <rect key="frame" x="206" y="290" width="189" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="109" y="297" width="181.5" height="23"/>
+                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tT-Cb-56U" customClass="DesignableButton" customModule="Appsassin0_1" customModuleProvider="target">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="nZm-cE-1uz"/>
+                                    <constraint firstAttribute="width" constant="200" id="tBb-rB-whD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nZm-cE-1uz"/>
+                                        <exclude reference="tBb-rB-whD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="nZm-cE-1uz"/>
+                                        <include reference="tBb-rB-whD"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="dP9-qB-YdP" kind="presentation" identifier="logOut" id="Wp9-PT-dJu"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99218934774398804" green="0.98849815130233765" blue="0.97581857442855835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5tT-Cb-56U" firstAttribute="top" secondItem="80c-Zx-IJ5" secondAttribute="bottom" constant="62" id="GwE-74-Ish"/>
                             <constraint firstItem="5tT-Cb-56U" firstAttribute="centerX" secondItem="QaU-lc-kUz" secondAttribute="centerX" id="PDY-H4-yZh"/>
@@ -613,8 +635,8 @@ There’s not much more to it, happy hunting! &lt;3
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="5tT-Cb-56U"/>
                                 <exclude reference="80c-Zx-IJ5"/>
+                                <exclude reference="5tT-Cb-56U"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="GwE-74-Ish"/>
@@ -625,8 +647,8 @@ There’s not much more to it, happy hunting! &lt;3
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="5tT-Cb-56U"/>
                                 <include reference="80c-Zx-IJ5"/>
+                                <include reference="5tT-Cb-56U"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="GwE-74-Ish"/>
@@ -640,7 +662,7 @@ There’s not much more to it, happy hunting! &lt;3
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Dw-0V-8yY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2223" y="-941"/>
+            <point key="canvasLocation" x="2223" y="-941.25"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LbA-YX-ZU2">
@@ -680,12 +702,31 @@ There’s not much more to it, happy hunting! &lt;3
                                     <constraint firstAttribute="height" constant="200" id="rZh-0n-NSl"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKW-51-xpb">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKW-51-xpb" customClass="DesignableButton" customModule="Appsassin0_1" customModuleProvider="target">
                                 <rect key="frame" x="264" y="438" width="72" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="p1W-Ov-gMn"/>
+                                    <constraint firstAttribute="height" constant="53" id="sds-qr-bwB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
-                                <state key="normal" title="Roger that!"/>
+                                <state key="normal" title="OK!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="p1W-Ov-gMn"/>
+                                        <exclude reference="sds-qr-bwB"/>
+                                    </mask>
+                                </variation>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="141" y="438" width="97" height="45"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="p1W-Ov-gMn"/>
+                                        <include reference="sds-qr-bwB"/>
+                                    </mask>
                                 </variation>
                                 <connections>
                                     <segue destination="FF3-n7-b0n" kind="presentation" id="HTR-p2-ShU"/>
@@ -717,7 +758,7 @@ There’s not much more to it, happy hunting! &lt;3
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grU-CZ-rxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2223" y="551"/>
+            <point key="canvasLocation" x="2223" y="550.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="FPf-3Q-Ofw">
