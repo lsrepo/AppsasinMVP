@@ -59,7 +59,7 @@
                                         <include reference="aEg-UA-DiH"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="100" y="40" width="201" height="207"/>
                                 </variation>
                             </imageView>
@@ -249,91 +249,131 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="36"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="JrN-PL-Gpg">
-                                    <rect key="frame" x="-12" y="-8" width="327" height="20"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkF-c6-Mcn">
-                                            <rect key="frame" x="0.0" y="0.0" width="35" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="47" id="H9R-Pu-SgG"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="H9R-Pu-SgG"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="widthClass=compact" ambiguous="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="47" height="20"/>
-                                                <mask key="constraints">
-                                                    <include reference="H9R-Pu-SgG"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Codename" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g4-23-W0J">
-                                            <rect key="frame" x="61" y="0.0" width="76" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="145" id="Rwp-Ng-r0j"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Rwp-Ng-r0j"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="widthClass=compact" ambiguous="YES">
-                                                <rect key="frame" x="73" y="0.0" width="145" height="20"/>
-                                                <mask key="constraints">
-                                                    <include reference="Rwp-Ng-r0j"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD6-lH-5VS">
-                                            <rect key="frame" x="163" y="0.0" width="40" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="45" id="Dqu-ij-GzK"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Dqu-ij-GzK"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="widthClass=compact" ambiguous="YES">
-                                                <rect key="frame" x="244" y="0.0" width="45" height="20"/>
-                                                <mask key="constraints">
-                                                    <include reference="Dqu-ij-GzK"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kills  Deaths" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUs-Nv-ic0">
-                                            <rect key="frame" x="229" y="0.0" width="98" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="98" id="clj-Dc-PZ2"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" ambiguous="YES">
-                                                <rect key="frame" x="315" y="0.0" width="98" height="20"/>
-                                            </variation>
-                                        </label>
-                                    </subviews>
-                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                        <rect key="frame" x="6" y="8" width="413" height="20"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkF-c6-Mcn">
+                                    <rect key="frame" x="0.0" y="0.0" width="35" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="47" id="H9R-Pu-SgG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="H9R-Pu-SgG"/>
+                                        </mask>
                                     </variation>
-                                </stackView>
+                                    <variation key="widthClass=compact" ambiguous="YES">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="20"/>
+                                        <mask key="constraints">
+                                            <include reference="H9R-Pu-SgG"/>
+                                        </mask>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Codename" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g4-23-W0J">
+                                    <rect key="frame" x="61" y="0.0" width="76" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="145" id="Rwp-Ng-r0j">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="79"/>
+                                        </constraint>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Rwp-Ng-r0j"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact" ambiguous="YES">
+                                        <rect key="frame" x="73" y="0.0" width="145" height="20"/>
+                                        <mask key="constraints">
+                                            <include reference="Rwp-Ng-r0j"/>
+                                        </mask>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kills  Deaths" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUs-Nv-ic0">
+                                    <rect key="frame" x="229" y="0.0" width="98" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="98" id="clj-Dc-PZ2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="widthClass=compact" ambiguous="YES">
+                                        <rect key="frame" x="315" y="0.0" width="98" height="20"/>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD6-lH-5VS">
+                                    <rect key="frame" x="163" y="0.0" width="40" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="Dqu-ij-GzK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Dqu-ij-GzK"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact" ambiguous="YES">
+                                        <rect key="frame" x="244" y="0.0" width="45" height="20"/>
+                                        <mask key="constraints">
+                                            <include reference="Dqu-ij-GzK"/>
+                                        </mask>
+                                    </variation>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" notEnabled="YES"/>
                             </accessibility>
+                            <constraints>
+                                <constraint firstItem="5g4-23-W0J" firstAttribute="centerY" secondItem="daM-zT-wur" secondAttribute="centerY" id="4Ia-Ub-2Li"/>
+                                <constraint firstItem="lUs-Nv-ic0" firstAttribute="leading" secondItem="5g4-23-W0J" secondAttribute="trailing" constant="15" id="Bkv-MS-CTo"/>
+                                <constraint firstItem="JD6-lH-5VS" firstAttribute="leading" secondItem="lUs-Nv-ic0" secondAttribute="trailing" constant="9" id="D3U-hB-BOa"/>
+                                <constraint firstItem="lUs-Nv-ic0" firstAttribute="centerY" secondItem="daM-zT-wur" secondAttribute="centerY" id="XE9-aB-UQa"/>
+                                <constraint firstItem="5g4-23-W0J" firstAttribute="leading" secondItem="EkF-c6-Mcn" secondAttribute="trailing" constant="64" id="bwP-3j-jlv"/>
+                                <constraint firstItem="EkF-c6-Mcn" firstAttribute="centerY" secondItem="daM-zT-wur" secondAttribute="centerY" id="kf5-ZY-RdJ"/>
+                                <constraint firstItem="JD6-lH-5VS" firstAttribute="centerY" secondItem="daM-zT-wur" secondAttribute="centerY" id="lMR-Z7-O8h"/>
+                                <constraint firstItem="EkF-c6-Mcn" firstAttribute="leading" secondItem="daM-zT-wur" secondAttribute="leading" id="v4L-M3-KPl"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="EkF-c6-Mcn"/>
+                                    <exclude reference="5g4-23-W0J"/>
+                                    <exclude reference="lUs-Nv-ic0"/>
+                                    <exclude reference="JD6-lH-5VS"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="kf5-ZY-RdJ"/>
+                                    <exclude reference="v4L-M3-KPl"/>
+                                    <exclude reference="4Ia-Ub-2Li"/>
+                                    <exclude reference="bwP-3j-jlv"/>
+                                    <exclude reference="Bkv-MS-CTo"/>
+                                    <exclude reference="XE9-aB-UQa"/>
+                                    <exclude reference="D3U-hB-BOa"/>
+                                    <exclude reference="lMR-Z7-O8h"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="subviews">
+                                    <include reference="EkF-c6-Mcn"/>
+                                    <include reference="5g4-23-W0J"/>
+                                    <include reference="lUs-Nv-ic0"/>
+                                    <include reference="JD6-lH-5VS"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <include reference="kf5-ZY-RdJ"/>
+                                    <include reference="v4L-M3-KPl"/>
+                                    <include reference="4Ia-Ub-2Li"/>
+                                    <include reference="bwP-3j-jlv"/>
+                                    <include reference="Bkv-MS-CTo"/>
+                                    <include reference="XE9-aB-UQa"/>
+                                    <include reference="D3U-hB-BOa"/>
+                                    <include reference="lMR-Z7-O8h"/>
+                                </mask>
+                            </variation>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leaderboardPFCell" rowHeight="76" id="3Jw-hO-NlU" customClass="LeaderboardPFTableViewCell" customModule="Appsassin0_1" customModuleProvider="target">
@@ -343,146 +383,137 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="75.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="E6t-Se-9DZ">
-                                            <rect key="frame" x="-12" y="-20" width="381" height="67"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1c-dA-7lm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="13" height="67"/>
-                                                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="24"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" ambiguous="YES">
-                                                        <rect key="frame" x="0.0" y="19" width="13" height="29"/>
-                                                    </variation>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OxF-L4-Dd1" customClass="PFImageView">
-                                                    <rect key="frame" x="43" y="0.0" width="65" height="67"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="65" id="Skr-R8-FHE"/>
-                                                        <constraint firstAttribute="height" constant="67" id="YDp-nU-Spz"/>
-                                                    </constraints>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="Skr-R8-FHE"/>
-                                                            <exclude reference="YDp-nU-Spz"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="widthClass=compact" ambiguous="YES">
-                                                        <rect key="frame" x="43" y="0.0" width="65" height="67"/>
-                                                        <mask key="constraints">
-                                                            <include reference="Skr-R8-FHE"/>
-                                                            <include reference="YDp-nU-Spz"/>
-                                                        </mask>
-                                                    </variation>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Catherine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dr-dz-FQr">
-                                                    <rect key="frame" x="138" y="0.0" width="77" height="67"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="77" id="VYh-q5-OZ3"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="VYh-q5-OZ3"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="widthClass=compact" ambiguous="YES">
-                                                        <rect key="frame" x="138" y="23" width="77" height="22"/>
-                                                        <mask key="constraints">
-                                                            <include reference="VYh-q5-OZ3"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS5-ho-FJk">
-                                                    <rect key="frame" x="245" y="0.0" width="45" height="67"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="45" id="j2r-sd-Kb8"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="21"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="j2r-sd-Kb8"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="widthClass=compact" ambiguous="YES">
-                                                        <rect key="frame" x="245" y="21" width="45" height="26"/>
-                                                        <mask key="constraints">
-                                                            <include reference="j2r-sd-Kb8"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAr-d1-6Mk">
-                                                    <rect key="frame" x="320" y="0.0" width="21" height="67"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="21" id="fbL-8M-yHx"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="21"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="fbL-8M-yHx"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="widthClass=compact" ambiguous="YES">
-                                                        <rect key="frame" x="320" y="22" width="21" height="24"/>
-                                                        <mask key="constraints">
-                                                            <include reference="fbL-8M-yHx"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHH-tn-9yx">
-                                                    <rect key="frame" x="371" y="0.0" width="11" height="67"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="11" id="DBe-sD-3a2"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="21"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="DBe-sD-3a2"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="widthClass=compact" ambiguous="YES">
-                                                        <rect key="frame" x="371" y="22" width="11" height="24"/>
-                                                        <mask key="constraints">
-                                                            <include reference="DBe-sD-3a2"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1c-dA-7lm">
+                                            <rect key="frame" x="0.0" y="0.0" width="13" height="67"/>
+                                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="24"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" ambiguous="YES">
+                                                <rect key="frame" x="0.0" y="19" width="13" height="29"/>
+                                            </variation>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OxF-L4-Dd1" customClass="PFImageView">
+                                            <rect key="frame" x="43" y="0.0" width="65" height="67"/>
                                             <constraints>
-                                                <constraint firstItem="uHH-tn-9yx" firstAttribute="leading" secondItem="zAr-d1-6Mk" secondAttribute="trailing" constant="28" id="hl7-3Y-H9C"/>
+                                                <constraint firstAttribute="width" constant="65" id="Skr-R8-FHE"/>
+                                                <constraint firstAttribute="height" constant="65" id="YDp-nU-Spz"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="hl7-3Y-H9C"/>
+                                                    <exclude reference="Skr-R8-FHE"/>
+                                                    <exclude reference="YDp-nU-Spz"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact" alignment="center" ambiguous="YES" misplaced="YES">
-                                                <rect key="frame" x="4" y="4" width="382" height="67"/>
+                                            <variation key="widthClass=compact" ambiguous="YES">
+                                                <rect key="frame" x="43" y="0.0" width="65" height="67"/>
                                                 <mask key="constraints">
-                                                    <include reference="hl7-3Y-H9C"/>
+                                                    <include reference="Skr-R8-FHE"/>
+                                                    <include reference="YDp-nU-Spz"/>
                                                 </mask>
                                             </variation>
-                                        </stackView>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Catherine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dr-dz-FQr">
+                                            <rect key="frame" x="138" y="0.0" width="77" height="67"/>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" ambiguous="YES">
+                                                <rect key="frame" x="138" y="23" width="77" height="22"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAr-d1-6Mk">
+                                            <rect key="frame" x="320" y="0.0" width="21" height="67"/>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" ambiguous="YES">
+                                                <rect key="frame" x="320" y="22" width="21" height="24"/>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="216" y="26" width="22" height="24"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHH-tn-9yx">
+                                            <rect key="frame" x="371" y="0.0" width="11" height="67"/>
+                                            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="21"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" ambiguous="YES">
+                                                <rect key="frame" x="371" y="22" width="11" height="24"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS5-ho-FJk">
+                                            <rect key="frame" x="245" y="0.0" width="45" height="67"/>
+                                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="21"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" ambiguous="YES">
+                                                <rect key="frame" x="245" y="21" width="45" height="26"/>
+                                            </variation>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="E6t-Se-9DZ" firstAttribute="leading" secondItem="Jfw-k5-NEm" secondAttribute="leadingMargin" constant="7" id="CqK-Y6-cWy"/>
+                                        <constraint firstItem="zAr-d1-6Mk" firstAttribute="leading" secondItem="6dr-dz-FQr" secondAttribute="leading" constant="103" id="1PP-q7-ypF"/>
+                                        <constraint firstItem="e1c-dA-7lm" firstAttribute="centerY" secondItem="Jfw-k5-NEm" secondAttribute="centerY" id="CEc-Dj-OyD"/>
+                                        <constraint firstItem="jS5-ho-FJk" firstAttribute="centerY" secondItem="Jfw-k5-NEm" secondAttribute="centerY" id="CuU-CN-mkA"/>
+                                        <constraint firstItem="OxF-L4-Dd1" firstAttribute="centerY" secondItem="Jfw-k5-NEm" secondAttribute="centerY" id="HqY-4r-TX1"/>
+                                        <constraint firstItem="uHH-tn-9yx" firstAttribute="centerY" secondItem="Jfw-k5-NEm" secondAttribute="centerY" id="IWY-D3-NN3"/>
+                                        <constraint firstItem="6dr-dz-FQr" firstAttribute="centerY" secondItem="Jfw-k5-NEm" secondAttribute="centerY" id="Vdy-gF-MZK"/>
+                                        <constraint firstItem="jS5-ho-FJk" firstAttribute="trailing" secondItem="uHH-tn-9yx" secondAttribute="trailing" constant="77.5" id="Xpc-YR-ftd"/>
+                                        <constraint firstItem="zAr-d1-6Mk" firstAttribute="centerY" secondItem="Jfw-k5-NEm" secondAttribute="centerY" id="YLq-nH-MVV"/>
+                                        <constraint firstItem="uHH-tn-9yx" firstAttribute="leading" secondItem="zAr-d1-6Mk" secondAttribute="leading" constant="53" id="c5X-fu-6aH"/>
+                                        <constraint firstItem="6dr-dz-FQr" firstAttribute="leading" secondItem="OxF-L4-Dd1" secondAttribute="leading" constant="73" id="jZH-g9-KHK"/>
+                                        <constraint firstItem="OxF-L4-Dd1" firstAttribute="leading" secondItem="e1c-dA-7lm" secondAttribute="leading" constant="32.5" id="mGm-Is-dEl"/>
+                                        <constraint firstItem="e1c-dA-7lm" firstAttribute="leading" secondItem="Jfw-k5-NEm" secondAttribute="leadingMargin" constant="6" id="mIN-7o-wpH">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
                                     </constraints>
                                     <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="e1c-dA-7lm"/>
+                                            <exclude reference="OxF-L4-Dd1"/>
+                                            <exclude reference="6dr-dz-FQr"/>
+                                            <exclude reference="zAr-d1-6Mk"/>
+                                            <exclude reference="uHH-tn-9yx"/>
+                                            <exclude reference="jS5-ho-FJk"/>
+                                        </mask>
                                         <mask key="constraints">
-                                            <exclude reference="CqK-Y6-cWy"/>
+                                            <exclude reference="CEc-Dj-OyD"/>
+                                            <exclude reference="mIN-7o-wpH"/>
+                                            <exclude reference="HqY-4r-TX1"/>
+                                            <exclude reference="mGm-Is-dEl"/>
+                                            <exclude reference="Vdy-gF-MZK"/>
+                                            <exclude reference="jZH-g9-KHK"/>
+                                            <exclude reference="1PP-q7-ypF"/>
+                                            <exclude reference="YLq-nH-MVV"/>
+                                            <exclude reference="IWY-D3-NN3"/>
+                                            <exclude reference="c5X-fu-6aH"/>
+                                            <exclude reference="CuU-CN-mkA"/>
+                                            <exclude reference="Xpc-YR-ftd"/>
                                         </mask>
                                     </variation>
-                                    <variation key="widthClass=compact">
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="e1c-dA-7lm"/>
+                                            <include reference="OxF-L4-Dd1"/>
+                                            <include reference="6dr-dz-FQr"/>
+                                            <include reference="zAr-d1-6Mk"/>
+                                            <include reference="uHH-tn-9yx"/>
+                                            <include reference="jS5-ho-FJk"/>
+                                        </mask>
                                         <mask key="constraints">
-                                            <include reference="CqK-Y6-cWy"/>
+                                            <include reference="CEc-Dj-OyD"/>
+                                            <include reference="mIN-7o-wpH"/>
+                                            <include reference="HqY-4r-TX1"/>
+                                            <include reference="mGm-Is-dEl"/>
+                                            <include reference="Vdy-gF-MZK"/>
+                                            <include reference="jZH-g9-KHK"/>
+                                            <include reference="1PP-q7-ypF"/>
+                                            <include reference="YLq-nH-MVV"/>
+                                            <include reference="IWY-D3-NN3"/>
+                                            <include reference="c5X-fu-6aH"/>
+                                            <include reference="CuU-CN-mkA"/>
+                                            <include reference="Xpc-YR-ftd"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -1175,7 +1206,7 @@
                                     <rect key="frame" x="307" y="88" width="210" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="114" y="248" width="171" height="30"/>
+                                    <rect key="frame" x="114" y="248" width="171" height="40"/>
                                 </variation>
                                 <connections>
                                     <action selector="deactivateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="5dm-cS-3sq"/>
@@ -1191,7 +1222,7 @@
                                     <rect key="frame" x="74" y="467" width="268" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="91" y="333" width="219" height="30"/>
+                                    <rect key="frame" x="91" y="333" width="219" height="220"/>
                                 </variation>
                                 <connections>
                                     <action selector="reactivateAllButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="daO-i0-mxf"/>
@@ -1253,7 +1284,7 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="60" y="64" width="267" height="60"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="72" y="404" width="267" height="60"/>
                                 </variation>
                             </label>
