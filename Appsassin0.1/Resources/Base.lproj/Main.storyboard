@@ -19,6 +19,12 @@
             <string>Pacifico-Regular</string>
             <string>Pacifico-Regular</string>
             <string>Pacifico-Regular</string>
+            <string>Pacifico-Regular</string>
+            <string>Pacifico-Regular</string>
+            <string>Pacifico-Regular</string>
+            <string>Pacifico-Regular</string>
+            <string>Pacifico-Regular</string>
+            <string>Pacifico-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -811,7 +817,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X0-eG-13Z">
-                                        <rect key="frame" x="189" y="247" width="83" height="30"/>
+                                        <rect key="frame" x="189" y="245" width="83" height="30"/>
                                         <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="15"/>
                                         <state key="normal" title="Signup here"/>
                                     </button>
@@ -831,12 +837,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not an assassin yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESP-tu-hqM">
-                                        <rect key="frame" x="64" y="251" width="130" height="21"/>
-                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efG-le-dbo" customClass="DesignableTextField" customModule="Appsassin0_1">
                                         <rect key="frame" x="18" y="111" width="245" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -865,8 +865,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShM-Iq-UYu">
-                                        <rect key="frame" x="17" y="92" width="74" height="21"/>
+                                        <rect key="frame" x="17" y="88" width="74" height="21"/>
                                         <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not an assassin yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESP-tu-hqM">
+                                        <rect key="frame" x="64" y="245" width="130" height="31"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -964,6 +970,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Wse-Pz-xtg" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="55b-h9-tMf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQl-Cm-bhP" customClass="DesignableButton" customModule="Appsassin0_1" customModuleProvider="target">
                                 <rect key="frame" x="219" y="288" width="162" height="49"/>
@@ -1766,6 +1775,187 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22C-py-RX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="519"/>
+        </scene>
+        <!--New Log In View Controller-->
+        <scene sceneID="Zyr-0E-jm9">
+            <objects>
+                <viewController id="Wse-Pz-xtg" customClass="NewLogInViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ZO-Z9-zV3"/>
+                        <viewControllerLayoutGuide type="bottom" id="EJc-Ku-R8D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GYf-eP-SFg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwg-Bb-nTF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VDb-0T-Fp8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yj7-BF-zj1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="id8-To-UZf" kind="unwind" unwindAction="unwindToViewController:" id="rqH-aa-8gM"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGI-2V-BbA" customClass="DesignableView" customModule="Appsassin0_1">
+                                <rect key="frame" x="160" y="75" width="280" height="339"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Codename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyO-Al-hCp">
+                                        <rect key="frame" x="17" y="22" width="84" height="21"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Codename" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggA-SF-pvX" customClass="DesignableTextField" customModule="Appsassin0_1">
+                                        <rect key="frame" x="17" y="45" width="245" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="player@apsass.in" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81J-Hu-IZs" customClass="DesignableTextField" customModule="Appsassin0_1">
+                                        <rect key="frame" x="18" y="111" width="245" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggE-e9-Sqg" customClass="DesignableButton" customModule="Appsassin0_1">
+                                        <rect key="frame" x="112" y="232" width="151" height="42"/>
+                                        <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
+                                        <state key="normal" title="Signup">
+                                            <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUp:" destination="Wse-Pz-xtg" eventType="touchUpInside" id="Xda-ug-3gi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTY-Bw-cmT">
+                                        <rect key="frame" x="17" y="83" width="74" height="30"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75f-d0-OKl" customClass="DesignableTextField" customModule="Appsassin0_1">
+                                        <rect key="frame" x="18" y="174" width="245" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-Px-jvw">
+                                        <rect key="frame" x="17" y="152" width="74" height="21"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-c5-mS9">
+                                        <rect key="frame" x="189" y="300" width="83" height="39"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="15"/>
+                                        <state key="normal" title="Login here"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already an assassin?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVu-EF-ZZD">
+                                        <rect key="frame" x="64" y="306" width="131" height="27"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="339" id="Bs8-i9-XNc"/>
+                                    <constraint firstAttribute="width" constant="280" id="j5j-RU-Kxe"/>
+                                    <constraint firstAttribute="height" constant="339" id="lM7-7a-xFL"/>
+                                    <constraint firstAttribute="width" constant="280" id="ubB-kj-BHa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ubB-kj-BHa"/>
+                                        <exclude reference="Bs8-i9-XNc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ubB-kj-BHa"/>
+                                        <include reference="Bs8-i9-XNc"/>
+                                        <exclude reference="j5j-RU-Kxe"/>
+                                        <exclude reference="lM7-7a-xFL"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZGI-2V-BbA" firstAttribute="centerY" secondItem="GYf-eP-SFg" secondAttribute="centerY" constant="-55.5" id="7aw-1g-Twd"/>
+                            <constraint firstItem="pwg-Bb-nTF" firstAttribute="centerY" secondItem="GYf-eP-SFg" secondAttribute="centerY" id="MYi-YL-Nyv"/>
+                            <constraint firstItem="ZGI-2V-BbA" firstAttribute="centerX" secondItem="GYf-eP-SFg" secondAttribute="centerX" id="hXF-eq-IS6"/>
+                            <constraint firstItem="ZGI-2V-BbA" firstAttribute="centerY" secondItem="GYf-eP-SFg" secondAttribute="centerY" id="itD-fS-AnV"/>
+                            <constraint firstItem="pwg-Bb-nTF" firstAttribute="bottom" secondItem="EJc-Ku-R8D" secondAttribute="top" id="jJT-GH-QjL"/>
+                            <constraint firstItem="pwg-Bb-nTF" firstAttribute="leading" secondItem="GYf-eP-SFg" secondAttribute="leading" id="mIO-Cw-zQA"/>
+                            <constraint firstItem="pwg-Bb-nTF" firstAttribute="centerX" secondItem="GYf-eP-SFg" secondAttribute="centerX" id="okk-9l-C6U"/>
+                            <constraint firstItem="ZGI-2V-BbA" firstAttribute="centerX" secondItem="GYf-eP-SFg" secondAttribute="centerX" id="sce-hU-mxT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sce-hU-mxT"/>
+                                <exclude reference="itD-fS-AnV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="sce-hU-mxT"/>
+                                <exclude reference="7aw-1g-Twd"/>
+                                <include reference="itD-fS-AnV"/>
+                                <exclude reference="hXF-eq-IS6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="username" destination="ggA-SF-pvX" id="vSV-tm-Qxm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vF-xP-EUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="id8-To-UZf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="526"/>
         </scene>
     </scenes>
     <resources>
