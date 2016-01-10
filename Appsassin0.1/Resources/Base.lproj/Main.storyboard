@@ -216,7 +216,7 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="485"/>
                                     </constraint>
                                 </constraints>
-                                <mutableString key="text">The rules of Appsassin are very simple:
+                                <string key="text">The rules of Appsassin are very simple:
 
 Once logged in, activate a game session to receive your next target.
 
@@ -229,7 +229,7 @@ If neither player takes a photo before the 10 min is up, both players lose.
 A kill is worth 100 points, and if you get killed you lose 50 points.
 
 There’s not much more to it, happy hunting! &lt;3
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -594,9 +594,6 @@ There’s not much more to it, happy hunting! &lt;3
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="109" y="297" width="181.5" height="23"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tT-Cb-56U" customClass="DesignableButton" customModule="Appsassin0_1" customModuleProvider="target">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -741,6 +738,15 @@ There’s not much more to it, happy hunting! &lt;3
                                     <rect key="frame" x="100" y="115" width="175.5" height="44.5"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2y-ro-GOx">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="614" width="103" height="49"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -751,8 +757,19 @@ There’s not much more to it, happy hunting! &lt;3
                             <constraint firstItem="C56-KW-GW2" firstAttribute="centerY" secondItem="yEX-kQ-VU9" secondAttribute="centerY" id="XfY-BP-eBD"/>
                             <constraint firstItem="C56-KW-GW2" firstAttribute="centerX" secondItem="yEX-kQ-VU9" secondAttribute="centerX" id="k2I-bU-aea"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="J2y-ro-GOx"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="J2y-ro-GOx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="TimerLabel" destination="J2y-ro-GOx" id="fIB-hE-Sm2"/>
                         <outlet property="profilePic" destination="C56-KW-GW2" id="0VN-Hz-1Bi"/>
                     </connections>
                 </viewController>
@@ -1391,7 +1408,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <rect key="frame" x="209" y="413" width="51" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="213" y="392" width="51" height="31"/>
+                                    <rect key="frame" x="231" y="392.5" width="51" height="31"/>
                                 </variation>
                                 <connections>
                                     <action selector="activateSwitchTapped:" destination="AXI-xY-kqQ" eventType="valueChanged" id="tlz-Kt-JHc"/>
@@ -1406,7 +1423,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <rect key="frame" x="110" y="416" width="91" height="20"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="116.5" y="397" width="72.5" height="20"/>
+                                    <rect key="frame" x="116.5" y="397.5" width="90.5" height="23.5"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-fb-3Dg">
@@ -1418,7 +1435,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <rect key="frame" x="111" y="311" width="179" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130.5" y="311" width="140.5" height="30.5"/>
+                                    <rect key="frame" x="130" y="311" width="140.5" height="30.5"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Agent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-jS-P5a">
@@ -1435,7 +1452,7 @@ There’s not much more to it, happy hunting! &lt;3
                                 <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="171.5" y="592" width="31.5" height="20"/>
+                                    <rect key="frame" x="171" y="592" width="31.5" height="20"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBZ-aV-7tw">
@@ -1491,7 +1508,7 @@ There’s not much more to it, happy hunting! &lt;3
                                 <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="158.5" y="666" width="44.5" height="20"/>
+                                    <rect key="frame" x="158" y="666" width="44.5" height="20"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -2025,6 +2042,47 @@ There’s not much more to it, happy hunting! &lt;3
                 <exit id="id8-To-UZf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="606" y="455"/>
+        </scene>
+        <!--Imer View Controller-->
+        <scene sceneID="Sw3-fI-MO9">
+            <objects>
+                <viewController id="yul-v1-8F3" customClass="TImerViewController" customModule="Appsassin0_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="don-1j-Oz0"/>
+                        <viewControllerLayoutGuide type="bottom" id="c6b-7h-mKh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iAd-sS-Y23">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwB-zn-bxS">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="137" y="110" width="127" height="65"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bwB-zn-bxS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bwB-zn-bxS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabelTest" destination="bwB-zn-bxS" id="sOv-4e-nB3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zz7-q7-M5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300.5" y="822"/>
         </scene>
     </scenes>
     <resources>

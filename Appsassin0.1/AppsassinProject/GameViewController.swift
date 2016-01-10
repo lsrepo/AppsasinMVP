@@ -12,6 +12,10 @@ import ParseUI
 
 class GameViewController: UIViewController {
     
+    var secondsCount = 600
+    var timer = NSTimer()
+    
+    @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var profilePic: PFImageView!
     
         func loadImage() {
@@ -35,14 +39,34 @@ class GameViewController: UIViewController {
             }
         }
     
+    // Convert timer to format: 00:00
+    func timerRun() {
+        secondsCount -= 1
+        var minutes = secondsCount / 60
+        var seconds = secondsCount - (minutes * 60)
+        
+        var timerOutput = "\(minutes):\(seconds)"
+        
+        TimerLabel.text = "\(timerOutput)"
+    }
+    
+    func setTimer() {
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("timerRun"), userInfo: nil, repeats: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var secondsCount = 600
+        timer.invalidate()
+        setTimer()
+        timerRun()
+        
 
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
-       self.view.backgroundColor = UIColor.blackColor()
+       //self.view.backgroundColor = UIColor.blackColor()
         loadImage();
     }
     
