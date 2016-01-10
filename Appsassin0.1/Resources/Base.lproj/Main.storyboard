@@ -553,13 +553,13 @@ There’s not much more to it, happy hunting! &lt;3
                                             <exclude reference="mGm-Is-dEl"/>
                                             <exclude reference="Vdy-gF-MZK"/>
                                             <exclude reference="jZH-g9-KHK"/>
+                                            <exclude reference="Ahn-Dr-Tn5"/>
+                                            <exclude reference="CuU-CN-mkA"/>
                                             <exclude reference="1PP-q7-ypF"/>
                                             <exclude reference="YLq-nH-MVV"/>
                                             <exclude reference="IWY-D3-NN3"/>
                                             <exclude reference="pV1-AC-qds"/>
                                             <exclude reference="uPX-wF-QWi"/>
-                                            <exclude reference="Ahn-Dr-Tn5"/>
-                                            <exclude reference="CuU-CN-mkA"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -578,13 +578,13 @@ There’s not much more to it, happy hunting! &lt;3
                                             <include reference="mGm-Is-dEl"/>
                                             <include reference="Vdy-gF-MZK"/>
                                             <include reference="jZH-g9-KHK"/>
+                                            <include reference="Ahn-Dr-Tn5"/>
+                                            <include reference="CuU-CN-mkA"/>
                                             <include reference="1PP-q7-ypF"/>
                                             <include reference="YLq-nH-MVV"/>
                                             <include reference="IWY-D3-NN3"/>
                                             <include reference="pV1-AC-qds"/>
                                             <include reference="uPX-wF-QWi"/>
-                                            <include reference="Ahn-Dr-Tn5"/>
-                                            <include reference="CuU-CN-mkA"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -684,10 +684,10 @@ There’s not much more to it, happy hunting! &lt;3
                                 <exclude reference="w57-Ys-bUc"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="9AW-Jo-nVY"/>
-                                <exclude reference="cAP-Mh-XkX"/>
                                 <exclude reference="PDY-H4-yZh"/>
                                 <exclude reference="dQb-Rz-yPd"/>
+                                <exclude reference="9AW-Jo-nVY"/>
+                                <exclude reference="cAP-Mh-XkX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -703,9 +703,9 @@ There’s not much more to it, happy hunting! &lt;3
                                 <include reference="w57-Ys-bUc"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="dQb-Rz-yPd"/>
                                 <include reference="9AW-Jo-nVY"/>
                                 <include reference="cAP-Mh-XkX"/>
-                                <include reference="dQb-Rz-yPd"/>
                             </mask>
                         </variation>
                     </view>
@@ -773,7 +773,8 @@ There’s not much more to it, happy hunting! &lt;3
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="141" y="438" width="97" height="45"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="100" y="586" width="200" height="53"/>
                                     <mask key="constraints">
                                         <include reference="p1W-Ov-gMn"/>
                                         <include reference="sds-qr-bwB"/>
@@ -792,11 +793,14 @@ There’s not much more to it, happy hunting! &lt;3
                                     <rect key="frame" x="100" y="115" width="175.5" height="44.5"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2y-ro-GOx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2y-ro-GOx">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="41"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="148.5" y="522" width="103" height="49"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1490,7 +1494,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <rect key="frame" x="110" y="416" width="91" height="20"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="116.5" y="355" width="90.5" height="23.5"/>
+                                    <rect key="frame" x="116" y="355" width="90.5" height="23.5"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-fb-3Dg">
@@ -1502,7 +1506,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <rect key="frame" x="111" y="311" width="179" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130.5" y="281" width="140.5" height="30.5"/>
+                                    <rect key="frame" x="130" y="281" width="140.5" height="30.5"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Agent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-jS-P5a">
@@ -2100,7 +2104,7 @@ There’s not much more to it, happy hunting! &lt;3
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwB-zn-bxS">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="137" y="110" width="127" height="65"/>
