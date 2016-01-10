@@ -50,6 +50,10 @@ class ProfileViewController: UIViewController {
     }
     
     @IBOutlet weak var agentLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var killsLabel: UILabel!
+    @IBOutlet weak var deathsLabel: UILabel!
+
     
     func loadProfileImage() {
         
@@ -80,6 +84,19 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    //Gets info about current player stats and updates info on profile page
+    func loadPlayerStats() {
+        
+        let query = PFQuery(className:"Player")
+        query.whereKey("objectId", equalTo:nsa.myPlayerId)
+        let _ = query.getFirstObjectInBackgroundWithBlock {  (playerStats:PFObject?, error:NSError?) -> Void in
+            if error == nil {
+                self.scoreLabel!.text = "\(playerStats!["score"])"
+                self.killsLabel!.text = "\(playerStats!["kills"])"
+                self.deathsLabel!.text = "\(playerStats!["deaths"])"
+            }
+        }
+    }
    
     
     func varInit(){
@@ -149,6 +166,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadProfileImage()
+        loadPlayerStats()
         //print("From Profile:nsa.myPlayerId", nsa.myPlayerId);
         
 //        //this works
