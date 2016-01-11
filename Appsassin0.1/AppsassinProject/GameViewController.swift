@@ -21,8 +21,11 @@ class GameViewController: UIViewController {
             let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
                 if error == nil {
                     print("//GameView:imgObj is\(imgObj)")
+                    nsa.targetPlayer = imgObj!
                     print("//GameView:Loading image")
                     //let imageView = PFImageView()
+                    
+                    
                     self.profilePic.image = UIImage(named: "...") // placeholder image
                     self.profilePic.file = imgObj!["image"] as? PFFile // remote image
                     self.profilePic.loadInBackground()

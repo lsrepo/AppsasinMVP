@@ -57,8 +57,7 @@ class ProfileViewController: UIViewController {
         query.whereKey("objectId", equalTo:nsa.myPlayerId)
         let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
             if error == nil {
-                //print("//ProfileView:imgObj is \(imgObj)")
-                //print("//ProfileView:Loading image")
+                nsa.myPlayer = imgObj!;
                 
                 //ad circular shape to the img
                 self.profilePic.layer.masksToBounds = true;
@@ -344,6 +343,10 @@ class ProfileViewController: UIViewController {
         if notif["type"] == "A" {
             //Set currentGameSession
             nsa.targetPlayerId = String(notif["playerId"])
+            
+         
+            
+            
             let gameSessionId = String(notif["gameSessionId"])
             
             let query = PFQuery(className:"Game")

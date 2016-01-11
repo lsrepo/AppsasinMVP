@@ -107,7 +107,49 @@ class FinishedViewController: UIViewController {
         self.targetImg.hidden = false;
         self.moveOnButton.hidden = false;
         self.finishedImageView.image = nsa.cameraImageFromMe
+        
+        //adjust score
+        adjustScore(nsa.myPlayer,isWin:true)
+        adjustScore(nsa.targetPlayer,isWin:false)
+        
+        
 
+    }
+    
+    func adjustScore(playerObj:PFObject,isWin:Bool){
+        
+        
+        var kills = playerObj["kills"] as! Int
+        var deaths = playerObj["deaths"] as! Int
+        var score = playerObj["score"] as! Int
+        
+        print(kills,deaths,score)
+        
+        
+        if (isWin == true){
+            //winner
+            
+            kills += 1;
+            playerObj["kills"] = NSNumber(integer:kills)
+            print("winner is \(playerObj)")
+
+        }else {
+            //loser
+            deaths += 1 ;
+            playerObj["deaths"] = NSNumber(integer:deaths)
+            print("loser is \(playerObj)")
+        }
+        //base score : 500, win/ lose : +/- 50
+        score = 500 + (kills)*50 - (deaths)*50
+        playerObj["score"] = NSNumber(integer:score)
+        playerObj.saveInBackgroundWithBlock { (result:Bool, error:NSError?) -> Void in
+            print("adjust score done",result)
+        }
+        
+        
+       
+        
+        
     }
     
     func loseGame(){
