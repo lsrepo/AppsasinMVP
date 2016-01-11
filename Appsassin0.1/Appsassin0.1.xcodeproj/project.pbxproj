@@ -77,6 +77,7 @@
 		979E117D1C2897AE0083D76E /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E11601C2897AE0083D76E /* TransitionZoom.swift */; };
 		979E117E1C2897AE0083D76E /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E11611C2897AE0083D76E /* UnwindSegue.swift */; };
 		979ED5071C2056FB0032997F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979ED5061C2056FB0032997F /* Images.xcassets */; };
+		97C6A8DD1C42810B001FBA75 /* TImerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C6A8DC1C42810B001FBA75 /* TImerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,7 @@
 		979E11601C2897AE0083D76E /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		979E11611C2897AE0083D76E /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		979ED5061C2056FB0032997F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		97C6A8DC1C42810B001FBA75 /* TImerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TImerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				97C6A8DC1C42810B001FBA75 /* TImerViewController.swift */,
 				979E10471C273BFA0083D76E /* NavigationController.swift */,
 				979E10431C26EE160083D76E /* LeaderboardViewController.swift */,
 				979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */,
@@ -520,6 +523,7 @@
 				979E116B1C2897AE0083D76E /* DesignableTextView.swift in Sources */,
 				27B26FA81C1D142500DF01A4 /* GameViewController.swift in Sources */,
 				27A4C0641C29B201006C31D5 /* NewLogInViewController.swift in Sources */,
+				97C6A8DD1C42810B001FBA75 /* TImerViewController.swift in Sources */,
 				979E11731C2897AE0083D76E /* SoundPlayer.swift in Sources */,
 				27B26FA41C1D0A4D00DF01A4 /* ProfileViewController.swift in Sources */,
 				27B2D5D91C23643C00BF194E /* FinishedViewController.swift in Sources */,

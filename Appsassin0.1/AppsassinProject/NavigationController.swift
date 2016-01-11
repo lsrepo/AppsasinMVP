@@ -23,7 +23,8 @@ class NavigationController: UINavigationController {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 33.0/255.0, green: 33.0/255.0, blue: 33/255.0, alpha: 1.0)]
         
         // Customizing the tab bar
-        UITabBar.appearance().tintColor = UIColor(red: 33.0/255.0, green: 33.0/255.0, blue: 33/255.0, alpha: 1.0)
+        //UITabBar.appearance().tintColor = UIColor(red: 33.0/255.0, green: 33.0/255.0, blue: 33/255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = UIColor(red: 255.0/255.0, green: 215.0/255.0, blue: 0/255.0, alpha: 1.0)
 
     }
 

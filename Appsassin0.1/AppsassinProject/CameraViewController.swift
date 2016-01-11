@@ -18,6 +18,25 @@ var RecordingContext = "RecordingContext"
 
 class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
+    var secondsCount = 600
+    var timer = NSTimer()
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    // Convert timer to format: 00:00
+    func timerRun() {
+        secondsCount -= 1
+        var minutes = secondsCount / 60
+        var seconds = secondsCount - (minutes * 60)
+        
+        var timerOutput = "\(minutes):\(seconds)"
+        
+        timerLabel.text = "\(timerOutput)"
+    }
+    
+    func setTimer() {
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("timerRun"), userInfo: nil, repeats: true)
+    }
+    
     //Need to have this in some VC to receive push
     func catchIt(userInfo: NSNotification){
         var notif = JSON(userInfo.valueForKey("userInfo")!)
@@ -63,6 +82,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        timer.invalidate()
+        setTimer()
+        timerRun()
         
         // Do any additional setup after loading the view, typically from a nib.
         
