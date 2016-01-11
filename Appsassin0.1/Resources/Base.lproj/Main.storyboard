@@ -30,7 +30,6 @@
             <string>Pacifico-Regular</string>
             <string>Pacifico-Regular</string>
             <string>Pacifico-Regular</string>
-            <string>Pacifico-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -799,9 +798,6 @@ There’s not much more to it, happy hunting! &lt;3
                                 <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="41"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="148.5" y="522" width="103" height="49"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1362,7 +1358,7 @@ There’s not much more to it, happy hunting! &lt;3
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKd-jS-xrn">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKd-jS-xrn">
                                 <rect key="frame" x="214" y="248" width="171" height="30"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <state key="normal" title="Deactivate game session">
@@ -1414,7 +1410,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <segue destination="Qen-uC-daf" kind="presentation" identifier="toGameBegin" id="rMh-tf-Q9J"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLy-08-cWe">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLy-08-cWe">
                                 <rect key="frame" x="241" y="195" width="116" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="B1n-uI-VRD"/>
@@ -1440,7 +1436,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <action selector="searchPlayerButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="ked-pD-vKF"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-ah-dqD">
                                 <rect key="frame" x="223" y="138" width="154" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="zIH-Ch-mcT"/>
@@ -1466,7 +1462,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <action selector="activateButton:" destination="AXI-xY-kqQ" eventType="touchUpInside" id="OOq-WM-d8g"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-cL-iTJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-cL-iTJ">
                                 <rect key="frame" x="166" y="403" width="267" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="wA9-uq-9UI"/>
@@ -1535,8 +1531,7 @@ There’s not much more to it, happy hunting! &lt;3
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="110" y="416" width="91" height="20"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="116" y="355" width="107" height="24"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="B4D-1P-pYG"/>
                                     </mask>
@@ -1551,7 +1546,7 @@ There’s not much more to it, happy hunting! &lt;3
                                     <rect key="frame" x="111" y="311" width="179" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130" y="281" width="141" height="31"/>
+                                    <rect key="frame" x="130" y="281" width="140.5" height="30.5"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Agent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-jS-P5a">
@@ -1598,7 +1593,7 @@ There’s not much more to it, happy hunting! &lt;3
                                         <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="74" y="38" width="54" height="30"/>
+                                            <rect key="frame" x="74" y="30.5" width="54" height="39.5"/>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEc-F4-QJd">
@@ -1607,7 +1602,7 @@ There’s not much more to it, happy hunting! &lt;3
                                         <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="74" y="0.0" width="54" height="30"/>
+                                            <rect key="frame" x="74" y="-7.5" width="54" height="39.5"/>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xye-9D-EqY">
@@ -1634,7 +1629,7 @@ There’s not much more to it, happy hunting! &lt;3
                                         <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="74" y="76" width="54" height="30"/>
+                                            <rect key="frame" x="74" y="68.5" width="54" height="39.5"/>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -1676,17 +1671,15 @@ There’s not much more to it, happy hunting! &lt;3
                                     <mask key="constraints">
                                         <exclude reference="5Nz-dF-aI5"/>
                                         <exclude reference="rnF-K6-ma1"/>
+                                        <exclude reference="0uv-s1-PnN"/>
+                                        <exclude reference="bE2-Xc-w2H"/>
+                                        <exclude reference="2eN-Ys-GeO"/>
+                                        <exclude reference="De0-IP-8Tv"/>
+                                        <exclude reference="TZq-cc-HSZ"/>
                                         <exclude reference="Kac-x3-93b"/>
                                         <exclude reference="UwR-xD-bJB"/>
                                         <exclude reference="ZfS-g9-I7M"/>
                                         <exclude reference="h8f-Kx-PbZ"/>
-                                        <exclude reference="D3z-jg-i0W"/>
-                                        <exclude reference="XkW-hF-0UV"/>
-                                        <exclude reference="eeh-hx-KRj"/>
-                                        <exclude reference="iMW-8l-hNR"/>
-                                        <exclude reference="2eN-Ys-GeO"/>
-                                        <exclude reference="De0-IP-8Tv"/>
-                                        <exclude reference="TZq-cc-HSZ"/>
                                         <exclude reference="1Q7-c9-MKI"/>
                                         <exclude reference="SaB-r3-p50"/>
                                         <exclude reference="ZaN-Fb-vwz"/>
@@ -1695,8 +1688,10 @@ There’s not much more to it, happy hunting! &lt;3
                                         <exclude reference="sYp-0m-wCd"/>
                                         <exclude reference="w8c-65-WuI"/>
                                         <exclude reference="O8r-In-kyb"/>
-                                        <exclude reference="0uv-s1-PnN"/>
-                                        <exclude reference="bE2-Xc-w2H"/>
+                                        <exclude reference="D3z-jg-i0W"/>
+                                        <exclude reference="XkW-hF-0UV"/>
+                                        <exclude reference="eeh-hx-KRj"/>
+                                        <exclude reference="iMW-8l-hNR"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1711,17 +1706,15 @@ There’s not much more to it, happy hunting! &lt;3
                                     <mask key="constraints">
                                         <include reference="5Nz-dF-aI5"/>
                                         <include reference="rnF-K6-ma1"/>
+                                        <include reference="0uv-s1-PnN"/>
+                                        <include reference="bE2-Xc-w2H"/>
+                                        <include reference="2eN-Ys-GeO"/>
+                                        <include reference="De0-IP-8Tv"/>
+                                        <include reference="TZq-cc-HSZ"/>
                                         <include reference="Kac-x3-93b"/>
                                         <include reference="UwR-xD-bJB"/>
                                         <include reference="ZfS-g9-I7M"/>
                                         <include reference="h8f-Kx-PbZ"/>
-                                        <include reference="D3z-jg-i0W"/>
-                                        <include reference="XkW-hF-0UV"/>
-                                        <include reference="eeh-hx-KRj"/>
-                                        <include reference="iMW-8l-hNR"/>
-                                        <include reference="2eN-Ys-GeO"/>
-                                        <include reference="De0-IP-8Tv"/>
-                                        <include reference="TZq-cc-HSZ"/>
                                         <include reference="1Q7-c9-MKI"/>
                                         <include reference="SaB-r3-p50"/>
                                         <include reference="ZaN-Fb-vwz"/>
@@ -1730,8 +1723,10 @@ There’s not much more to it, happy hunting! &lt;3
                                         <include reference="sYp-0m-wCd"/>
                                         <include reference="w8c-65-WuI"/>
                                         <include reference="O8r-In-kyb"/>
-                                        <include reference="0uv-s1-PnN"/>
-                                        <include reference="bE2-Xc-w2H"/>
+                                        <include reference="D3z-jg-i0W"/>
+                                        <include reference="XkW-hF-0UV"/>
+                                        <include reference="eeh-hx-KRj"/>
+                                        <include reference="iMW-8l-hNR"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1797,35 +1792,35 @@ There’s not much more to it, happy hunting! &lt;3
                                 <exclude reference="X3F-Z8-lOp"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WKy-X6-ZZf"/>
-                                <exclude reference="ZS2-Y6-kSh"/>
-                                <exclude reference="mcI-E1-Ifj"/>
-                                <exclude reference="pvR-5r-adX"/>
-                                <exclude reference="15j-7P-9pS"/>
-                                <exclude reference="8iR-xW-vT1"/>
-                                <exclude reference="gzN-Xy-Fnm"/>
-                                <exclude reference="aUe-9p-vUj"/>
-                                <exclude reference="luS-Pr-zbu"/>
-                                <exclude reference="Izz-4B-Wbc"/>
-                                <exclude reference="PPf-aD-rb6"/>
-                                <exclude reference="WrL-hH-u3v"/>
-                                <exclude reference="XwL-5b-vrw"/>
-                                <exclude reference="qwf-Xz-UCK"/>
-                                <exclude reference="yjY-GX-VlS"/>
+                                <exclude reference="MMH-Px-7PO"/>
+                                <exclude reference="SW6-oc-uhR"/>
+                                <exclude reference="StZ-ee-57B"/>
                                 <exclude reference="OIU-Ku-dQn"/>
                                 <exclude reference="cs2-1n-rd0"/>
                                 <exclude reference="vbd-at-8cL"/>
                                 <exclude reference="OgP-9R-BsL"/>
                                 <exclude reference="jDb-3f-67e"/>
+                                <exclude reference="XwL-5b-vrw"/>
+                                <exclude reference="qwf-Xz-UCK"/>
+                                <exclude reference="yjY-GX-VlS"/>
+                                <exclude reference="FLV-M7-BZu"/>
+                                <exclude reference="LHS-eV-lZe"/>
+                                <exclude reference="WKy-X6-ZZf"/>
+                                <exclude reference="ZS2-Y6-kSh"/>
+                                <exclude reference="15j-7P-9pS"/>
+                                <exclude reference="8iR-xW-vT1"/>
+                                <exclude reference="gzN-Xy-Fnm"/>
+                                <exclude reference="mcI-E1-Ifj"/>
+                                <exclude reference="pvR-5r-adX"/>
+                                <exclude reference="aUe-9p-vUj"/>
+                                <exclude reference="luS-Pr-zbu"/>
+                                <exclude reference="Izz-4B-Wbc"/>
+                                <exclude reference="PPf-aD-rb6"/>
+                                <exclude reference="WrL-hH-u3v"/>
+                                <exclude reference="ZHA-hL-Vob"/>
                                 <exclude reference="2TF-Vz-Rp9"/>
                                 <exclude reference="gcd-IW-Lmr"/>
                                 <exclude reference="iUh-iR-SyS"/>
-                                <exclude reference="FLV-M7-BZu"/>
-                                <exclude reference="LHS-eV-lZe"/>
-                                <exclude reference="MMH-Px-7PO"/>
-                                <exclude reference="SW6-oc-uhR"/>
-                                <exclude reference="StZ-ee-57B"/>
-                                <exclude reference="ZHA-hL-Vob"/>
                                 <exclude reference="HR8-la-gOe"/>
                                 <exclude reference="wZk-x0-ffY"/>
                             </mask>
@@ -1839,16 +1834,16 @@ There’s not much more to it, happy hunting! &lt;3
                                 <include reference="JX9-jS-P5a"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="WKy-X6-ZZf"/>
-                                <include reference="ZS2-Y6-kSh"/>
-                                <include reference="XwL-5b-vrw"/>
-                                <include reference="yjY-GX-VlS"/>
+                                <include reference="SW6-oc-uhR"/>
+                                <include reference="StZ-ee-57B"/>
                                 <include reference="OIU-Ku-dQn"/>
                                 <include reference="cs2-1n-rd0"/>
                                 <include reference="OgP-9R-BsL"/>
                                 <include reference="jDb-3f-67e"/>
-                                <include reference="SW6-oc-uhR"/>
-                                <include reference="StZ-ee-57B"/>
+                                <include reference="XwL-5b-vrw"/>
+                                <include reference="yjY-GX-VlS"/>
+                                <include reference="WKy-X6-ZZf"/>
+                                <include reference="ZS2-Y6-kSh"/>
                                 <include reference="HR8-la-gOe"/>
                                 <include reference="wZk-x0-ffY"/>
                             </mask>
@@ -1858,25 +1853,25 @@ There’s not much more to it, happy hunting! &lt;3
                                 <include reference="X3F-Z8-lOp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="mcI-E1-Ifj"/>
-                                <include reference="pvR-5r-adX"/>
+                                <include reference="MMH-Px-7PO"/>
+                                <include reference="vbd-at-8cL"/>
+                                <include reference="qwf-Xz-UCK"/>
+                                <include reference="FLV-M7-BZu"/>
+                                <include reference="LHS-eV-lZe"/>
                                 <include reference="15j-7P-9pS"/>
                                 <include reference="8iR-xW-vT1"/>
                                 <include reference="gzN-Xy-Fnm"/>
+                                <include reference="mcI-E1-Ifj"/>
+                                <include reference="pvR-5r-adX"/>
                                 <include reference="aUe-9p-vUj"/>
                                 <include reference="luS-Pr-zbu"/>
                                 <include reference="Izz-4B-Wbc"/>
                                 <include reference="PPf-aD-rb6"/>
                                 <include reference="WrL-hH-u3v"/>
-                                <include reference="qwf-Xz-UCK"/>
-                                <include reference="vbd-at-8cL"/>
+                                <include reference="ZHA-hL-Vob"/>
                                 <include reference="2TF-Vz-Rp9"/>
                                 <include reference="gcd-IW-Lmr"/>
                                 <include reference="iUh-iR-SyS"/>
-                                <include reference="FLV-M7-BZu"/>
-                                <include reference="LHS-eV-lZe"/>
-                                <include reference="MMH-Px-7PO"/>
-                                <include reference="ZHA-hL-Vob"/>
                             </mask>
                         </variation>
                     </view>
@@ -1939,9 +1934,9 @@ There’s not much more to it, happy hunting! &lt;3
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlayi6x1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-Fc-Ucn">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer will be added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoV-VR-1y4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoV-VR-1y4">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="41"/>
                                         <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" misplaced="YES">
@@ -1953,7 +1948,7 @@ There’s not much more to it, happy hunting! &lt;3
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="4xC-3e-lew" secondAttribute="centerX" id="DDW-v5-BdR"/>
                                     <constraint firstItem="PoV-VR-1y4" firstAttribute="centerX" secondItem="dC1-Ft-db7" secondAttribute="centerX" id="Lcw-vs-5GK"/>
-                                    <constraint firstItem="PoV-VR-1y4" firstAttribute="top" secondItem="dC1-Ft-db7" secondAttribute="top" constant="80" id="Rm0-C7-tp1"/>
+                                    <constraint firstItem="PoV-VR-1y4" firstAttribute="top" secondItem="dC1-Ft-db7" secondAttribute="top" constant="89" id="Rm0-C7-tp1"/>
                                     <constraint firstItem="4xC-3e-lew" firstAttribute="centerY" secondItem="dC1-Ft-db7" secondAttribute="centerY" id="b7e-BH-y2E"/>
                                     <constraint firstItem="2Wf-Fc-Ucn" firstAttribute="centerY" secondItem="dC1-Ft-db7" secondAttribute="centerY" id="eoe-ys-8hz"/>
                                     <constraint firstItem="2Wf-Fc-Ucn" firstAttribute="centerX" secondItem="dC1-Ft-db7" secondAttribute="centerX" id="rYZ-y0-ObH"/>
@@ -2003,6 +1998,7 @@ There’s not much more to it, happy hunting! &lt;3
                     <connections>
                         <outlet property="previewView" destination="dC1-Ft-db7" id="jeF-d1-0ZN"/>
                         <outlet property="snapButton" destination="4xC-3e-lew" id="gPx-jm-iBY"/>
+                        <outlet property="timerLabel" destination="PoV-VR-1y4" id="YrM-0l-1P6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5s-l5-KNd" sceneMemberID="firstResponder"/>

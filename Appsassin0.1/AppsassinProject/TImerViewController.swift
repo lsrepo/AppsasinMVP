@@ -31,7 +31,6 @@ class TImerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var secondsCount = 600
         setTimer()
         timerRun()
 
