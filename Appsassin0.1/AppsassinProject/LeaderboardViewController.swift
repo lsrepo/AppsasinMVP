@@ -24,13 +24,10 @@ class LeaderboardViewController: PFQueryTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.tableView.rowHeight = 54.0
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func queryForTable() -> PFQuery {
@@ -50,11 +47,6 @@ class LeaderboardViewController: PFQueryTableViewController {
             cell = LeaderboardPFTableViewCell (style: .Default, reuseIdentifier: cellIdentifier)
         }
         
-        
-        // Thumbn
-//        var initialThumbnail = UIImage(named: "Profile_inactive.pdf")
-//        cell?.avatar.image = initialThumbnail
-        
         if let thumbnail = object?["image"] as? PFFile {
             cell?.avatar.file = thumbnail
             cell?.avatar.loadInBackground()
@@ -66,25 +58,7 @@ class LeaderboardViewController: PFQueryTableViewController {
         cell!.scoreLabel.text = "\(object!["score"])"
         cell!.placeLabel.text = "\(indexPath.row + 1)"
         
-        
-        // Default tableview with images
-//        cell?.textLabel?.text = object?["username"] as? String
-//        let cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath, object: object)
-//        cell?.avatar?.contentMode = .ScaleAspectFill
-//        cell?.avatar?.clipsToBounds = true
-//        cell?.accessoryType = .DisclosureIndicator
-        
         return cell
     }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }
