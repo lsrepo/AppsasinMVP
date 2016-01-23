@@ -15,11 +15,6 @@ import ParseUI
 
 class ProfileViewController: UIViewController {
     
-    
-   
-    @IBAction func reactivateAllButton(sender: AnyObject) {
-        nsa.reactivateAll();
-    }
     @IBAction func activateButton(sender: AnyObject) {
         self.activateGameMode();
     }
@@ -67,18 +62,13 @@ class ProfileViewController: UIViewController {
                 self.profilePic.layer.masksToBounds = true;
                 self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
                 
-                self.profilePic.image = UIImage(named: "...") // placeholder image
-                self.profilePic.file = imgObj!["image"] as? PFFile // remote image
+                // placeholder image
+                self.profilePic.image = UIImage(named: "...")
+                
+                // remote image
+                self.profilePic.file = imgObj!["image"] as? PFFile
+                
                 self.profilePic.loadInBackground()
-                
-                //self.profilePic = imageView
-                
-                
-                
-                //itemImageView.layer.masksToBounds = YES;
-                
-                //profilePic.layer
-                
             }
         }
     }
@@ -118,14 +108,10 @@ class ProfileViewController: UIViewController {
     
     func assignTargets(){
         //GameView:Assigning Targets
-        //print("myPlayerId is \(nsa.myPlayerId)")
-        //print("targetPlayer is \(nsa.targetPlayerId)")
         nsa.gameStateChanger(true, isMatched: true, playerId: nsa.myPlayerId)
         nsa.gameStateChanger(true, isMatched: true, playerId: nsa.targetPlayerId)
         
         createGameSession();
-        
-
     }
     
     func createGameSession(){
@@ -166,94 +152,65 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         loadProfileImage()
         loadPlayerStats()
-        //print("From Profile:nsa.myPlayerId", nsa.myPlayerId);
-        
-//        //this works
-//        let GameViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GameViewController") as UIViewController
-//        
-//        self.tabBarController!.presentViewController(GameViewController, animated: true, completion: nil)
-
-        //you need to be logged in to do that
-        //addImage();
-        
-        //loadImage();
-        
     }
     
+
+//    //giant pile of ... code
 //    func loadImage() {
 //        print("loading image")
 //        let query = PFQuery(className:"Player")
-//        query.whereKey("objectId", equalTo:"g326VU11Do")
-//        let _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
+//        query.whereKey("objectId", equalTo:"28r6nJ1769")
+//        _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
 //            if error == nil {
-//                print(imgObj)
-//                print("loading result")
-//                let imageView = PFImageView()
-//                imageView.image = UIImage(named: "...") // placeholder image
-//                imageView.file = imgObj!["image"] as? PFFile // remote image
+//                //print(imgObj)
+//                //print("loading result")
+//                let img = imgObj!["image"]
+//                let imageView: PFImageView = PFImageView()
+//                imageView.file = img as? PFFile
+//                imageView.loadInBackground({
+//                    (photo, error) -> Void in
+//                    if error == nil {
+//                        print("loading alert")
+////                        self.profileIV.image =
+//                        
+//                        let alert = UIAlertController(title: "You have a message", message: "Message from ", preferredStyle: UIAlertControllerStyle.Alert)
+//                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+//                            (action) -> Void in
+//                            
+//                            
+//                            let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+//                            backgroundView.backgroundColor = UIColor.blackColor()
+//                            backgroundView.alpha = 0.8
+//                            backgroundView.tag = 10
+//                            backgroundView.contentMode = UIViewContentMode.ScaleAspectFit
+//                            self.view.addSubview(backgroundView)
+//                            
+//                            let displayedImage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+//                            displayedImage.image = photo
+//                            displayedImage.tag = 10
+//                            displayedImage.contentMode = UIViewContentMode.ScaleAspectFit
+//                            
+//                            self.view.addSubview(displayedImage);
+//
+//                            _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "hideMessage", userInfo: nil, repeats: false)
+//
+//                            }
+//                            )
+//                        )
+//                        self.presentViewController(alert, animated: true, completion: nil)
+//                        
+//                        
+//                    }
+//                    else {
+//                        print(error)
+//                    }
+//                    
+//                    }
+//                )
 //                
-//                imageView.loadInBackground()
-//               
 //            }
 //        }
 //    }
-
-    //giant pile of ... code
-    func loadImage() {
-        print("loading image")
-        let query = PFQuery(className:"Player")
-        query.whereKey("objectId", equalTo:"28r6nJ1769")
-        _ = query.getFirstObjectInBackgroundWithBlock {  (imgObj:PFObject?, error:NSError?) -> Void in
-            if error == nil {
-                //print(imgObj)
-                //print("loading result")
-                let img = imgObj!["image"]
-                let imageView: PFImageView = PFImageView()
-                imageView.file = img as? PFFile
-                imageView.loadInBackground({
-                    (photo, error) -> Void in
-                    if error == nil {
-                        print("loading alert")
-//                        self.profileIV.image =
-                        
-                        let alert = UIAlertController(title: "You have a message", message: "Message from ", preferredStyle: UIAlertControllerStyle.Alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-                            (action) -> Void in
-                            
-                            
-                            let backgroundView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
-                            backgroundView.backgroundColor = UIColor.blackColor()
-                            backgroundView.alpha = 0.8
-                            backgroundView.tag = 10
-                            backgroundView.contentMode = UIViewContentMode.ScaleAspectFit
-                            self.view.addSubview(backgroundView)
-                            
-                            let displayedImage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
-                            displayedImage.image = photo
-                            displayedImage.tag = 10
-                            displayedImage.contentMode = UIViewContentMode.ScaleAspectFit
-                            
-                            self.view.addSubview(displayedImage);
-
-                            _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "hideMessage", userInfo: nil, repeats: false)
-
-                            }
-                            )
-                        )
-                        self.presentViewController(alert, animated: true, completion: nil)
-                        
-                        
-                    }
-                    else {
-                        print(error)
-                    }
-                    
-                    }
-                )
-                
-            }
-        }
-    }
 
 
     
@@ -283,7 +240,7 @@ class ProfileViewController: UIViewController {
         query.getObjectInBackgroundWithId("IZhi8dmPYn") {
             (playerObj: PFObject?, error: NSError?) -> Void in
             if error == nil && playerObj != nil {
-                //print(playerObj)
+
                 playerObj!["image"] = imageFile
                 playerObj!.saveInBackground()
             } else {
@@ -300,9 +257,6 @@ class ProfileViewController: UIViewController {
                 //Send current location to Parse
                 PFUser.currentUser()!["location"] = geoPoint;
                 PFUser.currentUser()!.saveInBackground()
-                
-                //print(geoPoint)
-                //print(PFUser.currentUser()!.objectId!)
                 
                 // Create a query for places
                 let userQuery = PFUser.query()
@@ -351,9 +305,7 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-//Setting Up Push
-    
-    
+
     //Need to have this in some VC to receive push
     func catchIt(userInfo: NSNotification){
         var notif = JSON(userInfo.valueForKey("userInfo")!)
@@ -362,9 +314,7 @@ class ProfileViewController: UIViewController {
             //Set currentGameSession
             nsa.targetPlayerId = String(notif["playerId"])
             
-         
-            
-            
+
             let gameSessionId = String(notif["gameSessionId"])
             
             let query = PFQuery(className:"Game")
@@ -384,35 +334,22 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-    
-    
-    
+        
     
     override func viewWillDisappear(animated: Bool) {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func viewWillAppear(animated: Bool) {
-
-       // self.view.backgroundColor = UIColor.whiteColor()
-
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "catchIt:", name: "myNotif", object: nil)
-        
-        //Initialize data that's connected to the userCurrent method
         varInit();
-        
         self.agentLabel.text = "Agent " + PFUser.currentUser()!.username!
     }
     
-//End of Push
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    
-   
     
 }

@@ -40,6 +40,7 @@
 		81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81781A49E0DB00E65899 /* AudioToolbox.framework */; };
 		81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */; };
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
+		9709383E1C53CE0A00206C79 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709383D1C53CE0A00206C79 /* Player.swift */; };
 		979E10441C26EE160083D76E /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10431C26EE160083D76E /* LeaderboardViewController.swift */; };
 		979E10461C26F1130083D76E /* LeaderboardPFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */; };
 		979E10481C273BFA0083D76E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E10471C273BFA0083D76E /* NavigationController.swift */; };
@@ -117,6 +118,7 @@
 		81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		9709383D1C53CE0A00206C79 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		979E10431C26EE160083D76E /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPFTableViewCell.swift; sourceTree = "<group>"; };
 		979E10471C273BFA0083D76E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -214,11 +216,13 @@
 				1FBCC0BDCD7AB328E052B3F5 /* Pods-Appsassin0.1.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				787FEA6725E972255476E64C /* Pods */,
 				814C3AC91B69877600E307BB /* Info.plist */,
 				979ED5061C2056FB0032997F /* Images.xcassets */,
 				979E10491C275A8A0083D76E /* Fonts.xcassets */,
@@ -233,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				81BA81471A49DA1800E65899 /* AppsassinProject */,
-				787FEA6725E972255476E64C /* Pods */,
 				D5557839CE31574BDB41554B /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				279DBBFB1C2353AC00613F12 /* LIbrary */,
 				27636B9D1C22FAD60063BFF2 /* images */,
 				27D4ABF11C1D1C6900572B9E /* snipper.png */,
+				9709383D1C53CE0A00206C79 /* Player.swift */,
 				27A4C0631C29B201006C31D5 /* NewLogInViewController.swift */,
 				27B26FA31C1D0A4D00DF01A4 /* ProfileViewController.swift */,
 				278342831C1D191900348B74 /* AVCamPreviewView.swift */,
@@ -538,6 +542,7 @@
 				979E117E1C2897AE0083D76E /* UnwindSegue.swift in Sources */,
 				979E116A1C2897AE0083D76E /* DesignableTextField.swift in Sources */,
 				278342851C1D191900348B74 /* AVCamPreviewView.swift in Sources */,
+				9709383E1C53CE0A00206C79 /* Player.swift in Sources */,
 				979E11651C2897AE0083D76E /* BlurView.swift in Sources */,
 				979E10441C26EE160083D76E /* LeaderboardViewController.swift in Sources */,
 				979E11791C2897AE0083D76E /* SpringTextField.swift in Sources */,

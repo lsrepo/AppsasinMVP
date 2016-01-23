@@ -225,6 +225,21 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
         })
     }
     
+    //Need to have this in some VC to receive push
+    func catchIt(userInfo: NSNotification){
+        var notif = JSON(userInfo.valueForKey("userInfo")!)
+        // Check nil and do redirect here, for example:
+        if notif["type"] == "B" {
+            //Initiate change in VC
+            nsa.playerStatus = "Loser";
+            let FinishedViewController = self.storyboard!.instantiateViewControllerWithIdentifier("FinishedViewController") as UIViewController
+            self.presentViewController(FinishedViewController, animated: true, completion: nil)
+            
+        }
+    }
+    
+    
+    
     override func viewWillDisappear(animated: Bool) {
         
         dispatch_async(self.sessionQueue, {
