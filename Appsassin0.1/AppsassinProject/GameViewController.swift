@@ -27,16 +27,18 @@ class GameViewController: UIViewController {
                     print("//GameView:imgObj is\(imgObj)")
                     nsa.targetPlayer = imgObj!
                     print("//GameView:Loading image")
-                    //let imageView = PFImageView()
+
                     
+                    // placeholder image
+                    self.profilePic.image = UIImage(named: "...")
+                    // remote image
+                    self.profilePic.file = imgObj!["image"] as? PFFile
                     
-                    self.profilePic.image = UIImage(named: "...") // placeholder image
-                    self.profilePic.file = imgObj!["image"] as? PFFile // remote image
                     self.profilePic.loadInBackground()
                     self.profilePic.layer.masksToBounds = true;
                     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
                     
-                    //self.profilePic = imageView
+
     
                 }
             }
@@ -45,10 +47,10 @@ class GameViewController: UIViewController {
     // Convert timer to format: 00:00
     func timerRun() {
         secondsCount -= 1
-        var minutes = secondsCount / 60
-        var seconds = secondsCount - (minutes * 60)
+        let minutes = secondsCount / 60
+        let seconds = secondsCount - (minutes * 60)
         
-        var timerOutput = "\(minutes):\(seconds)"
+        let timerOutput = "\(minutes):\(seconds)"
         
         TimerLabel.text = "\(timerOutput)"
     }
@@ -79,7 +81,7 @@ class GameViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var timerviewc = segue.destinationViewController as! CameraViewController
+        let timerviewc = segue.destinationViewController as! CameraViewController
         timerviewc.secondsCount = self.secondsCount
     }
 

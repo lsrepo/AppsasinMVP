@@ -4,7 +4,9 @@
 //
 //  Created by sunset on 14-11-9.
 //  Copyright (c) 2014年 sunset. All rights reserved.
-//
+
+
+//  This is a framework written by sunset, a Japanese person. We didn't change anything except added the timer here.
 
 import UIKit
 import AVFoundation
@@ -25,29 +27,16 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
     // Convert timer to format: 00:00
     func timerRun() {
         secondsCount -= 1
-        var minutes = secondsCount / 60
-        var seconds = secondsCount - (minutes * 60)
+        let minutes = secondsCount / 60
+        let seconds = secondsCount - (minutes * 60)
         
-        var timerOutput = "\(minutes):\(seconds)"
+        let timerOutput = "\(minutes):\(seconds)"
         
         timerLabel.text = "\(timerOutput)"
     }
     
     func setTimer() {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: ("timerRun"), userInfo: nil, repeats: true)
-    }
-    
-    //Need to have this in some VC to receive push
-    func catchIt(userInfo: NSNotification){
-        var notif = JSON(userInfo.valueForKey("userInfo")!)
-        // Check nil and do redirect here, for example:
-        if notif["type"] == "B" {
-            //Initiate change in VC
-            nsa.playerStatus = "Loser";
-            let FinishedViewController = self.storyboard!.instantiateViewControllerWithIdentifier("FinishedViewController") as UIViewController
-            self.presentViewController(FinishedViewController, animated: true, completion: nil)
-            
-        }
     }
     
     // Camera Package

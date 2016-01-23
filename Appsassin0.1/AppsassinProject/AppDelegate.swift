@@ -154,12 +154,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
- //      PFPush.handlePush(userInfo)
-
 
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
+        
         //Receiving push notification
         let notif = JSON(userInfo) // SwiftyJSON required
         print("//AppDelegate: Push notification is \(notif)")
