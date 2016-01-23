@@ -34,7 +34,6 @@
 		27E02B2B1C1D1EE700E351F5 /* snipper.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E02B2A1C1D1EE700E351F5 /* snipper.png */; };
 		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
-		81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814C1A49DA1800E65899 /* ViewController.swift */; };
 		81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA816B1A49DB6800E65899 /* Bolts.framework */; };
 		81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA816C1A49DB6800E65899 /* Parse.framework */; };
 		81BA81771A49E0D500E65899 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81761A49E0D500E65899 /* libsqlite3.dylib */; };
@@ -76,7 +75,6 @@
 		979E117D1C2897AE0083D76E /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E11601C2897AE0083D76E /* TransitionZoom.swift */; };
 		979E117E1C2897AE0083D76E /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E11611C2897AE0083D76E /* UnwindSegue.swift */; };
 		979ED5071C2056FB0032997F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979ED5061C2056FB0032997F /* Images.xcassets */; };
-		97C6A8DD1C42810B001FBA75 /* TImerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C6A8DC1C42810B001FBA75 /* TImerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,7 +108,6 @@
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81BA81451A49DA1800E65899 /* Appsassin0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsassin0.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BA814A1A49DA1800E65899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81BA814C1A49DA1800E65899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81BA816B1A49DB6800E65899 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		81BA816C1A49DB6800E65899 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		81BA816D1A49DB6800E65899 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -156,7 +153,6 @@
 		979E11601C2897AE0083D76E /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		979E11611C2897AE0083D76E /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		979ED5061C2056FB0032997F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		97C6A8DC1C42810B001FBA75 /* TImerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TImerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,10 +261,8 @@
 				27B2A9C01C29E0E8001A6AE7 /* SettingsViewController.swift */,
 				278342841C1D191900348B74 /* CameraViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
-				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				27B26FA11C1CFD5400DF01A4 /* Launch Screen.storyboard */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
-				97C6A8DC1C42810B001FBA75 /* TImerViewController.swift */,
 				979E10471C273BFA0083D76E /* NavigationController.swift */,
 				979E10431C26EE160083D76E /* LeaderboardViewController.swift */,
 				979E10451C26F1130083D76E /* LeaderboardPFTableViewCell.swift */,
@@ -520,7 +514,6 @@
 				979E116B1C2897AE0083D76E /* DesignableTextView.swift in Sources */,
 				27B26FA81C1D142500DF01A4 /* GameViewController.swift in Sources */,
 				27A4C0641C29B201006C31D5 /* NewLogInViewController.swift in Sources */,
-				97C6A8DD1C42810B001FBA75 /* TImerViewController.swift in Sources */,
 				979E11731C2897AE0083D76E /* SoundPlayer.swift in Sources */,
 				27B26FA41C1D0A4D00DF01A4 /* ProfileViewController.swift in Sources */,
 				27B2D5D91C23643C00BF194E /* FinishedViewController.swift in Sources */,
@@ -528,7 +521,6 @@
 				979E11641C2897AE0083D76E /* AutoTextView.swift in Sources */,
 				979E11701C2897AE0083D76E /* LoadingView.swift in Sources */,
 				979E116C1C2897AE0083D76E /* DesignableView.swift in Sources */,
-				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				278342861C1D191900348B74 /* CameraViewController.swift in Sources */,
 				979E11631C2897AE0083D76E /* AsyncImageView.swift in Sources */,
 				979E11771C2897AE0083D76E /* SpringImageView.swift in Sources */,
